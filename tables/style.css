@@ -1,0 +1,93 @@
+
+h2 {
+    
+    margin-left: 5%;
+    font-size: 25px;
+    color: #fff;
+}
+hr {
+    margin: 2px auto;
+    width: 90%;
+}
+.container {
+    margin:3vh auto;
+    width:90%;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 6vh auto;
+    font-size: 0.9em;
+    width: 90%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 15px #383838;
+}
+.content-table thead tr{
+    background-color: #F06E2D;
+    color: #1c1c1c;
+    text-align: center;
+    font-weight: bold;
+}
+.content-table th, .content-table td{
+    padding: 12px 15px;
+}
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr{
+    background-color: #1c1c1c;
+    color:#dddddd
+}
+.content-table tbody tr:hover{
+    background-color: #383838;
+}
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #F06E2D
+}
+.content-table td{
+    text-align: center;
+}
+.vermelho {
+    color: red;
+}
+.amarelo {
+    color: #fffb00;
+}
+.verde {
+    color: green;
+}
+            
+
+.pill-nav a {
+    margin-right: 20%;
+    margin-left: 5%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #F06E2D;
+    overflow: hidden;
+}
+
+
+
+.pill-nav a:hover {
+    background-color: #252423;
+    color: white;
+    margin-left: 20px;
+}
+
+.dark,
+.dark header {
+  background-color: #263238;
+  --color-default:#C0C0C0;
+    --color-second:	#D3D3D3;
+    --color-white:#fff;
+    --color-body:#4A3F35;
+    --color-light:#e0e0e0;
+    --color-black:#4F4F4F;
+}
+
