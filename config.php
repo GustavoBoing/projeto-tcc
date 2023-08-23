@@ -18,7 +18,7 @@ if ( !defined('ABSPATH') )
 	
 /** caminho no server para o sistema **/
 if ( !defined("BASEURL") )
-	define("BASEURL","/teste_tcc_certo/");
+	define("BASEURL","/projeto-tcc/");
 	
 /** caminho do arquivo de banco de dados **/
 if ( !defined("DBAPI") )
