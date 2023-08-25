@@ -354,3 +354,18 @@ body.darkmode{
     --color-light:#e0e0e0;
     --color-black:#4F4F4F;
 }
+
+
+.bgsolda h2{
+
+  padding: 40px 0;
+  font-size: 50px;
+  color: white;
+}
+
+  .bgsolda{
+    background: url('../images/sodador.jpg') no-repeat;
+    height: 150px;
+    text-align: center;
+
+}
