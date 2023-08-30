@@ -342,14 +342,6 @@ nav {
   transition: all .5s ease;
   text-shadow: 1px 2px 5px #F06E2D;
 }
-body.darkmode{
-    --color-default:#C0C0C0;
-  ond  --color-sec:	#D3D3D3;
-    --color-white:#fff;
-    --color-body:#4A3F35;
-    --color-light:#e0e0e0;
-    --color-black:#4F4F4F;
-}
     </style>
     <script src="js/script.js"></script>
   </head>
@@ -403,11 +395,6 @@ body.darkmode{
               <span class="link_name">Configurações</span>
             </a>
             <span class="tooltip">Configurações</span>
-          </li>
-          <li>
-            <a id="dark-mode" href="dark">
-              <i class="fa-solid fa-circle-half-stroke" id="dark" for = "drk"></i>
-            </a>
           </li>
         </ul>
       </div>
