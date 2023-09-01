@@ -270,7 +270,6 @@ nav {
   font-family: system-ui, -apple-system, Helvetica, sans-serif, Arial;
   background: var(--color-default);
   height: 9vh;
-  position: relative;
   top: 0;
   left: 0;
   right: 0;

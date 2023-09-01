@@ -262,7 +262,7 @@ nav {
   font-family: system-ui, -apple-system, Helvetica, sans-serif, Arial;
   background: var(--color-default);
   height: 9vh;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -357,7 +357,7 @@ body.darkmode{
 
 .bgsolda{
   background: url('../images/soldador4.jpg') no-repeat;
-  height: 157px;
+  height: 180px;
   border-style: solid;
   border-color: black;
   opacity: 1;
@@ -365,15 +365,24 @@ body.darkmode{
 }
 .bgsolda h2{
   color:white;
-  padding: 40px 0;
+  padding: 50px 0; 
   font-size: 50px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
 
 }
 
 
+.textoSobre{
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
+  padding: 3.2em;
+}
 
+.textoSobre .topicos, .cTitulo {
+  margin-top: 10px;
+}
 
 
 
