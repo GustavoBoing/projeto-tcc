@@ -261,7 +261,7 @@ nav {
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, sans-serif, Arial;
   background: var(--color-default);
-  height: 9vh;
+  height: 8vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -271,6 +271,7 @@ nav {
 
 .navlist {
   list-style: none;
+  z-index: 999;
 }
 
 .navlist:hover{

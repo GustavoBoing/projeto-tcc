@@ -269,11 +269,11 @@ nav {
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, sans-serif, Arial;
   background: var(--color-default);
-  height: 9vh;
+  height: 8vh;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 11;
 }
 
 .navlist {
@@ -281,7 +281,8 @@ nav {
 }
 
 .navlist:hover{
-  opacity: 0.7;
+  opacity: 0.8;
+  transition: .8s all ease-in-out;
 }
 
 .navlist li {
@@ -408,10 +409,8 @@ nav {
             <a class="logo" href="#">RV Soluções Industriais</a>
           </ul>
           <ul class="navlist">
-            <li><a href="#" class="login"><i class="fa-regular fa-user fa-lg" style="color: #F06E2D;"></i></i></a></li>
+            <li><a href="#" class="login"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a></li>
           </ul>
         </nav>
       </div>
-
-      
 </html>

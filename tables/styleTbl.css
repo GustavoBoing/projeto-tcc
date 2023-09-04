@@ -55,12 +55,12 @@ hr {
     color: #fffb00;
 }
 .verde {
-    color: green;
+    color: rgb(3, 250, 3);
 }
             
 
 .pill-nav a {
-    margin-right: 20%;
+    margin-right: 60%;
     margin-left: 5%;
     color: rgb(255, 255, 255);
     text-align: center;
