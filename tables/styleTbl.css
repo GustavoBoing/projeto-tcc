@@ -1,6 +1,10 @@
+*{
+    margin: 0 5% 0 5%;
+    font-family: 'Times New Roman', Times, serif;
+}
 
 h2 {
-    
+    margin-top: 5vh;
     margin-left: 5%;
     font-size: 25px;
     color: #fff;
@@ -57,15 +61,14 @@ hr {
 }
 .verde {
     color: rgb(3, 250, 3);
-}
-            
+}  
 
 .pill-nav a {
     margin-right: 40%;
     margin-left: 5%;
-    color: rgb(255, 255, 255);
+    color: black;
     text-align: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     font-size: 15px;
     border-radius: 5px;
@@ -73,21 +76,20 @@ hr {
     overflow: hidden;
 }
 
-
-
 .pill-nav a:hover {
     background-color: #252423;
     color: white;
+    transition: .8s;
 }
 
-.dark,
-.dark header {
-  background-color: #263238;
-  --color-default:#C0C0C0;
-    --color-second:	#D3D3D3;
-    --color-white:#fff;
-    --color-body:#4A3F35;
-    --color-light:#e0e0e0;
-    --color-black:#4F4F4F;
+#botoes {
+    display: flex;
+    margin-left: 10vh;
+    margin-right: 5%;
+    margin-top: 5vh;
+}
+
+#editar {
+    margin-left: 10vh;
 }
 
