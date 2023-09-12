@@ -1,63 +1,27 @@
+:root{
+    --color-default:#1c1c1c;
+    --color-second:	#D3D3D3;
+    --color-white:#89817D;
+    --color-body:#4A3F35;
+    --color-black:#F06E2D;
+  }
+
 * {
     font-family: system-ui, -apple-system, Helvetica, sans-serif, Arial;
 }
 h4{
     text-align: right;
 }
+
+#subtitulo{
+    font-size: small;
+    color: var(--color-white);
+}
+
 .text{
     top: 8vh;
     display: inline-block;
     font-size: 25px;
     font-weight: 500;
     margin: 18px;
-}
-#cardprincipal{
-    background-color:#979797;
-    border-radius: 10px;
-    padding: 10px;
-    width:90%;
-    left: 50%;
-    right: 50%;
-    margin-left: 90px;
-    border: 3px solid black;
-}
-#cardchart{
-    margin: 8px;
-    margin-right: 10px;
-    background-color: #454545;
-    border-radius: 5px;
-    border: 3px solid black;
-    display: flex;
-    justify-content: space-between;
-}
-
-#cardchartline{
-    margin: 10px;
-    background-color: #454545;
-    border-radius: 5px;
-    border: 3px solid black;
-    width:100%;
-}
-
-#cardchartdonut{
-    margin: 10px;
-    background-color: #454545;
-    border-radius: 5px;
-    border: 3px solid black;
-    width:100%;
-}
-
-#card-box{
-    background-color: #454545;
-    display: inline-block;
-    padding: 10px;
-    border: 3px solid black;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 650px;
-}
-#card-box-pai {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

@@ -30,7 +30,7 @@
   min-height: 100vh;
   width: 78px;
   padding: 6px 14px;
-  z-index: 99;
+  z-index: 10;
   background-color: var(--color-default);
   transition: all .5s ease;
   position: fixed;
@@ -215,7 +215,7 @@
   top:0vh;
   left:78px;
   width: calc(100% - 78px);
-  transition: all .5s ease;
+  transition: all .6s ease;
   z-index: 2;
 }
 

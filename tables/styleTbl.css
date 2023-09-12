@@ -7,12 +7,14 @@ h2 {
     margin-top: 5vh;
     margin-left: 5%;
     font-size: 25px;
-    color: #fff;
+    color: black;
 }
+
 hr {
     margin: 2px auto;
     width: 90%;
 }
+
 .container {
     margin:3vh auto;
     width:90%;
@@ -33,9 +35,14 @@ hr {
     text-align: center;
     font-weight: bold;
 }
+
 .content-table th, .content-table td{
     padding: 12px 15px;
 }
+.content-table td{
+    text-align: center;
+}
+
 .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
 }
@@ -50,9 +57,7 @@ hr {
 .content-table tbody tr:last-of-type {
     border-bottom: 2px solid #F06E2D
 }
-.content-table td{
-    text-align: center;
-}
+
 .vermelho {
     color: red;
 }
