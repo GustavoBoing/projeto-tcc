@@ -41,6 +41,7 @@ hr {
 }
 .content-table tbody tr:hover{
     background-color: #383838;
+    transition: .6s;
 }
 .content-table tbody tr:last-of-type {
     border-bottom: 2px solid #F06E2D
