@@ -7,6 +7,7 @@
     <head>
         <link rel="stylesheet" href="styleTbl.css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="../inc/style.css"/>
     </head>
     <body>
         <br>
