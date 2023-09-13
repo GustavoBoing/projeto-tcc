@@ -355,19 +355,14 @@ nav {
 
 .textoSobre .topicos, .cTitulo {
   margin-top: 10px;
-  
 }
 
-.Divisor h2{
+.divisor{
   color: white;
-  display: block;
+  display: flex;
   font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  justify-content: center;
   font-weight: bold;
-
 }
 
 .linha-title {
@@ -377,7 +372,6 @@ nav {
   max-height: 100%;
   height: auto;
   vertical-align: middle;
-
 }
 
 
