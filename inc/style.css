@@ -293,8 +293,8 @@ nav {
     align-items: center;
   }
   .logo {
-    position: fixed;
-    display: relative;
+    position: absolute;
+    display: inline-block;
     text-align: center;
     font-size: 14px;
     top:2.7vh;
@@ -359,10 +359,38 @@ nav {
 
 .divisor{
   color: white;
-  display: flex;
-  font-size: 1.5em;
-  justify-content: center;
-  font-weight: bold;
+}
+
+.divisor h3{
+  text-align: center;
+  padding: 0 0 10px 0 ;
+  font-size: 4vh;
+}
+
+.divisor .image {
+
+  text-align: center;
+}
+
+.divisor .image::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 2.5vh;
+  margin-right: 10px;
+  width: 80px;
+  height: 0;
+  border: 0.5px solid #D3D3D3;
+}
+
+.divisor .image::after {
+  content: "";
+  display: inline-block;
+  margin-bottom: 2.5vh;
+  margin-left: 10px;
+  width: 80px;
+  height: 0;
+  border: 0.5px solid #D3D3D3;
+  /*background: linear-gradient(#ECC440, #FFFA8A);*/
 }
 
 .linha-title {
@@ -373,12 +401,3 @@ nav {
   height: auto;
   vertical-align: middle;
 }
-
-
-
-
-
-
-
-
-

@@ -10,13 +10,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./inc/style.css" />
+        <link rel="stylesheet" href="<?php echo BASEURL; ?>/inc/style.css" />
         <title>Document</title>
     </head>
 
     <body>
         <div class="bgsolda">
-            <h2>Sobre</h2>
+            <h2>Sobre Nós</h2>
         </div>
         <main>
             <div class="textoSobre">
@@ -54,19 +54,20 @@
                         garantindo uma gestão de materiais precisa e estratégica.</p>
                 </div>
             </div>
-
-            <div class="divisor" >
-                <h2>Protocolos Estéticos</h2>
-                <div class="image">
-                    <img src="https://esteticavanessagimenez.com.br/template/imagens/icone.png" alt="Icone">
+            <div class="centralizar">
+                <div class="divisor" >
+                    <h3>Protocolos Estéticos</h3>
+                    <div class="image">
+                        <img src="https://esteticavanessagimenez.com.br/template/imagens/icone.png" alt="Icone">
+                    </div>
                 </div>
-            </div>
 
-            <div class="box">
-                <span>01</span>
-                <h4>Tratamentos Corporais</h4>
-                <p>Temos os melhores tratamentos estéticos corporais de Sorocaba! Conheça e se encante com os resultados.
-                </p>
+                <div class="box">
+                    <span>01</span>
+                    <h4>Tratamentos Corporais</h4>
+                    <p>Temos os melhores tratamentos estéticos corporais de Sorocaba! Conheça e se encante com os resultados.
+                    </p>
+                </div>
             </div>
         </main>
         <script src="js/script.js"></script>

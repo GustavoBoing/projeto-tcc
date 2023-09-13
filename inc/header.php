@@ -48,9 +48,9 @@
           <li>
             <a href="<?php echo BASEURL; ?>sobre.php">
               <i class='bx bx-info-circle' id="icons"></i>
-              <span class="link_name">Sobre</span>
+              <span class="link_name">Sobre Nós</span>
             </a>
-            <span class="tooltip">Sobre</span>
+            <span class="tooltip">Sobre Nós</span>
           </li>
           <li>
             <a  href="#">
