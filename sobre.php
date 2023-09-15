@@ -10,7 +10,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="<?php echo BASEURL; ?>/inc/style.css" />
+        <link rel="stylesheet" href="<?php echo BASEURL; ?>./inc/style.css" />
+        <link rel="stylesheet" href="<?php echo BASEURL; ?>./css/styleSobre.css" />
         <title>Document</title>
     </head>
 
@@ -56,17 +57,22 @@
             </div>
             <div class="centralizar">
                 <div class="divisor" >
-                    <h3>Protocolos Estéticos</h3>
+                    <h3>A REALTECH</h3>
                     <div class="image">
-                        <img src="https://esteticavanessagimenez.com.br/template/imagens/icone.png" alt="Icone">
+                        <img src="./images/realtech.png" alt="Icone">
                     </div>
                 </div>
-
-                <div class="box">
-                    <span>01</span>
-                    <h4>Tratamentos Corporais</h4>
-                    <p>Temos os melhores tratamentos estéticos corporais de Sorocaba! Conheça e se encante com os resultados.
-                    </p>
+                <div class="boxes">
+                    <div id="caixa01" class="box">
+                        <span>01</span>
+                        <h3>Projetos Web</h3>
+                        <p></p>
+                    </div>
+                    <div id="caixa02" class="box">
+                        <span>02</span>
+                        <h3>Projetos Mobile</h3>
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </main>
