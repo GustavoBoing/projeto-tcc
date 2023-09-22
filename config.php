@@ -1,7 +1,7 @@
 <?php
 
 /** O nome do banco de dados*/
-define('DB_NAME', 'estoque_rv');
+define('DB_NAME', 'almoxarifado');
 
 /** Usuário do banco de dados MySQL */
 define('DB_USER', 'root');

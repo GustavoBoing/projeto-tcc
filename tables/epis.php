@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <?php
-        require_once "../config.php";
+        require_once('function.php');
+        index();
         include(HEADER_TEMPLATE);
     ?>
 <html>
@@ -32,7 +33,22 @@
                         <th>Quantidade</th>
                     </tr>
                 </thead>
-                <tr>
+                <tbody>
+                    <tr>
+                        <?php if ($produtos) : ?>
+                        <?php foreach($produtos as $produto)?>
+                        <td><?php echo $produto['id_produto']?></td>
+                        <td><?php echo $produto['Descricao']?></td>
+                        <td><?php echo $produto['Tipo']?></td>
+                        <td><?php echo $produto['Quantidade']?></td>
+                    </tr>
+                    <?php else : ?>
+                        <tr>
+                            <td colspan="7">Nenhum registro encontrado.</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+                <!-- <tr>
                     <td>001</td>
                     <td>Óculos de segurança</td>
                     <td>EPI</td>
@@ -107,7 +123,7 @@
                             }
                         ?>
                     </td>
-                </tr>
+                </tr> -->
             </table>
         </main>
     </body>
