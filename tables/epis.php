@@ -34,19 +34,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <?php if ($produtos) : ?>
-                        <?php foreach($produtos as $produto)?>
-                        <td><?php echo $produto['id_produto']?></td>
-                        <td><?php echo $produto['Descricao']?></td>
-                        <td><?php echo $produto['Tipo']?></td>
-                        <td><?php echo $produto['Quantidade']?></td>
-                    </tr>
+                    <?php if ($produtos) : ?>
+                    <?php foreach($produtos as $produto) : ?>
+                        <tr>
+                            <td><?php echo $produto['id_produto']?></td>
+                            <td><?php echo $produto['Descricao']?></td>
+                            <td><?php echo $produto['Tipo']?></td>
+                            <td><?php echo $produto['Quantidade']?></td>
+                        </tr>
+                    <?php endforeach ; ?>
                     <?php else : ?>
                         <tr>
                             <td colspan="7">Nenhum registro encontrado.</td>
                         </tr>
-                    <?php endif; ?>
+                    <?php endif ; ?>
                 </tbody>
                 <!-- <tr>
                     <td>001</td>
@@ -54,16 +55,16 @@
                     <td>EPI</td>
                     <td>
                         <?php
-                            for ($j = 0; $j < 1; $j++) {
-                                $valor = rand(1,100);
-                            }
-                            if ($valor < 10) {
-                                echo '<span class="vermelho">' . $valor . '</span>';
-                            } elseif ($valor >= 11 && $valor <= 40) {
-                                echo '<span class="amarelo">' . $valor . '</span>';
-                            } else {
-                                echo '<span class="verde">' . $valor . '</span>';
-                            }
+                            // for ($j = 0; $j < 1; $j++) {
+                            //     $valor = rand(1,100);
+                            // }
+                            // if ($valor < 10) {
+                            //     echo '<span class="vermelho">' . $valor . '</span>';
+                            // } elseif ($valor >= 11 && $valor <= 40) {
+                            //     echo '<span class="amarelo">' . $valor . '</span>';
+                            // } else {
+                            //     echo '<span class="verde">' . $valor . '</span>';
+                            // }
                         ?>
                     </td>
                 </tr>
@@ -73,16 +74,16 @@
                     <td>EPI</td>
                     <td>
                         <?php
-                            for ($j = 0; $j < 1; $j++) {
-                                $valor = rand(1,100);
-                            }
-                            if ($valor < 10) {
-                                echo '<span class="vermelho">' . $valor . '</span>';
-                            } elseif ($valor >= 11 && $valor <= 40) {
-                                echo '<span class="amarelo">' . $valor . '</span>';
-                            } else {
-                                echo '<span class="verde">' . $valor . '</span>';
-                            }
+                            // for ($j = 0; $j < 1; $j++) {
+                            //     $valor = rand(1,100);
+                            // }
+                            // if ($valor < 10) {
+                            //     echo '<span class="vermelho">' . $valor . '</span>';
+                            // } elseif ($valor >= 11 && $valor <= 40) {
+                            //     echo '<span class="amarelo">' . $valor . '</span>';
+                            // } else {
+                            //     echo '<span class="verde">' . $valor . '</span>';
+                            // }
                         ?>
                     </td>
                 </tr>
@@ -92,16 +93,16 @@
                     <td>EPI</td>
                     <td>
                         <?php
-                            for ($j = 0; $j < 1; $j++) {
-                                $valor = rand(1,100);
-                            }
-                            if ($valor < 10) {
-                                echo '<span class="vermelho">' . $valor . '</span>';
-                            } elseif ($valor >= 11 && $valor <= 40) {
-                                echo '<span class="amarelo">' . $valor . '</span>';
-                            } else {
-                                echo '<span class="verde">' . $valor . '</span>';
-                            }
+                            // for ($j = 0; $j < 1; $j++) {
+                            //     $valor = rand(1,100);
+                            // }
+                            // if ($valor < 10) {
+                            //     echo '<span class="vermelho">' . $valor . '</span>';
+                            // } elseif ($valor >= 11 && $valor <= 40) {
+                            //     echo '<span class="amarelo">' . $valor . '</span>';
+                            // } else {
+                            //     echo '<span class="verde">' . $valor . '</span>';
+                            // }
                         ?>
                     </td>
                 </tr>
@@ -111,16 +112,16 @@
                     <td>EPI</td>
                     <td>
                         <?php
-                            for ($j = 0; $j < 1; $j++) {
-                                $valor = rand(1,100);
-                            }
-                            if ($valor < 10) {
-                                echo '<span class="vermelho">' . $valor . '</span>';
-                            } elseif ($valor >= 11 && $valor <= 40) {
-                                echo '<span class="amarelo">' . $valor . '</span>';
-                            } else {
-                                echo '<span class="verde">' . $valor . '</span>';
-                            }
+                            // for ($j = 0; $j < 1; $j++) {
+                            //     $valor = rand(1,100);
+                            // }
+                            // if ($valor < 10) {
+                            //     echo '<span class="vermelho">' . $valor . '</span>';
+                            // } elseif ($valor >= 11 && $valor <= 40) {
+                            //     echo '<span class="amarelo">' . $valor . '</span>';
+                            // } else {
+                            //     echo '<span class="verde">' . $valor . '</span>';
+                            // }
                         ?>
                     </td>
                 </tr> -->
