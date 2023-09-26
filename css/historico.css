@@ -1,0 +1,101 @@
+:root{
+    --color-default:#1c1c1c;
+    --color-second:	#D3D3D3;
+    --color-white:#89817D;
+    --color-body:#4A3F35;
+    --color-black:#F06E2D;
+}
+
+* {
+    font-family: system-ui, -apple-system, Helvetica, sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+}
+
+#subtitulo{
+    font-size: small;
+    color: var(--color-white);
+}
+
+.text{
+    top: 8vh;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 18px;
+    margin-left: 5%;
+}
+
+.container {
+    margin:3vh auto;
+    width:90%;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 6vh auto;
+    font-size: 0.9em;
+    width: 90%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 15px #383838;
+}
+.content-table thead tr{
+    background-color: #F06E2D;
+    color: #1c1c1c;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-table th, .content-table td{
+    padding: 12px 15px;
+}
+.content-table td{
+    text-align: center;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr{
+    background-color: #1c1c1c;
+    color:#dddddd
+}
+.content-table tbody tr:hover{
+    background-color: #383838;
+    transition: .6s;
+}
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #F06E2D
+}
+
+.pill-nav a {
+    margin-right: 40%;
+    margin-left: 5%;
+    color: black;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #F06E2D;
+    overflow: hidden;
+}
+
+.pill-nav a:hover {
+    background-color: #252423;
+    color: white;
+    transition: .8s;
+}
+
+#botoes {
+    display: flex;
+    margin-left: 10vh;
+    margin-right: 5%;
+    margin-top: 5vh;
+}
+
+#editar {
+    margin-left: 10vh;
+}
+

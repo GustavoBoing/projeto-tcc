@@ -8,9 +8,8 @@
 
 * {
     font-family: system-ui, -apple-system, Helvetica, sans-serif, Arial;
-}
-h4{
-    text-align: right;
+    margin: 0;
+    padding: 0;
 }
 
 #subtitulo{

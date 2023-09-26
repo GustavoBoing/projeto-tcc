@@ -39,14 +39,14 @@
             <span class="tooltip">EPI's</span>
           </li>
           <li>
-            <a href="#">
+            <a href="<?php echo BASEURL; ?>telas/historico.php">
               <i class='bx bx-transfer-alt' id="icons"></i>
               <span class="link_name">Histórico de transações</span>
             </a>
             <span class="tooltip">Histórico de transações</span>
           </li>
           <li>
-            <a href="<?php echo BASEURL; ?>sobre.php">
+            <a href="<?php echo BASEURL; ?>telas/sobre.php">
               <i class='bx bx-info-circle' id="icons"></i>
               <span class="link_name">Sobre Nós</span>
             </a>
