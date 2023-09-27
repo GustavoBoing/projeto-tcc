@@ -4,6 +4,7 @@
     --color-white:#89817D;
     --color-body:#4A3F35;
     --color-black:#F06E2D;
+    --color-orange:#ff8c00;
 }
 
 .bgsolda{
@@ -94,6 +95,11 @@
     margin: 3% 5% 5% 5%;
 }
 
+.box {
+    z-index: 99;
+    color: white;
+}
+
 .boxes .box {
     display: flex;
     flex-direction: column;
@@ -101,11 +107,27 @@
     width: 80vh;
     height: 40vh;
     padding: 2% 3% 10% 3%;
-    border-radius: 10px;
-    background-color: red;
+    /* border-radius: 10px; */
     margin: 0 2% 0 2%;
 }
 
 .boxes > .box p {
     text-align: justify;
+}
+
+#caixa01, #caixa02 {
+    padding: 30px 30px 70px 30px;
+    box-shadow: 5px 10px 25px rgb(0 0 0 / 18%);
+}
+
+#caixa01:hover {
+    border: solid 1px var(--color-default);
+    padding: 30px 30px 70px 30px;
+    box-shadow: 10px 15px 30px rgb(0 0 0 / 18%);
+}
+
+#caixa02:hover {
+    border: solid 1px var(--color-default);
+    padding: 30px 30px 70px 30px;
+    box-shadow: 10px 15px 30px rgb(0 0 0 / 18%);
 }

@@ -1,3 +1,11 @@
+:root{
+    --color-default:#1c1c1c;
+    --color-second:	#D3D3D3;
+    --color-white:#89817D;
+    --color-body:#4A3F35;
+    --color-black:#F06E2D;
+}
+
 *{
     margin: 0 5% 0 5%;
     font-family: 'Times New Roman', Times, serif;
@@ -13,6 +21,7 @@ h2 {
 hr {
     margin: 2px auto;
     width: 90%;
+    border-color: #1c1c1c;
 }
 
 .container {
