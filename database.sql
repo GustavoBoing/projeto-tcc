@@ -147,7 +147,8 @@ INSERT INTO `usuario` (`id_usuario`, `Login`, `Senha`) VALUES
 (2, 'CarlaSanches', 'vdt65'),
 (3, 'CarlosEdu87', '09smkx'),
 (4, 'Bea019', '1234'),
-(5, 'Filipinho1V9', 'istrcvsu');
+(5, 'Filipinho1V9', 'istrcvsu'),
+(6, 'admin', 'admin');
 
 --
 -- Índices para tabelas despejadas

@@ -1,39 +1,38 @@
 <!DOCTYPE html>
-<?php
+<?php 
     require_once "config.php";
-    include(HEADER_TEMPLATE);
 ?>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="css/styleIndex.css"/>
-                <link rel="stylesheet" href="inc/style.css"/>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>Almoxarifado</title>
-    </head>
-    <body>
-        <header>
-            <div class="text" style="padding-left:16px">
-                <h2><i class="fa-brands fa-uncharted fa-lg"></i> &nbsp; Página Inicial</h2>
-                <p id="subtitulo">Visão geral do Almoxarifado</p>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type='text/css' href="./login/styles.css">
+    <title>Tela de login</title>
+</head>
+<body>
+    <div class="background-container">
+        <div class="background-image"></div>
+        <form action="./login/entrar.php" method="post">
+            <div class="content">
+                <div class="imagem-logo">
+                    <p></p>
+                </div>
+                <p>
+                    <p><label class="label-email" for="usuario">Usuário</label></p>
+                    <input class="login" type="text" name="login" placeholder="Digite seu nome de usuário" required>
+                </p>
+                <p>
+                    <p><label for="password">Senha</label></p>
+                    <input class="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                </p>
+                <p>
+                    <label class="esqueceu" for="esqueceu">Esqueceu sua senha?</label>
+                </p>
+                <p>
+                    <button class="entrar">Entrar</button>
+                </p>
             </div>
-        </header>
-        <main>
-            <div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-            </div>
-        </main>
-        <script src="script.js"></script>
-    </body>
+        </form>
+    </div>
+</body>
 </html>

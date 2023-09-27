@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: black;
+}
+  
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/image.jpg');
+    background-size: cover;
+    opacity: 0.5;
+    filter: blur(4px);
+}
+
+.content {
+    background-color: #1B1917;
+    border: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 110px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0;
+}
+
+.imagem-logo {
+    background-image: url('image/logo2.png');
+    margin-left: 45px;
+    width: 310px;
+    height: 80px;
+    margin-bottom: 30px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+label {
+    margin-top: 20px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.login, .senha {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    background-color: #B0A9A2;
+}
+
+.esqueceu {
+    color: #F1641F;
+    cursor: pointer;
+}
+
+.entrar {
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    align-items: center;
+    color:whitesmoke;
+    background-color: #F1641F;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.entrar:hover {
+    opacity: 0.8;
+}
