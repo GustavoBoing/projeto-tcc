@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="<?php echo BASEURL; ?>./inc/style.css" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>./css/styleSobre.css" />
-        <title>Document</title>
+        <title>O Software</title>
     </head>
 
     <body>
@@ -21,7 +21,7 @@
         </div>
         <main>
             <div class="textoSobre">
-                <p>Temos o prazer de apresentar nossa Plataforma de Controle de Almoxarifado na versão 1.0.0, uma solução
+                <p>Temos o prazer de apresentar a Plataforma de Controle de Almoxarifado na versão 1.0.0, uma solução
                     desenvolvida com dedicação e expertise para otimizar a gestão de materiais na RV Soluções Industriais.
                     Nosso sistema foi projetado para atender às demandas específicas da empresa, proporcionando uma
                     abordagem eficaz e eficiente para administrar tanto insumos quanto Equipamentos de Proteção Individual

@@ -18,7 +18,7 @@
         </div>
         <ul class="nav-list">
           <li>
-            <a href="<?php echo BASEURL; ?>index.php">
+            <a href="<?php echo BASEURL; ?>telas/index.php">
               <i class='bx bx-home-alt-2' id="icons"></i>
               <span class="link_name">Início</span>
             </a>
@@ -48,9 +48,9 @@
           <li>
             <a href="<?php echo BASEURL; ?>telas/sobre.php">
               <i class='bx bx-info-circle' id="icons"></i>
-              <span class="link_name">Sobre Nós</span>
+              <span class="link_name">O Software</span>
             </a>
-            <span class="tooltip">Sobre Nós</span>
+            <span class="tooltip">O Software</span>
           </li>
           <li>
             <a  href="#">

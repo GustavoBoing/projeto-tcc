@@ -40,7 +40,14 @@
                             <td><?php echo $produto['id_produto']?></td>
                             <td><?php echo $produto['Descricao']?></td>
                             <td><?php echo $produto['Tipo']?></td>
-                            <td><?php echo $produto['Quantidade']?></td>
+                            <td><?php if($produto['Quantidade'] < 10 ){
+                                echo '<span class="vermelho">' . $produto['Quantidade'] . '</span>';
+                            } elseif ($produto['Quantidade'] <= 40){
+                                echo '<span class="amarelo">' . $produto['Quantidade'] . '</span>';
+                            } else {
+                                echo '<span class="verde">' . $produto['Quantidade'] . '</span>';
+                            }
+                            ?></td>
                         </tr>
                     <?php endforeach ; ?>
                     <?php else : ?>
