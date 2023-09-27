@@ -17,7 +17,7 @@
 
     <body>
         <div class="bgsolda">
-            <h2>Sobre Nós</h2>
+            <h2>O Software</h2>
         </div>
         <main>
             <div class="textoSobre">
