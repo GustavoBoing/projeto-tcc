@@ -22,18 +22,24 @@
             </div>
         </header>
         <main>
-            <div>
-                <div>
-
+            <div class="boxes">
+                <div id="caixa01" class="box">
+                    <span>01</span>
+                    <h3>Pouco Quantidade</h3>
+                    <p></p>
                 </div>
-                <div>
-
+                <div id="caixa02" class="box">
+                    <span>02</span>
+                    <h3>Grande Quantidade</h3>
+                    <p></p>
                 </div>
-                <div>
-
+                <div id="caixa03" class="box">
+                    <span>03</span>
+                    <h3>Mais Utilizados</h3>
+                    <p></p>
                 </div>
             </div>
         </main>
-        <script src="script.js"></script>
+        <script src="<?php echo BASEURL; ?>js/script.js"></script>
     </body>
 </html>
