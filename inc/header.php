@@ -6,6 +6,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
+    <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
     <script src="<?php echo BASEURL; ?>js/script.js"></script>
   </head>
 
@@ -59,6 +60,11 @@
             </a>
             <span class="tooltip">Configurações</span>
           </li>
+          <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
         </ul>
       </div>
     </div>
