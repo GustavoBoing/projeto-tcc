@@ -5,6 +5,8 @@
     --color-body:#4A3F35;
     --color-black:#F06E2D;
     --color-orange:#ff8c00;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
 }
 
 .bgsolda{
@@ -26,14 +28,16 @@
   }
   
   .bgsolda h2{
-    color:white;
+    color: var(--color-black);
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
     padding: 35px 0px 5px 0px; 
     font-size: 50px;
     text-align: center;
   }
   
   .textoSobre{
-    color: #fff;
+    color: var(--search-text);
     font-family: "Times New Roman", sans-serif;
     text-align: justify;
     padding: 3.2em;

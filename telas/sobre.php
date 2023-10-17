@@ -11,6 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="<?php echo BASEURL; ?>./inc/style.css" />
+        <link rel="stylesheet" href="<?php echo BASEURL; ?>./images" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>./css/styleSobre.css" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
         <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
@@ -58,6 +59,43 @@
                         garantindo uma gestão de materiais precisa e estratégica.</p>
                 </div>
             </div>
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                 <img src="soldador.jpg" style="width:100%">
+                <div class="text">Trabalhamos para novas Tecnologias</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                    <img src="/images/img2.png" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                    <img src="soldador2.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+
             <div class="centralizar">
                 <div class="divisor" >
                     <h3>A REALTECH</h3>
