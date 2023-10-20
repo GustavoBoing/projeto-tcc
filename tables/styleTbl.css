@@ -107,3 +107,12 @@ hr {
     margin-left: 10vh;
 }
 
+.changes {
+    width: 28%;
+}
+
+.changes a{
+    color: var(--color-second);
+    margin-left: 5px;
+}
+
