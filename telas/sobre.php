@@ -100,23 +100,26 @@
                 <div class="divisor" >
                     <h3>A REALTECH</h3>
                     <div class="image">
-                        <img src="./images/realtech.png" alt="Icone">
+                        <img src="./images/realtech.png">
                     </div>
                 </div>
-                <div class="boxes">
+
+
+                <div id="boxes" class="boxes">
                     <div id="caixa01" class="box">
-                        <span>01</span>
                         <h3>Projetos Web</h3>
-                        <p></p>
+                        <p>Nossa empresa de tecnologia se destaca na criação de projetos de sites personalizados, que cativam o público e impulsionam o sucesso dos negócios.
+                           Contamos com uma equipe experiente e comprometida em transformar ideias criativas em soluções digitais inovador</p>
                     </div>
+
                     <div id="caixa02" class="box">
-                        <span>02</span>
                         <h3>Projetos Mobile</h3>
-                        <p></p>
+                        <p>Nossa empresa de tecnologia é líder no desenvolvimento de projetos mobiles inovadores, atendendo à crescente demanda por aplicativos e soluções móveis.
+                        Nossa equipe altamente qualificada transforma ideias em aplicativos práticos e envolventes, adaptados às necessidades moveis.</p>
                     </div>
                 </div>
             </div>
         </main>
-        <script src="js/script.js"></script>
+        <script src="js/script.js" defer></script>
     </body>
 </html>
