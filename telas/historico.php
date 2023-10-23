@@ -21,12 +21,10 @@
         <title>Almoxarifado</title>
     </head>
     <body>
-        <header>
-            <div class="text" style="padding-left:16px">
-                <h2><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Histórico</h2>
-                <p id="subtitulo">Visão geral das últimas transações</p>
-            </div>
-        </header>
+        <!-- <div class="text" style="padding-left:16px">
+            <h2><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Histórico</h2>
+            <p id="subtitulo">Visão geral das últimas transações</p>
+        </div> -->
         <main>
             <table class="content-table">
                 <thead>

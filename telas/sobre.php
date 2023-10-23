@@ -107,13 +107,13 @@
 
                 <div id="boxes" class="boxes">
                     <div id="caixa01" class="box">
-                        <h3>Projetos Web</h3>
+                        <h3>Projetos Web &nbsp &nbsp <i class="fa-solid fa-display"></i></h3>
                         <p>Nossa empresa de tecnologia se destaca na criação de projetos de sites personalizados, que cativam o público e impulsionam o sucesso dos negócios.
-                           Contamos com uma equipe experiente e comprometida em transformar ideias criativas em soluções digitais inovador</p>
+                           Contamos com uma equipe experiente e comprometida em transformar ideias criativas em soluções digitais inovador.</p>
                     </div>
 
                     <div id="caixa02" class="box">
-                        <h3>Projetos Mobile</h3>
+                        <h3>Projetos Mobile &nbsp &nbsp <i class="fa-solid fa-mobile-screen"></i></h3>
                         <p>Nossa empresa de tecnologia é líder no desenvolvimento de projetos mobiles inovadores, atendendo à crescente demanda por aplicativos e soluções móveis.
                         Nossa equipe altamente qualificada transforma ideias em aplicativos práticos e envolventes, adaptados às necessidades moveis.</p>
                     </div>

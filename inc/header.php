@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 
+<?php
+  require_once "../config.php";
+  require_once "function.php";
+?>
+
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -77,6 +82,9 @@
           </a>
           <ul class="container">
             <a class="logo" href="#">RV Soluções Industriais</a>
+          </ul>
+          <ul>
+            <a href="">Você está logado como </a>
           </ul>
           <ul class="navlist">
             <li><a href="#" class="login"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a></li>

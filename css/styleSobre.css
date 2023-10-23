@@ -17,7 +17,7 @@
     content: '';
     background: url('../images/soldador4.jpg') no-repeat center center;
     width: 100%;
-    height: 22vh;
+    height: 20vh;
     background-color: black;
     z-index: -1;
     position: absolute;
@@ -41,6 +41,7 @@
     font-family: "Times New Roman", sans-serif;
     text-align: justify;
     padding: 3.2em;
+    margin-top: 5vh;
   }
   
   .textoSobre .topicos, .cTitulo {
@@ -109,13 +110,19 @@
     flex-direction: column;
     text-align: left;
     width: 80vh;
-    height: 40vh;
+    height: 35vh;
     padding: 2% 3% 10% 3%;
     /* border-radius: 10px; */
     margin: 0 2% 0 2%;
 }
 
+.boxes > .box h3 {
+  margin-top: 10px;
+}
+
 .boxes > .box p {
+    margin-right: 5px;
+    margin-top: 20px;
     text-align: justify;
 }
 

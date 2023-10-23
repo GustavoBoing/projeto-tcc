@@ -14,7 +14,7 @@
     </head>
     <body>
         <header>
-            <h2> ESTOQUE - INSUMOS </h2>
+            <h2>&nbsp <i class='bx bx-grid-alt' id="icons"></i>&nbsp &nbsp ESTOQUE - INSUMOS </h2>
             <hr>
             <!-- <div id="botoes">
                 <div class="pill-nav" id="adicionar">
@@ -31,8 +31,9 @@
                     <tr>
                         <th>ID</th>
                         <th>Insumo</th>
-                        <th>Tipo</th>
                         <th>Quantidade</th>
+                        <th>Valor Unitário</th>
+                        <th>Valor em Estoque</th>
                         <th>Alterações</th>
                     </tr>
                 </thead>
@@ -45,14 +46,15 @@
                                 {
                                     echo '<td>'.$produto['id_produto'].'</td>';
                                     echo '<td>'.$produto['Descricao'].'</td>';
-                                    echo '<td>'.$produto['Tipo'].'</td>';
                                     if($produto['Quantidade'] < 10 ){
-                                        echo '<td>' . '<span class="vermelho">' . $produto['Quantidade'] . '</span>' . '</td>';
+                                        echo '<td>' . '<span class="vermelho">' . number_format($produto['Quantidade'], 2, ',', '.') . '</span>' . '</td>';
                                     } else if ($produto['Quantidade'] <= 40){
-                                         echo '<td>' . '<span class="amarelo">' . $produto['Quantidade'] . '</span>' . '</td>' ;
+                                         echo '<td>' . '<span class="amarelo">' . number_format($produto['Quantidade'], 2, ',', '.') . '</span>' . '</td>' ;
                                     } else {
-                                         echo '<td>' . '<span class="verde">' . $produto['Quantidade'] . '</span>' . '</td>';
+                                         echo '<td>' . '<span class="verde">' . number_format($produto['Quantidade'], 2, ',', '.') . '</span>' . '</td>';
                                     }
+                                    echo '<td>'. 'R$ ' . $produto['Valor'].'</td>';
+                                    echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'
                                 ?>
                                 <td class="changes">
                                     <a href="edit.php?id=<?php echo $customer['id']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-plus-circle'></i> Adicionar</a>

@@ -4,9 +4,9 @@
  *  Pesquisa um Registro pelo ID em uma Tabela
  */  
 	
-		date_default_timezone_set("America/Sao_Paulo");
+	date_default_timezone_set("America/Sao_Paulo");
 	
-	 function open_database() {
+	function open_database() {
 		try {
 			$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 			$conn -> set_charset ("utf8");
@@ -62,6 +62,7 @@
 		close_database($database);
 		return $found;
 	}
+
 	function find_all( $table ) {
 	  return find($table);
 	}
