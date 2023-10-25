@@ -83,9 +83,7 @@
           <ul class="container">
             <a class="logo" href="#">RV Soluções Industriais</a>
           </ul>
-          <ul>
-            <a href="">Você está logado como </a>
-          </ul>
+            <p class="userlogin">Você está logado como </p>
           <ul class="navlist">
             <li><a href="#" class="login"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a></li>
           </ul>

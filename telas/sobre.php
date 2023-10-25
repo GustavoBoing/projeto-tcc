@@ -34,26 +34,26 @@
                     <p>Características Principais:</p>
                 </div>
                 <div class="topicos">
-                    <p><strong>Segurança Aperfeiçoada:</strong> A Plataforma de Controle de Almoxarifado prioriza a segurança de
+                    <p class="top"><strong>Segurança Aperfeiçoada:</strong> A Plataforma de Controle de Almoxarifado prioriza a segurança de
                         informações sensíveis. Através da tela de login, garantimos que somente usuários autorizados tenham
                         acesso ao sistema, protegendo seus dados e mantendo a confidencialidade.</p>
-                    <p><strong>Visão Global no Início:</strong> Ao adentrar o sistema, nossa tela de início oferece uma
+                    <p class="top"><strong>Visão Global no Início:</strong> Ao adentrar o sistema, nossa tela de início oferece uma
                         visão abrangente da situação do almoxarifado. Apresentamos gráficos intuitivos e cards informativos
                         que destacam materiais em grande quantidade, aqueles em escassez e os itens mais utilizados. Essa
                         visualização estratégica auxilia na tomada de decisões assertivas.</p>
-                    <p><strong>Gerenciamento Preciso de Insumos e EPIs:</strong> Nossa plataforma dispõe de telas
+                    <p class="top"><strong>Gerenciamento Preciso de Insumos e EPIs:</strong> Nossa plataforma dispõe de telas
                         específicas para insumos e EPIs. Através de tabelas interativas, os usuários têm a possibilidade de
                         ajustar as quantidades de materiais, seja para retirada ou adição. Isso assegura a manutenção do
                         estoque conforme as necessidades operacionais.</p>
-                    <p><strong>Transparência no Histórico:</strong> A funcionalidade de histórico de transações permite
+                    <p class="top"><strong>Transparência no Histórico:</strong> A funcionalidade de histórico de transações permite
                         rastrear as ações mais recentes realizadas no sistema. Cada movimentação, seja relacionada a insumos
                         ou EPIs, é registrada, garantindo transparência e fornecendo insights valiosos para análises
                         futuras.</p>
-                    <p><strong>Configurações Personalizadas:</strong> A tela de configurações proporciona uma maneira
+                    <p class="top"><strong>Configurações Personalizadas:</strong> A tela de configurações proporciona uma maneira
                         flexível de personalizar a experiência do usuário. Mesmo que os detalhes específicos desta seção
                         estejam sendo finalizados, nosso sistema já oferece um espaço para você definir parâmetros conforme
                         suas necessidades.</p>
-                    <p>A Plataforma de Controle de Almoxarifado é uma ferramenta que alavanca a eficiência, a organização e
+                    <p class="top">A Plataforma de Controle de Almoxarifado é uma ferramenta que alavanca a eficiência, a organização e
                         a tomada de decisões informadas dentro do nosso ambiente industrial. Nosso compromisso é continuar
                         desenvolvendo recursos e funcionalidades que atendam às exigências dinâmicas de nossa empresa,
                         garantindo uma gestão de materiais precisa e estratégica.</p>
@@ -120,6 +120,5 @@
                 </div>
             </div>
         </main>
-        <script src="js/script.js" defer></script>
     </body>
 </html>

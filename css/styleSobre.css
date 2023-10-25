@@ -17,20 +17,20 @@
     content: '';
     background: url('../images/soldador4.jpg') no-repeat center center;
     width: 100%;
-    height: 20vh;
+    height: 130px;
     background-color: black;
     z-index: -1;
     position: absolute;
-    opacity: .3;
+    opacity: .6;
     right: 0;
     border-right: 2px solid #000;
     border-bottom: 2px solid #000;
   }
   
   .bgsolda h2{
-    color: var(--color-black);
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: black;
+    color: var(--search-text);
+    /* -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color:#F06E2D; */
     padding: 35px 0px 5px 0px; 
     font-size: 50px;
     text-align: center;
@@ -41,11 +41,14 @@
     font-family: "Times New Roman", sans-serif;
     text-align: justify;
     padding: 3.2em;
-    margin-top: 5vh;
   }
   
   .textoSobre .topicos, .cTitulo {
     margin-top: 10px;
+  }
+
+  .textoSobre .topicos > .top {
+    margin: 5px 0 0 0
   }
   
   .divisor{
@@ -97,7 +100,7 @@
 .boxes {
     display: flex;
     justify-content: center;
-    margin: 3% 5% 5% 5%;
+    margin: 3% 7% 7% 7%;
 }
 
 .box {
@@ -110,7 +113,7 @@
     flex-direction: column;
     text-align: left;
     width: 80vh;
-    height: 35vh;
+    height: 50vh;
     padding: 2% 3% 10% 3%;
     /* border-radius: 10px; */
     margin: 0 2% 0 2%;
@@ -118,12 +121,15 @@
 
 .boxes > .box h3 {
   margin-top: 10px;
+  color: var(--search-text);
 }
+
 
 .boxes > .box p {
     margin-right: 5px;
     margin-top: 20px;
     text-align: justify;
+    color: var(--search-text);
 }
 
 #caixa01, #caixa02 {
