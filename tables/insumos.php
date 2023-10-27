@@ -47,11 +47,11 @@
                                     echo '<td>'.$produto['id_produto'].'</td>';
                                     echo '<td>'.$produto['Descricao'].'</td>';
                                     if($produto['Quantidade'] < 10 ){
-                                        echo '<td>' . '<span class="vermelho">' . number_format($produto['Quantidade'], 2, ',', '.') . '</span>' . '</td>';
+                                        echo '<td>' . '<span class="vermelho">' . $produto['Quantidade'] . '</span>' . '</td>';
                                     } else if ($produto['Quantidade'] <= 40){
-                                         echo '<td>' . '<span class="amarelo">' . number_format($produto['Quantidade'], 2, ',', '.') . '</span>' . '</td>' ;
+                                         echo '<td>' . '<span class="amarelo">' . $produto['Quantidade'] . '</span>' . '</td>' ;
                                     } else {
-                                         echo '<td>' . '<span class="verde">' . number_format($produto['Quantidade'], 2, ',', '.') . '</span>' . '</td>';
+                                         echo '<td>' . '<span class="verde">' . $produto['Quantidade'] . '</span>' . '</td>';
                                     }
                                     echo '<td>'. 'R$ ' . $produto['Valor'].'</td>';
                                     echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'

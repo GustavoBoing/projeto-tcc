@@ -13,16 +13,16 @@
 }
 
 #subtitulo{
-    /* font-size: small;
-    color: var(--color-white); */
+    font-size: small;
+    color: var(--color-white);
 }
 
 .text{
-
+    margin: 25px 0 0 50px;
 }
 
 main {
-    margin-top: 15vh;
+    margin-top: 20px;
 }
 
 .container {
