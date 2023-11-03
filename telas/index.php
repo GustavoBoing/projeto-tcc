@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <?php
     require_once "../config.php";
+    require_once('function.php');
+    grandeQtd();
+    poucaQtd();
     include(HEADER_TEMPLATE);
 ?>
 
@@ -18,35 +21,48 @@
         <title>Almoxarifado</title>
     </head>
     <body>
-      <header>
-          <div class="text" style="padding-left:16px">
-              <h2><i class="fa-brands fa-uncharted fa-lg"></i> &nbsp; Página Inicial</h2>
-              <p id="subtitulo">Visão geral do Almoxarifado</p>
-          </div>
-      </header>
+      <div class="tittle" style="padding-left:16px">
+        <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black;"><i class="fa-brands fa-uncharted fa-lg"></i> &nbsp; Página Inicial</h2>
+        <p id="subtitulo">Visão geral do Almoxarifado</p>
+      </div>
       <main>
         <div id="boxes" class="boxes">
           <div id="caixa01" class="box">
-            <h3>Grande quantidade</h3>
-            <p></p>
+            <h3><i class="fa-regular fa-file-lines"></i>&nbsp; &nbsp;Grande quantidade</h3>
+            <?php
+              if ($produtos) :
+                // var_dump($produtos);
+                echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: white;">';
+                foreach ($produtos as $produto) :
+                  echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . $produto['Quantidade'] . ' unidades ' . '</li>';
+                endforeach;
+                echo '</ol>';
+              else :
+                echo 'Nenhum produto está com quantidade maior que 35 unidades.';
+              endif;
+            ?>
           </div>
           <div id="caixa02" class="box">
-            <h3>Baixa quantidade</h3>
+            <h3><i class="fa-solid fa-file-lines"></i>&nbsp; &nbsp;Baixa quantidade</h3>
+            <?php
+              if ($poucos) :
+                echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: white;">';
+                foreach ($poucos as $produto) :
+                  echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . $produto['Quantidade'] . ' unidades ' . '</li>';
+                endforeach;
+                echo '</ol>';
+              else :
+                echo 'Nenhum produto está com quantidade menor que 10 unidades.';
+              endif;
+            ?>
+          </div>
+          <div id="caixa03" class="box">
+            <h3><i class="fa-solid fa-file-lines"></i>&nbsp; &nbsp;Itens mais utilizados</h3>
+
           </div>
         </div>
-        <!-- <div id="boxes" class="boxes">
-          <div id="caixa01" class="box">
-              <h3>Pouca quantidade</h3>
-              <p></p>
-          </div>
-
-          <div id="caixa02" class="box">
-              <h3>Grande quantidade</h3>
-              <p></p>
-          </div>
-        </div> -->
       </main>
-      <div class="graphic">
+      <!-- <div class="graphic">
           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
           <script type="text/javascript">
           google.charts.load('current', {'packages':['corechart']});
@@ -72,7 +88,7 @@
             chart.draw(data, options);
           }
         </script>
-        <div id="curve_chart" style="width: 900px; height: 500px"></div>
+        <div id="curve_chart" style="width: 900px; height: 500px"></div> -->
       </body>
     </div>
 </html>

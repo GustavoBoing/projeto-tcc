@@ -1,6 +1,5 @@
 
 :root{
-
     --color-default:#ffffff;
     --color-second:	#bebebe;
     --color-white:#333333;
@@ -8,10 +7,10 @@
     --color-black:#F06E2D;
     --search-bar: #F2F2F2;
     --search-text: #010718;
-  }
+}
   
   
-  body.dark{
+body.dark{
     --color-default:#1c1c1c;
     --color-second:	#D3D3D3;
     --color-white:#89817D;
@@ -19,10 +18,7 @@
     --color-black:#F06E2D;
     --search-bar: #F2F2F2;
     --search-text: #fff;
-  }
-
-
-
+}
 
 .nav-bar .darkLight-searchBox{
     display: flex;
@@ -144,4 +140,13 @@ body.dark .search-field input{
 
 body.dark .search-field i{
     color: var( --color-black);
+}
+
+body.dark .tittle > h2 {
+    color: var(--color-default);
+    text-shadow: 1px 2px 5px var(--color-black);
+}
+
+#subtitulo {
+    color: var(--color-white);
 }

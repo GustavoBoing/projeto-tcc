@@ -65,17 +65,28 @@
             </a>
             <span class="tooltip">Configurações</span>
           </li>
-          <div class="darkLight-searchBox">
-                <div class="dark-light">
-                    <i class='bx bx-moon moon'></i>
-                    <i class='bx bx-sun sun'></i>
-                </div>
+          <!-- <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i>
+            </div>
+          </div> -->
+          <li>
+            <a class="darkLight-searchBox">
+              <div class="dark-light">
+                <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i>
+                <span class="link_name">Modo escuro</span>
+              </div>
+            </a>
+            <span class="tooltip">Modo escuro</span>
+          </li>
         </ul>
       </div>
     </div>
   </header>
     <section class="home-section">
-      <div class="topnav" id="myTopnav">
+      <div class="topnav" id="myTopnav"> 
         <nav>
           <a class="logo_rv" href="#">
             <img src="<?php echo BASEURL; ?>images/logo.png" alt="logo" width="45" height="">
@@ -83,7 +94,9 @@
           <ul class="container">
             <a class="logo" href="#">RV Soluções Industriais</a>
           </ul>
-            <p class="userlogin">Você está logado como </p>
+          <ul>
+            <p class="user-logado">Você está logado como </p>
+          </ul>
           <ul class="navlist">
             <li><a href="#" class="login"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a></li>
           </ul>

@@ -56,8 +56,6 @@ body.addEventListener("click" , e =>{
 
 });  
 
-
-
     closeBtn.addEventListener("click",function(){
         sidebar.classList.toggle("open")
         menuBtnChange()
@@ -102,7 +100,6 @@ body.addEventListener("click" , e =>{
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
     }
-
 }
 
 

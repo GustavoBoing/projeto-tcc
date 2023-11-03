@@ -17,17 +17,12 @@
     color: var(--color-white);
 }
 
-.text{
-    margin: 25px 0 0 50px;
+.tittle{
+    margin: 25px 0 0 70px;
 }
 
 main {
-    margin-top: 20px;
-}
-
-.container {
-    margin:3vh auto;
-    width:90%;
+    margin: 20px 0 0 0;
 }
 
 .content-table {
@@ -68,33 +63,4 @@ main {
     border-bottom: 2px solid #F06E2D
 }
 
-.pill-nav a {
-    margin-right: 40%;
-    margin-left: 5%;
-    color: black;
-    text-align: center;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #F06E2D;
-    overflow: hidden;
-}
-
-.pill-nav a:hover {
-    background-color: #252423;
-    color: white;
-    transition: .8s;
-}
-
-#botoes {
-    display: flex;
-    margin-left: 10vh;
-    margin-right: 5%;
-    margin-top: 5vh;
-}
-
-#editar {
-    margin-left: 10vh;
-}
 

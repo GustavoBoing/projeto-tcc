@@ -21,7 +21,7 @@
   font-size:20px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-left: 10%;
+  margin: 0 0 0 50px;
 }
 
 .container .logo {
@@ -242,13 +242,6 @@ nav li:hover {
   opacity: 0.7;
 }
 
-.container {
-  font-size:20px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-left: 3%;
-}
-
 .container .logo {
   cursor: default;
   color: var(--color-black);
@@ -368,7 +361,7 @@ img {vertical-align: middle;}
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 8px; 
   width: 100%;
   text-align: center;
 }
@@ -405,11 +398,10 @@ img {vertical-align: middle;}
 }
 
 
-.topnav .userlogin{
+.topnav > nav > ul > .user-logado{
   color: #F06E2D;
   font-size: small;
   margin-left: 325px;
-
 }
 
 @keyframes fade {

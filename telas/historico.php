@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
     require_once "function.php";
-    indexEPI();
+    historico();
+    // movimentacao();
     include(HEADER_TEMPLATE);
 ?>
 
@@ -14,27 +15,19 @@
                 <link rel="stylesheet" href="<?php echo BASEURL; ?>css/historico.css"/>
                 <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
                 <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
-                <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
-        
-        
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Almoxarifado</title>
     </head>
     <body>
-        <div class="text" style="padding-left: 16px">
-            <h2><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Histórico</h2>
+        <div class="tittle">
+            <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black;"><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Histórico</h2>
             <p id="subtitulo">Visão geral das últimas transações</p>
         </div>
-        <!-- <div class="text" style="padding-left:16px">
-            <h2><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Histórico</h2>
-            <p id="subtitulo">Visão geral das últimas transações</p>
-        </div> -->
         <main>
             <table class="content-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Produto</th>
+                        <th>Item</th>
                         <th>Funcionário</th>
                         <th>Entrou/Saiu</th>
                         <th>Quantidade</th>
@@ -42,42 +35,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if ($produtos) : ?>
-                    <?php foreach($produtos as $produto) : ?>
-                        <tr>
-                            <td><?php echo $produto['id_mov']?></td>
-                            <td><?php echo $produto['Produto_id']?></td>
-                            <td><?php echo $produto['Funcionario']?></td>
-                            <td><?php echo $produto['EntraSai']?></td>
-                            <td><?php echo $produto['QntdModificada']?></td>
-                            <td><?php echo $produto['Datas']?></td>
-                        </tr>
-                    <?php endforeach ; ?>
-                    <?php else : ?>
-                        <tr>
-                            <td colspan="7">Nenhum registro encontrado.</td>
-                        </tr>
-                    <?php endif ; ?>
+                    <?php if ($historicos) :
+                        // var_dump($historicos);
+                        foreach($historicos as $produto) : 
+                        echo '<tr>';
+                            // echo '<td>' . $produto['id_mov'] . '</td>';
+                            echo '<td>' . $produto['Descricao'] . '</td>';
+                            echo '<td>' . $produto['Funcionario'] . '</td>';
+                            echo '<td>' . $produto['EntraSai'] . '</td>';
+                            echo '<td>' . $produto['QntdModificada'] . '</td>';
+                            echo '<td>' . $produto['Datas'] . '</td>';
+                        echo '</tr>';
+                        endforeach ; 
+                        else :
+                        echo '<tr>';
+                            echo '<td colspan="7">Nenhum registro encontrado.</td>';
+                        echo '</tr>';
+                    endif ; ?>
                 </tbody>
-                <!-- <tr>
-                    <td>001</td>
-                    <td>Óculos de segurança</td>
-                    <td>EPI</td>
-                    <td>
-                        <?php
-                            // for ($j = 0; $j < 1; $j++) {
-                            //     $valor = rand(1,100);
-                            // }
-                            // if ($valor < 10) {
-                            //     echo '<span class="vermelho">' . $valor . '</span>';
-                            // } elseif ($valor >= 11 && $valor <= 40) {
-                            //     echo '<span class="amarelo">' . $valor . '</span>';
-                            // } else {
-                            //     echo '<span class="verde">' . $valor . '</span>';
-                            // }
-                        ?>-->
             </table>
         </main>
-        <script src="script.js"></script>
     </body>
 </html>

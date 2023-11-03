@@ -13,24 +13,15 @@
         <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
     </head>
     <body>
-        <header>
-            <h2>&nbsp <i class='bx bx-grid-alt' id="icons"></i>&nbsp &nbsp ESTOQUE - INSUMOS </h2>
-            <hr>
-            <!-- <div id="botoes">
-                <div class="pill-nav" id="adicionar">
-                    <a href="#contact">Adicionar</a>
-                </div>
-                <div class="pill-nav" id="editar">
-                    <a href="#about">Editar</a>
-                </div>
-            </div> -->
-        </header>
-        <main>
+        <div class="tittle">
+            <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black; letter-spacing:2px;"><i class='bx bx-grid-alt'></i>&nbsp INSUMOS </h2>
+            <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens de Insumo</p>
+        </div>
+        <main> 
             <table class="content-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Insumo</th>
+                        <th>Item</th>
                         <th>Quantidade</th>
                         <th>Valor Unitário</th>
                         <th>Valor em Estoque</th>
@@ -44,7 +35,7 @@
                                 <?php 
                                 if ($produto['Tipo'] == '2') 
                                 {
-                                    echo '<td>'.$produto['id_produto'].'</td>';
+                                    // echo '<td>'.$produto['id_produto'].'</td>';
                                     echo '<td>'.$produto['Descricao'].'</td>';
                                     if($produto['Quantidade'] < 10 ){
                                         echo '<td>' . '<span class="vermelho">' . $produto['Quantidade'] . '</span>' . '</td>';
