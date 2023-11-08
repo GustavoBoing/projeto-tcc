@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-    <?php
+<?php
         require_once('function.php');
         indexEPI();
         include(HEADER_TEMPLATE);
-    ?>
+
+        session_start();
+        if(!isset($_SESSION['login']))
+          header("Location: ../index.php");
+?>
+    
+<!DOCTYPE html>
+
 <html>
     <head>
         <link rel="stylesheet" href="styleTbl.css"/>

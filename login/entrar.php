@@ -1,4 +1,6 @@
 <?php
+
+
 // Informações de conexão com o banco de dados
 $servername = "localhost";
 $dbname = "almoxarifado";

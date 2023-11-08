@@ -1,11 +1,15 @@
-<!DOCTYPE html>
 <?php
     require_once "../config.php";
     require_once('function.php');
     grandeQtd();
     poucaQtd();
     include(HEADER_TEMPLATE);
+    session_start();
+    if(!isset($_SESSION['login']))
+      header("Location: ../index.php");
 ?>
+
+<!DOCTYPE html>
 
 <html>
     <head>

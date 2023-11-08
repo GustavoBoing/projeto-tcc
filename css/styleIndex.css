@@ -4,6 +4,9 @@
     --color-white:#89817D;
     --color-body:#4A3F35;
     --color-black:#F06E2D;
+    --color-orange:#ff8c00;
+    --search-bar: #ffffff;
+    --search-text: #010718;
   }
 
 * {
@@ -48,13 +51,29 @@ body {
     box-shadow: 10px 15px 30px rgb(0 0 0 / 18%);
 }
 
+.box > .caixa02{
+
+    color: var(--search-text);
+}
+
+.boxes > .box > ol{
+
+    color: var(--search-text);
+}
+
 .boxes > .box > li {
+
+    color: var(--search-text);
     margin: 20px 0 0 15px;
     text-align: left;
+    
 }
 
 .boxes > .box > h3 {
+
+    color: var(--search-text);
     font-size: 23px;
+    
 }
 
 #caixa01:hover, #caixa02:hover, #caixa03:hover{
