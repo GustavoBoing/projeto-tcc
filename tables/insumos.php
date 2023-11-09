@@ -1,36 +1,37 @@
-
-<?php
+<!DOCTYPE html>
+    <?php
         require_once('function.php');
         indexINS();
         include(HEADER_TEMPLATE);
-        session_start();
-        if(!isset($_SESSION['login']))
-          header("Location: ../index.php");
-        
-        
-
-?>
-
-<!DOCTYPE html>
-
+    ?>
 <html>
     <head>
         <link rel="stylesheet" href="styleTbl.css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
         <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
     </head>
     <body>
-        <div class="tittle">
-            <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black; letter-spacing:2px;"><i class='bx bx-grid-alt'></i>&nbsp INSUMOS </h2>
-            <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens de Insumo</p>
-        </div>
-        <main> 
+        <header>
+            <h2>&nbsp <i class='bx bx-grid-alt' id="icons"></i>&nbsp &nbsp ESTOQUE - INSUMOS </h2>
+            <hr>
+            <!-- <div id="botoes">
+                <div class="pill-nav" id="adicionar">
+                    <a href="#contact">Adicionar</a>
+                </div>
+                <div class="pill-nav" id="editar">
+                    <a href="#about">Editar</a>
+                </div>
+            </div> -->
+        </header>
+        <main>
             <table class="content-table">
                 <thead>
                     <tr>
-                        <th>Item</th>
+                        <th>ID</th>
+                        <th>Insumo</th>
                         <th>Quantidade</th>
                         <th>Valor Unitário</th>
                         <th>Valor em Estoque</th>
@@ -44,7 +45,7 @@
                                 <?php 
                                 if ($produto['Tipo'] == '2') 
                                 {
-                                    // echo '<td>'.$produto['id_produto'].'</td>';
+                                    echo '<td>'.$produto['id_produto'].'</td>';
                                     echo '<td>'.$produto['Descricao'].'</td>';
                                     if($produto['Quantidade'] < 10 ){
                                         echo '<td>' . '<span class="vermelho">' . $produto['Quantidade'] . '</span>' . '</td>';
@@ -57,9 +58,9 @@
                                     echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'
                                 ?>
                                 <td class="changes">
-                                    <a href="edit.php?id=<?php echo $customer['id']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-plus-circle'></i> Adicionar</a>
-                                    <a href="edit.php?id=<?php echo $customer['id']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-minus-circle'></i> Retirar</a>
-			                        <a href="edit.php?id=<?php echo $customer['id']; ?>" class="btn btn-sm btn-secondary"><i class="fa-solid fa-user-pen"></i> Editar</a>
+                                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black"><i class='bx bx-plus-circle'></i>Adicionar</button>
+                                    <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black"><i class='bx bx-minus-circle'></i>Retirar</button>
+                                    <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-black"><i class="fa-solid fa-user-pen"></i>Editar</button>
                                 </td>
                                 <?php } ?>
                             </tr>
@@ -68,5 +69,105 @@
                 </tbody>
             </table>
         </main>
+
+        <div class="w3-container">
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                <header class="w3-container w3-teal"> 
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h2>Adicionar</h2>
+                </header>
+                <div class="w3-container">
+                    <form method="POST" id="form-edit-usuario">
+                        <input type="hidden" name="id" id="editid">
+
+                        <div class="row mb-3">
+                            <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-warning btn-sm" value="Salvar">Salvar</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-container">
+            <div id="id02" class="w3-modal">
+                <div class="w3-modal-content">
+                <header class="w3-container w3-teal"> 
+                    <span onclick="document.getElementById('id02').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h2>Retirar</h2>
+                </header>
+                <div class="w3-container">
+                <form method="POST" id="form-edit-usuario">
+                        <input type="hidden" name="id" id="editid">
+
+                        <div class="row mb-3">
+                            <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-warning btn-sm" value="Salvar">Salvar</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-container">
+            <div id="id03" class="w3-modal">
+                <div class="w3-modal-content">
+                <header class="w3-container w3-teal"> 
+                    <span onclick="document.getElementById('id03').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h2>Editar</h2>
+                </header>
+                <div class="w3-container">
+                    <form method="POST" id="form-edit-usuario">
+                        <input type="hidden" name="id" id="editid">
+
+                        <div class="row mb-3">
+                            <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="valor" class="col-sm-2 col-form-label">Valor</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="valor" class="form-control" id="editvalor" placeholder="Valor">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="modelo" class="col-sm-2 col-form-label">Modelo</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="modelo" class="form-control" id="editmodelo" placeholder="Modelo">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="descricao" class="col-sm-2 col-form-label">Descrição</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="descricao" class="form-control" id="editdescricao" placeholder="Descrição">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-warning btn-sm" value="Salvar">Salvar</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+        
     </body>
 </html>
