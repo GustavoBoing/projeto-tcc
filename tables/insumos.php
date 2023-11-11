@@ -70,19 +70,21 @@
             </table>
         </main>
 
-        <div class="w3-container">
+    <div class= "modaltbl">                  
+        <div class="w3-container ">
             <div id="id01" class="w3-modal">
-                <div class="w3-modal-content">
-                <header class="w3-container w3-teal"> 
+                <div class="w3-modal-content w3-round">
+
+                <header class="w3-container w3-black w3-center"> 
                     <span onclick="document.getElementById('id01').style.display='none'" 
                     class="w3-button w3-display-topright">&times;</span>
                     <h2>Adicionar</h2>
                 </header>
+
                 <div class="w3-container">
                     <form method="POST" id="form-edit-usuario">
                         <input type="hidden" name="id" id="editid">
-
-                        <div class="row mb-3">
+                        <div class="row mb-3 w3-padding-16">
                             <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
                             <div class="col-sm-10">
                                 <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
@@ -90,16 +92,18 @@
                         </div>
 
                         <button type="submit" class="btn btn-outline-warning btn-sm" value="Salvar">Salvar</button>
+                        <hr>
                     </form>
                 </div>
                 </div>
             </div>
         </div>
+    </div> 
 
         <div class="w3-container">
             <div id="id02" class="w3-modal">
-                <div class="w3-modal-content">
-                <header class="w3-container w3-teal"> 
+                <div class="w3-modal-content w3-round">
+                <header class="w3-container w3-black w3-center"> 
                     <span onclick="document.getElementById('id02').style.display='none'" 
                     class="w3-button w3-display-topright">&times;</span>
                     <h2>Retirar</h2>
@@ -108,7 +112,7 @@
                 <form method="POST" id="form-edit-usuario">
                         <input type="hidden" name="id" id="editid">
 
-                        <div class="row mb-3">
+                        <div class="row mb-3 w3-padding-16">
                             <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
                             <div class="col-sm-10">
                                 <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
@@ -124,8 +128,8 @@
 
         <div class="w3-container">
             <div id="id03" class="w3-modal">
-                <div class="w3-modal-content">
-                <header class="w3-container w3-teal"> 
+                <div class="w3-modal-content w3-round">
+                <header class="w3-container w3-black w3-center"> 
                     <span onclick="document.getElementById('id03').style.display='none'" 
                     class="w3-button w3-display-topright">&times;</span>
                     <h2>Editar</h2>
@@ -134,28 +138,28 @@
                     <form method="POST" id="form-edit-usuario">
                         <input type="hidden" name="id" id="editid">
 
-                        <div class="row mb-3">
+                        <div class="row mb-3 w3-padding-16">
                             <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
                             <div class="col-sm-10">
                                 <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-3 w3-padding-16">
                             <label for="valor" class="col-sm-2 col-form-label">Valor</label>
                             <div class="col-sm-10">
                                 <input type="text" name="valor" class="form-control" id="editvalor" placeholder="Valor">
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-3 w3-padding-16">
                             <label for="modelo" class="col-sm-2 col-form-label">Modelo</label>
                             <div class="col-sm-10">
                                 <input type="text" name="modelo" class="form-control" id="editmodelo" placeholder="Modelo">
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-3 w3-padding-16">
                             <label for="descricao" class="col-sm-2 col-form-label">Descrição</label>
                             <div class="col-sm-10">
                                 <input type="text" name="descricao" class="form-control" id="editdescricao" placeholder="Descrição">

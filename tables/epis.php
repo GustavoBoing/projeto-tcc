@@ -94,7 +94,7 @@
         <div class="w3-container">
             <div id="id01" class="w3-modal">
                 <div class="w3-modal-content">
-                <header class="w3-container w3-teal"> 
+                <header class="w3-container w3-black w3-center"> 
                     <span onclick="document.getElementById('id01').style.display='none'" 
                     class="w3-button w3-display-topright">&times;</span>
                     <h2>Adicionar</h2>
@@ -102,8 +102,7 @@
                 <div class="w3-container">
                     <form method="POST" id="form-edit-usuario">
                         <input type="hidden" name="id" id="editid">
-
-                        <div class="row mb-3">
+                        <div class="row mb-3 w3-padding-16">
                             <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
                             <div class="col-sm-10">
                                 <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
