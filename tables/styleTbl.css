@@ -8,12 +8,19 @@
 
 *{
     margin: 0 5% 0 5%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-h2 {
+.tittle {
+    font-family: 'Poppins', sans-serif;
+}
+
+.tittle > .titulos {
+    font-family: 'Poppins', sans-serif;
     margin: 25px 0 0 67px;
     color: #F06E2D;
+    font-size: 30px;
+    font-weight: 1000;
 }
 
 #subtitulo {
@@ -101,6 +108,16 @@ input[type=text], select {
     box-sizing: border-box;
   }
 
+input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
 button[type=submit] {
     width: 100%;
     background-color: #F06E2D;
@@ -110,16 +127,15 @@ button[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
 
-  button[type=submit]:hover {
-    background-color: #F06E2D;
-  }
+button[type=submit]:hover {
+    background-color: #f35c10;
+    transition: 0.9s;
+}
 
-  label{
-
+label{
     font-size: medium;
     margin-top: 50px;
-
-  }
+}
 

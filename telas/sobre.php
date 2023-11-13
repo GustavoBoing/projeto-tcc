@@ -14,8 +14,7 @@
         <link rel="stylesheet" href="<?php echo BASEURL; ?>./images" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>./css/styleSobre.css" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
-        <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
-        
+
         <title>O Software</title>
     </head>
 
@@ -61,28 +60,33 @@
             </div>
 
             <div class="centralizar">
-                <div class="divisor" >
-                    <h3>A REALTECH</h3>
-                    <div class="image">
-                        <img src="./images/realtech.png">
+                <div class="hidden">
+                    <div class="divisor" >
+                        <h3>A REALTECH</h3>
+                        <div class="image">
+                            <img src="./images/realtech.png">
+                        </div>
                     </div>
                 </div>
 
+                <div class="hidden">
+                    <div id="boxes" class="boxes">
+                        <div id="caixa01" class="box">
+                            <h3>Projetos Web &nbsp &nbsp <i class="fa-solid fa-display"></i></h3>
+                            <p>Nossa empresa de tecnologia se destaca na criação de projetos de sites personalizados, que cativam o público e impulsionam o sucesso dos negócios.
+                            Contamos com uma equipe experiente e comprometida em transformar ideias criativas em soluções digitais inovador.</p>
+                        </div>
 
-                <div id="boxes" class="boxes">
-                    <div id="caixa01" class="box">
-                        <h3>Projetos Web &nbsp &nbsp <i class="fa-solid fa-display"></i></h3>
-                        <p>Nossa empresa de tecnologia se destaca na criação de projetos de sites personalizados, que cativam o público e impulsionam o sucesso dos negócios.
-                           Contamos com uma equipe experiente e comprometida em transformar ideias criativas em soluções digitais inovador.</p>
-                    </div>
-
-                    <div id="caixa02" class="box">
-                        <h3>Projetos Mobile &nbsp &nbsp <i class="fa-solid fa-mobile-screen"></i></h3>
-                        <p>Nossa empresa de tecnologia é líder no desenvolvimento de projetos mobiles inovadores, atendendo à crescente demanda por aplicativos e soluções móveis.
-                        Nossa equipe altamente qualificada transforma ideias em aplicativos práticos e envolventes, adaptados às necessidades moveis.</p>
+                        <div id="caixa02" class="box">
+                            <h3>Projetos Mobile &nbsp &nbsp <i class="fa-solid fa-mobile-screen"></i></h3>
+                            <p>Nossa empresa de tecnologia é líder no desenvolvimento de projetos mobiles inovadores, atendendo à crescente demanda por aplicativos e soluções móveis.
+                            Nossa equipe altamente qualificada transforma ideias em aplicativos práticos e envolventes, adaptados às necessidades moveis.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
     </body>
+    <script src="<?php echo BASEURL; ?>js/sobre.js"defer></script>
+    <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
 </html>

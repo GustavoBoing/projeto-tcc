@@ -11,21 +11,16 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
-        <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
     </head>
     <body>
-        <header>
+        <div class="tittle">
+            <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black; letter-spacing: 1px;"><i class='bx bx-hard-hat'></i>&nbsp EPI's </h2>
+            <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens de EPI</p>
+        </div>
+        <!-- <header>
             <h2>&nbsp<i class='bx bx-hard-hat' id="icons"></i>&nbsp &nbsp ESTOQUE - EPI´s </h2>
             <hr>
-            <!-- <div id="botoes">
-                <div class="pill-nav" id="adicionar">
-                    <a href="#contact">Adicionar</a>
-                </div>
-                <div class="pill-nav" id="editar">
-                    <a href="#about">Editar</a>
-                </div>
-            </div> -->
-        </header>
+        </header> -->
         <main>
             <table class="content-table">
                 <thead>
@@ -71,23 +66,6 @@
                         </tr>
                     <?php endif ; ?>
                 </tbody>
-                <!-- <tr>
-                    <td>001</td>
-                    <td>Óculos de segurança</td>
-                    <td>EPI</td>
-                    <td>
-                        <?php
-                            // for ($j = 0; $j < 1; $j++) {
-                            //     $valor = rand(1,100);
-                            // }
-                            // if ($valor < 10) {
-                            //     echo '<span class="vermelho">' . $valor . '</span>';
-                            // } elseif ($valor >= 11 && $valor <= 40) {
-                            //     echo '<span class="amarelo">' . $valor . '</span>';
-                            // } else {
-                            //     echo '<span class="verde">' . $valor . '</span>';
-                            // }
-                        ?>-->
             </table>
         </main>
 
@@ -188,13 +166,11 @@
                 </div>
             </div>
         </div>
-
             <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
             <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
             <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-
             <script src="js/custom.js"></script>
-
+            <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
     </body>
 <html>

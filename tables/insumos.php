@@ -14,9 +14,12 @@
         <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
     </head>
     <body>
-        <header>
-            <h2>&nbsp <i class='bx bx-grid-alt' id="icons"></i>&nbsp &nbsp ESTOQUE - INSUMOS </h2>
-            <hr>
+        <div class="tittle">
+            <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black; letter-spacing:1px;"><i class='bx bx-grid-alt'></i>&nbsp Insumos </h2>
+            <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens de Insumo</p>
+        </div>
+            <!-- <h2>&nbsp <i class='bx bx-grid-alt' id="icons"></i>&nbsp &nbsp ESTOQUE - INSUMOS </h2>
+            <hr> -->
             <!-- <div id="botoes">
                 <div class="pill-nav" id="adicionar">
                     <a href="#contact">Adicionar</a>
@@ -25,7 +28,6 @@
                     <a href="#about">Editar</a>
                 </div>
             </div> -->
-        </header>
         <main>
             <table class="content-table">
                 <thead>
@@ -87,7 +89,7 @@
                         <div class="row mb-3 w3-padding-16">
                             <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
                             <div class="col-sm-10">
-                                <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
+                                <input type="number" name="quantidade" class="form-control" id="editquantidade" placeholder="Digite a quantidade que deseja inserir">
                             </div>
                         </div>
 
@@ -115,7 +117,7 @@
                         <div class="row mb-3 w3-padding-16">
                             <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
                             <div class="col-sm-10">
-                                <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
+                                <input type="number" name="quantidade" class="form-control" min="0" id="editquantidade" placeholder="Quantidade">
                             </div>
                         </div>
 
@@ -172,6 +174,6 @@
                 </div>
             </div>
         </div>
-        
     </body>
+    <script src="<?php echo BASEURL ?>js/tabelas.js"></script>
 </html>

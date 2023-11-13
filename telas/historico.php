@@ -24,7 +24,7 @@
     </head>
     <body>
         <div class="tittle">
-            <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black;"><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Histórico</h2>
+            <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black; letter-spacing: 1px;"><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Histórico</h2>
             <p id="subtitulo">Visão geral das últimas transações</p>
         </div>
         <main>

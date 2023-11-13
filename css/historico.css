@@ -7,7 +7,7 @@
 }
 
 * {
-    font-family: system-ui, -apple-system, Helvetica, sans-serif, Arial;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
 }
@@ -19,6 +19,7 @@
 
 .tittle{
     margin: 25px 0 0 70px;
+    font-size: 20px;
 }
 
 main {
@@ -27,8 +28,8 @@ main {
 
 .content-table {
     border-collapse: collapse;
-    margin: 6vh auto;
-    font-size: 0.9em;
+    margin: 30px auto;
+    font-size: 15px;
     width: 90%;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
