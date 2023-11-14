@@ -70,26 +70,17 @@ body {
     color: var(--search-text);
 }
 
-/* .boxes > .box > li {
+ .boxes > .box > li {
 
     color: var(--search-text);
-    margin: 20px 0 0 15px;
-    text-align: left;
     
 }
 
-.boxes > .box > h3 {
-
-    color: var(--search-text);
-    font-size: 23px;
-    
-} */
-
-#caixa01:hover, #caixa02:hover, #caixa03:hover{
+/* #caixa01:hover, #caixa02:hover, #caixa03:hover{
     border: solid 1px var(--color-default);
     padding: 30px 30px 70px 30px;
     box-shadow: 10px 15px 30px rgb(0 0 0 / 18%);
-}
+} */
 
 /* #caixa02:hover {
     border: solid 1px var(--color-default);

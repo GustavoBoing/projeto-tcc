@@ -37,7 +37,7 @@
               <?php
                 if ($produtos) :
                   // var_dump($produtos);
-                  echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: white;">';
+                  echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: var(--search-text);">';
                   foreach ($produtos as $produto) :
                     echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . $produto['Quantidade'] . ' unidades ' . '</li>';
                   endforeach;
@@ -53,7 +53,7 @@
               <h3><i class="fa-solid fa-file-lines"></i>&nbsp; &nbsp;Baixa quantidade</h3>
               <?php
                 if ($poucos) :
-                  echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: white;">';
+                  echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: var(--search-text);">';
                   foreach ($poucos as $produto) :
                     echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . $produto['Quantidade'] . ' unidades ' . '</li>';
                   endforeach;
@@ -70,7 +70,7 @@
               <?php
                 if ($movimentacoes) :
                   // var_dump($movimentacoes);
-                  echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: white;">';
+                  echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: var(--search-text);">';
                     foreach ($movimentacoes as $produto) :
                         echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . $produto['quantidade'] . ' unidades ' . '</li>';
                         // var_dump($produto);
