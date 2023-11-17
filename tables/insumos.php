@@ -1,9 +1,9 @@
+<?php
+    require_once('function.php');
+    indexINS();
+    include(HEADER_TEMPLATE);
+?>
 <!DOCTYPE html>
-    <?php
-        require_once('function.php');
-        indexINS();
-        include(HEADER_TEMPLATE);
-    ?>
 <html>
     <head>
         <link rel="stylesheet" href="styleTbl.css"/>
@@ -58,10 +58,10 @@
                                     echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'
                                 ?>
                                 <td class="changes">
-                                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black"><i class='bx bx-plus-circle'></i>Adicionar</button>
-                                    <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black"><i class='bx bx-minus-circle'></i>Retirar</button>
-                                    <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-black"><i class="fa-solid fa-user-pen"></i>Editar</button>
-                                </td>
+                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-plus-circle'></i> Adicionar</a>
+                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-minus-circle'></i> Renovar</a>
+                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Editar</a>
+                                
                                 <?php } ?>
                             </tr>
                         <?php endforeach ; ?>    
@@ -69,105 +69,6 @@
                 </tbody>
             </table>
         </main>
-
-        <div class="w3-container">
-            <div id="id01" class="w3-modal">
-                <div class="w3-modal-content">
-                <header class="w3-container w3-teal"> 
-                    <span onclick="document.getElementById('id01').style.display='none'" 
-                    class="w3-button w3-display-topright">&times;</span>
-                    <h2>Adicionar</h2>
-                </header>
-                <div class="w3-container">
-                    <form method="POST" id="form-edit-usuario">
-                        <input type="hidden" name="id" id="editid">
-
-                        <div class="row mb-3">
-                            <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-outline-warning btn-sm" value="Salvar">Salvar</button>
-                    </form>
-                </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="w3-container">
-            <div id="id02" class="w3-modal">
-                <div class="w3-modal-content">
-                <header class="w3-container w3-teal"> 
-                    <span onclick="document.getElementById('id02').style.display='none'" 
-                    class="w3-button w3-display-topright">&times;</span>
-                    <h2>Retirar</h2>
-                </header>
-                <div class="w3-container">
-                <form method="POST" id="form-edit-usuario">
-                        <input type="hidden" name="id" id="editid">
-
-                        <div class="row mb-3">
-                            <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-outline-warning btn-sm" value="Salvar">Salvar</button>
-                    </form>
-                </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="w3-container">
-            <div id="id03" class="w3-modal">
-                <div class="w3-modal-content">
-                <header class="w3-container w3-teal"> 
-                    <span onclick="document.getElementById('id03').style.display='none'" 
-                    class="w3-button w3-display-topright">&times;</span>
-                    <h2>Editar</h2>
-                </header>
-                <div class="w3-container">
-                    <form method="POST" id="form-edit-usuario">
-                        <input type="hidden" name="id" id="editid">
-
-                        <div class="row mb-3">
-                            <label for="quantidade" class="col-sm-2 col-form-label">Quantidade</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="quantidade" class="form-control" id="editquantidade" placeholder="Quantidade">
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="valor" class="col-sm-2 col-form-label">Valor</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="valor" class="form-control" id="editvalor" placeholder="Valor">
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="modelo" class="col-sm-2 col-form-label">Modelo</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="modelo" class="form-control" id="editmodelo" placeholder="Modelo">
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="descricao" class="col-sm-2 col-form-label">Descrição</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="descricao" class="form-control" id="editdescricao" placeholder="Descrição">
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-outline-warning btn-sm" value="Salvar">Salvar</button>
-                    </form>
-                </div>
-                </div>
-            </div>
-        </div>
-        
+        <script src="js/custom.js"></script>
     </body>
 </html>
