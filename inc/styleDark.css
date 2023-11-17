@@ -142,9 +142,9 @@ body.dark .search-field i{
     color: var( --color-black);
 }
 
-body.dark .tittle > h2 {
-    color: var(--color-default);
-    text-shadow: 1px 2px 5px var(--color-black);
+body.dark .tittle > .titulos {
+    color: var(--color-black);
+    text-shadow: 1px 2px 5px var(--color-default);
 }
 
 #subtitulo {

@@ -73,7 +73,7 @@
     margin-right: 10px;
     width: 100px;
     height: 0;
-    border: 0.5px solid #D3D3D3;
+    border: 0.5px solid var(--search-text);
   }
   
   .divisor .image::after {
@@ -83,12 +83,12 @@
     margin-left: 10px;
     width: 100px;
     height: 0;
-    border: 0.5px solid #D3D3D3;
+    border: 0.5px solid var(--search-text);
     /*background: linear-gradient(#ECC440, #FFFA8A);*/
   }
   
   .linha-title {
-    color: white;
+    color: var(--search-text);
     box-sizing: border-box;
     max-width: 100%;
     max-height: 100%;
@@ -105,7 +105,7 @@
 
 .box {
     z-index: 99;
-    color: white;
+    color: var(--search-text);
 }
 
 .boxes .box {
@@ -147,4 +147,19 @@
     border: solid 1px var(--color-default);
     padding: 30px 30px 70px 30px;
     box-shadow: 10px 15px 30px rgb(0 0 0 / 18%);
+}
+
+
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1.5s;
 }
