@@ -53,9 +53,9 @@
                                 echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'
                             ?>
                             <td class="changes">
-                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-plus-circle'></i> Adicionar</a>
-                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-minus-circle'></i> Renovar</a>
-                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Editar</a>
+                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-plus-circle'></i> Adicionar</a>
+                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-minus-circle'></i> Renovar</a>
+                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class="fa fa-edit"></i> Editar</a>
                             </td>
                             <?php } ?>
                         </tr>

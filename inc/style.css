@@ -233,7 +233,7 @@
   }
 
 a {
-    color: var(--search-text);
+    color: rgb(168, 167, 167);
     text-decoration: none;
     transition: 0.5s;
   }
