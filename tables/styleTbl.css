@@ -18,11 +18,17 @@
 .tittle > .titulos {
     font-family: 'Poppins', sans-serif;
     margin: 25px 0 0 67px;
+<<<<<<< HEAD
     color: var(--color-black);
     font-size: 30px;
     font-weight: 1000;
     text-shadow: 3px 4px 4px black;
     letter-spacing: 1px;
+=======
+    color: #F06E2D;
+    font-size: 30px;
+    font-weight: 1000;
+>>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11
 }
 
 #subtitulo {
@@ -92,6 +98,56 @@
 
     margin-left: 2px;
 
+<<<<<<< HEAD
+=======
+}
+
+.changes button{
+
+    border-radius: 10px;
+    color: #383838;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+button[type=submit] {
+    width: 100%;
+    background-color: #F06E2D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #f35c10;
+    transition: 0.9s;
+}
+
+label{
+    font-size: medium;
+    margin-top: 50px;
+>>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11
 }
 
 .changes button{

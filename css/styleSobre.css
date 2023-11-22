@@ -52,7 +52,7 @@
   }
   
   .divisor{
-    color: white;
+    color: var(--search-text);
   }
   
   .divisor h3{
@@ -108,24 +108,24 @@
     color: var(--search-text);
 }
 
-.boxes .box {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 80vh;
-    height: 50vh;
-    padding: 2% 3% 10% 3%;
-    /* border-radius: 10px; */
-    margin: 0 2% 0 2%;
+.boxes .hidden > .box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80vh;
+  height: 50vh;
+  padding: 2% 3% 10% 3%;
+  /* border-radius: 10px; */
+  margin: 0 2% 0 2%;
 }
 
-.boxes > .box h3 {
+.boxes > .hidden > .box h3 {
   margin-top: 10px;
   color: var(--search-text);
 }
 
 
-.boxes > .box p {
+.boxes > .hidden > .box p {
     margin-right: 5px;
     margin-top: 20px;
     text-align: justify;
@@ -135,6 +135,7 @@
 #caixa01, #caixa02 {
     padding: 30px 30px 70px 30px;
     box-shadow: 5px 10px 25px rgb(0 0 0 / 18%);
+    margin-left: 10px;
 }
 
 #caixa01:hover {
@@ -149,7 +150,10 @@
     box-shadow: 10px 15px 30px rgb(0 0 0 / 18%);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11
 .hidden {
   opacity: 0;
   filter: blur(15px);
@@ -162,4 +166,9 @@
   filter: blur(0);
   transform: translateX(0);
   transition: all 1.5s;
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11

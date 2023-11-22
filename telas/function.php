@@ -15,10 +15,10 @@ $produto = null;
 $pouco = null;
 $poucos = null;
 
-    function maisUtilizados(){
-        global $movimentacoes;
-        $join = "S";
-    }
+function maisUtilizados(){
+    global $movimentacoes;
+    $movimentacoes = innerJoin2("id_mov, id_produto, COUNT(Produto_id) AS total_saidas,  SUM(CASE WHEN EntraSai = 'Entra' THEN QntdModificada ELSE 0 END) AS quantidade, Descricao, Funcionario, EntraSai, QntdModificada, Datas, Produto_id", "movimentacao", "produto", "movimentacao.Produto_id", "produto.id_produto", "'Entra'", "DESC");
+}
 
     function movimentacao() {
         global $produtos;
@@ -56,6 +56,32 @@ $poucos = null;
         try{
             if($p) {
               $sql = "SELECT " . $data . " FROM " . $table . " INNER JOIN " . $tableInner . " ON " . $table01Column . "=" . $p;
+              $result = $database->query($sql);
+              if($result->num_rows > 0)  {
+                  $found = array();
+                  while ($row = $result->fetch_assoc()) {
+                    array_push($found, $row);
+                  }
+              } else{
+                  throw new Exception("Não foram encontrados registros de dados!");
+              }
+            }
+        } catch (Exception $e)  {
+            $_SESSION['message'] = "Ocorreu um erro: " . $e->getMessage();
+            $_SESSION['type'] = "danger";
+        }
+        close_database($database);
+        return $found;
+    }
+
+    function innerJoin2 ($data = null, $table = null, $tableInner = null, $table01Column = null,$dataInner = null, $sai = null, $p = null) {
+
+        $database = open_database();
+        $found = null;
+    
+        try{
+            if($p) {
+              $sql = "SELECT " . $data . " FROM " . $table . " INNER JOIN " . $tableInner . " ON " . $table01Column . "=" . $dataInner . " WHERE EntraSai = " . $sai . " GROUP BY Descricao ORDER BY quantidade " . $p . " LIMIT 5";
               $result = $database->query($sql);
               if($result->num_rows > 0)  {
                   $found = array();

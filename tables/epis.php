@@ -14,7 +14,11 @@
     </head>
     <body>
         <div class="tittle">
+<<<<<<< HEAD
             <h2 class="titulos"><i class='bx bx-hard-hat'></i>&nbsp EPI's </h2>
+=======
+            <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black; letter-spacing: 1px;"><i class='bx bx-hard-hat'></i>&nbsp EPI's </h2>
+>>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11
             <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens de EPI</p>
         </div>
         <!-- <header>
