@@ -18,17 +18,15 @@
 .tittle > .titulos {
     font-family: 'Poppins', sans-serif;
     margin: 25px 0 0 67px;
-<<<<<<< HEAD
     color: var(--color-black);
     font-size: 30px;
     font-weight: 1000;
     text-shadow: 3px 4px 4px black;
     letter-spacing: 1px;
-=======
     color: #F06E2D;
     font-size: 30px;
     font-weight: 1000;
->>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11
+/* >>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11 */
 }
 
 #subtitulo {
@@ -91,15 +89,10 @@
 
 .changes {
     width: 40%;
-    
 }
 
 .changes a{
-
     margin-left: 2px;
-
-<<<<<<< HEAD
-=======
 }
 
 .changes button{
@@ -147,7 +140,6 @@ button[type=submit]:hover {
 label{
     font-size: medium;
     margin-top: 50px;
->>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11
 }
 
 .changes button{
@@ -212,4 +204,23 @@ label{
 .TituloEdit > input{
     margin: 2px, 3px, 5px, 8px;
     size: 30px;
+}
+
+.gera-pdf {
+    margin: 25px 0 0 5%;
+}
+
+.gera-pdf > a > button {
+    padding: 8px 10px 8px 10px;
+    background: #1c1c1c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.gera-pdf > a > button:hover {
+    background-color: #363636;
+    transition: .8s;
 }

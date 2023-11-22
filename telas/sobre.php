@@ -11,7 +11,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="<?php echo BASEURL; ?>./inc/style.css" />
-        <link rel="stylesheet" href="<?php echo BASEURL; ?>./images" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>./css/styleSobre.css" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
 
@@ -87,6 +86,6 @@
             </div>
         </main>
     </body>
-    <script src="<?php echo BASEURL; ?>js/sobre.js"defer></script>
-    <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
+    <script src="<?php echo BASEURL; ?>js/index.js"></script>
+    <script src="<?php echo BASEURL; ?>js/script.js"defer></script>
 </html>

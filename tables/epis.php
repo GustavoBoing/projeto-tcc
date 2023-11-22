@@ -6,7 +6,7 @@
     ?>
 <html>
     <head>
-        <link rel="stylesheet" href="styleTbl.css"/>
+        <link rel="stylesheet" href="<?php echo BASEURL; ?>css/styleTbl.css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
@@ -14,17 +14,17 @@
     </head>
     <body>
         <div class="tittle">
-<<<<<<< HEAD
+
             <h2 class="titulos"><i class='bx bx-hard-hat'></i>&nbsp EPI's </h2>
-=======
+
             <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black; letter-spacing: 1px;"><i class='bx bx-hard-hat'></i>&nbsp EPI's </h2>
->>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11
+
             <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens de EPI</p>
         </div>
-        <!-- <header>
-            <h2>&nbsp<i class='bx bx-hard-hat' id="icons"></i>&nbsp &nbsp ESTOQUE - EPI´s </h2>
-            <hr>
-        </header> -->
+
+        <div class="gera-pdf">
+            <a class="botao-gerar" href="gera_pdf_epi.php"><button><i class="fa-solid fa-print" style="color: #ffffff;"></i>&nbsp Gerar Relatório</button></a>
+        </div>
         <main>
             <table class="content-table">
                 <thead>

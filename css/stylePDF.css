@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.titulo{
+    font-size: 20px;
+    margin: 20px 50px 20px 50px;
+    text-align: center;
+}
+
+.content {
+    margin: 5px 50px 5px 50px;
+}
+
+.produto {
+    font-size: 15px;
+    margin: 5px 0 5px 0;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 50px 0 50px;
+    justify-content: space-between;
+}
+
+.copy > p {
+    font-size: 15px;
+}
+
+.data > p {
+    font-size: 15px;
+}

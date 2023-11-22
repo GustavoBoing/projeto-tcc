@@ -150,10 +150,6 @@
     box-shadow: 10px 15px 30px rgb(0 0 0 / 18%);
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11
 .hidden {
   opacity: 0;
   filter: blur(15px);
@@ -166,9 +162,4 @@
   filter: blur(0);
   transform: translateX(0);
   transition: all 1.5s;
-<<<<<<< HEAD
 }
-=======
-}
-
->>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11
