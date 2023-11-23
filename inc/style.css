@@ -411,4 +411,214 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 
+.tittle {
+  font-family: 'Poppins', sans-serif;
+}
 
+.tittle > .titulos {
+  font-family: 'Poppins', sans-serif;
+  margin: 25px 0 0 67px;
+  color: var(--color-black);
+  font-size: 30px;
+  font-weight: 1000;
+  text-shadow: 3px 4px 4px black;
+  letter-spacing: 1px;
+  color: #F06E2D;
+  font-size: 30px;
+  font-weight: 1000;
+
+}
+
+#subtitulo {
+  color: var(--color-white);
+}
+
+/* hr {
+  margin: 2px auto;
+  width: 90%;
+  border-color: #1c1c1c;
+} */
+
+.content-table {
+  border-collapse: collapse;
+  margin: 6vh auto;
+  font-size: 0.9em;
+  width: 90%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 15px #383838;
+}
+.content-table thead tr{
+  background-color: #F06E2D;
+  color: #1c1c1c;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-table th, .content-table td{
+  padding: 12px 15px;
+}
+.content-table td{
+  text-align: center;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr{
+  background-color: #1c1c1c;
+  color:#dddddd
+}
+.content-table tbody tr:hover{
+  background-color: #383838;
+  transition: .6s;
+}
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #F06E2D
+}
+
+.vermelho {
+  color: rgb(255, 0, 0);
+}
+.amarelo {
+  color: #fffb00;
+}
+.verde {
+  color: rgb(3, 250, 3);
+}  
+
+.changes {
+  width: 40%;
+}
+
+.changes a{
+  margin-left: 2px;
+}
+
+.changes button{
+
+  border-radius: 10px;
+  color: #383838;
+}
+
+
+input[type=text], select {
+  width: 90%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number], select {
+  width: 90%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+button[type=submit] {
+  width: 100%;
+  background-color: #F06E2D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #000000;
+  transition: 0.10s;
+  
+}
+
+label{
+  font-size: small;
+  margin-top: 50px;
+}
+
+
+.TituloEdit{
+
+  font-family: 'Poppins', sans-serif;
+  margin: 25px 0 0 67px;
+  margin-bottom: 20px;
+  color: var(--color-black);
+  font-size: 20px;
+  font-weight: 1000;
+  text-shadow: 3px 4px 4px black;
+  letter-spacing: 1px;
+}
+
+.TituloEdit > input{
+  margin: 2px, 3px, 5px, 8px;
+  size: 30px;
+}
+
+.btnfuncoes{
+
+  display: flex;
+  flex-direction: row;
+  margin: 10px; 
+  margin-left: 65px;
+}
+
+.btnfuncoes > button{
+
+  width: 100px;
+  height: 20px;
+}
+
+.btnSalvar{
+
+ margin-right: 20px;
+
+  }
+
+  .btnCancelar{
+
+    margin-left: 20px;
+   
+  }
+
+.Nome{
+
+  margin-left: 15px;
+  color: var(--search-text);
+
+}
+
+.Modelo{
+
+  margin-left: 15px;
+  color: var(--search-text);
+
+}
+
+.Valor{
+
+  margin-left: 15px;
+  color: var(--search-text);
+
+}
+
+.Qtd{
+
+  margin-left: 15px;
+  color: var(--search-text);
+
+}
+
+form{
+
+  display: flex;
+  margin-left: 50px;
+}

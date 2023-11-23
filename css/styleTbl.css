@@ -26,7 +26,7 @@
     color: #F06E2D;
     font-size: 30px;
     font-weight: 1000;
-/* >>>>>>> a3588f4e09264684f09042d0576d0d86b9800c11 */
+
 }
 
 #subtitulo {
@@ -149,7 +149,7 @@ label{
 }
 
 input[type=text], select {
-    width: 60%;
+    width: 80%;
     padding: 2px 8px;
     margin: 4px 0;
     display: inline-block;
@@ -193,7 +193,7 @@ label{
 .TituloEdit{
 
     font-family: 'Poppins', sans-serif;
-    margin: 25px 0 0 67px;
+    margin: 25px 0px 0px 67px;
     color: var(--color-black);
     font-size: 30px;
     font-weight: 1000;
