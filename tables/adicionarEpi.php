@@ -29,7 +29,7 @@
     ?>
     <body>
         <div class="TituloEdit">
-            <h2 class="titulos"><i class='bx bx-hard-hat'></i>&nbsp Editar Dados </h2>
+            <h2 class="titulos"><i class='bx bx-plus-circle'></i>&nbsp Adicionar </h2>
         </div>
         <form class="tela-editar" method="POST" action="functions/add.php" enctype="multipart/form-data">
             <div class="deixar-column">
@@ -75,4 +75,5 @@
             </div>
         </form>
     </body>
+    <script src="<?php echo BASEURL?>js/script.js"></script>
 </html>

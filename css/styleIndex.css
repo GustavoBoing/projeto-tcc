@@ -30,6 +30,8 @@ body {
     display: inline-block;
     font-size: 25px;
     font-weight: 500;
+    color: var(--color-black);
+    
 }
 
 .boxes {

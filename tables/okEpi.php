@@ -20,4 +20,5 @@
             <a href="<?php echo BASEURL; ?>tables/epis.php">Clique aqui e retorne para a tela de EPI</a>
         </div>
     </body>
+    <script src="<?php echo BASEURL?>js/script.js"></script>
 </html>

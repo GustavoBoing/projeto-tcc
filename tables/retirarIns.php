@@ -30,7 +30,7 @@ $row_produto = mysqli_fetch_assoc($resultado_produto);
     ?>
     <body>
         <div class="TituloEdit">
-            <h2 class="titulos"><i class='bx bx-hard-hat'></i>&nbsp Editar Dados </h2>
+            <h2 class="titulos"><i class='bx bx-minus-circle'></i>&nbsp Retirar </h2>
         </div>
         <form class="tela-editar" method="POST" action="functions/retira.php" enctype="multipart/form-data">
             <div class="deixar-column">
@@ -76,4 +76,5 @@ $row_produto = mysqli_fetch_assoc($resultado_produto);
             </div>
         </form>
     </body>
+    <script src="<?php echo BASEURL?>js/script.js"></script>
 </html>

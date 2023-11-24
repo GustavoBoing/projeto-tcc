@@ -82,5 +82,5 @@
    
     </body>
     <script src="<?php echo BASEURL ?>js/tabelas.js"></script>
-    <script src="<?php echo BASEURL; ?>inc/script.js"defer></script>
+    <script src="<?php echo BASEURL?>js/script.js"></script>
 </html>
