@@ -10,9 +10,9 @@ $result_produto = "UPDATE produto SET quantidade = quantidade + $quantidade_a_so
 $resultado_produto = mysqli_query($conn, $result_produto);
 
 if(mysqli_affected_rows($conn)){
-    $_SESSION['msg'] = "<p style='color:green;'>Produto editado com sucesso</p>";
-    header("Location: ./index.php");
+	$_SESSION['msg'] = "";
+	header("Location: ../okEpi.php");
 } else {
-    $_SESSION['msg'] = "<p style='color:red;'>Produto não foi editado com sucesso</p> <a href='editEpi.php?id=$id_produto'>Retornar para tentar novamente</a>>";
-    var_dump($result_produto);
+    $_SESSION['msg'] = "<p style='color:red;'>Produto não foi editado com sucesso</p> <a href='editEpi.php?id=$id_produto'>Retornar para tentar novamente</a>";
+    // var_dump($result_produto);
 }

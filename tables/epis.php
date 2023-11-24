@@ -26,10 +26,15 @@
             </div>
             <div class="filtro">
                 <form action="epis.php" method="POST">
-                    <label for="">Filtro</label>
-                    <input class="filtro" type="text" name="filtro">
-                    <input type="submit" value="buscar">
-                    <?php //var_dump($produtos);?>
+                <div class="actionsTbls">
+                        <div class="input-Filtro">
+                            <input class="btnFiltro" type="text" name="filtro" placeholder="Pesquise um produto">
+                        </div>
+                        <div class="btnFiltro">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: white"></i></button>
+                        </div>
+                        <?php //var_dump($produtos);?>
+                    </div>
                 </form>
             </div>
         </div>
@@ -63,8 +68,8 @@
                                 echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'
                             ?>
                             <td class="changes">
-                                <a href="adicionar.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-plus-circle'></i> Adicionar</a>
-                                <a href="retirar.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-minus-circle'></i> Retirar</a>
+                                <a href="adicionarEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-plus-circle'></i> Adicionar</a>
+                                <a href="retirarEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-minus-circle'></i> Retirar</a>
                                 <a href="editEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class="fa fa-edit"></i> Editar</a>
                             </td>
                             <?php } ?>

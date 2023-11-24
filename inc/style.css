@@ -501,7 +501,7 @@ img {vertical-align: middle;}
   color: #383838;
 }
 
-
+/* 
 input[type=text], select {
   width: 90%;
   padding: 10px 20px;
@@ -520,20 +520,6 @@ input[type=number], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-/* .btnCancela {
-  padding: 10px 20px;
-  height: 40px;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #F06E2D;
-  color: white;
-}
-
-.btnCancela:hover {
-  background-color: #636262;
-  transition: 0.8s;
 } */
 
 label{
@@ -642,7 +628,7 @@ label{
   transition: 0.8s;
   
 }
-
+/* 
 button[type=submit] {
   width: 100px;
   background-color: #F06E2D;
@@ -659,4 +645,5 @@ button[type=submit]:hover {
   background-color: #636262;
   transition: 0.8s;
   
-}
+} */
+

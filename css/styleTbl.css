@@ -101,7 +101,7 @@
     color: #383838;
 }
 
-input[type=text], select {
+/* input[type=text], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -135,7 +135,7 @@ button[type=submit] {
 button[type=submit]:hover {
     background-color: #f35c10;
     transition: 0.9s;
-}
+} */
 
 label{
     font-size: medium;
@@ -147,7 +147,7 @@ label{
     border-radius: 10px;
     color: #ffffff;
 }
-
+/* 
 input[type=text], select {
     width: 80%;
     padding: 2px 8px;
@@ -182,7 +182,7 @@ button[type=submit] {
 button[type=submit]:hover {
     background-color: #f35c10;
     transition: 0.9s;
-}
+} */
 
 label{
     font-size: small;
@@ -229,4 +229,36 @@ label{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-right: 5%;
+}
+
+.actionsTbls {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 5% 0 0;
+}
+
+.btnFiltro > button{
+    padding: 8px 10px 8px 10px;
+    background: var(--color-black);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btnFiltro > button:hover {
+    background-color: #363636;
+    transition: .8s;
+}
+
+.input-Filtro > input {
+    width: 250px;
+    padding: 7px 10px 7px 10px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-right: 5px;
 }

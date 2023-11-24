@@ -14,12 +14,12 @@ $result_produto = "UPDATE produto SET descricao='$descricao', valor='$valor', mo
 $resultado_produto = mysqli_query($conn, $result_produto);
 
 if(mysqli_affected_rows($conn)){
-	$_SESSION['msg'] = "<p style='color:green;'>Produto editado com sucesso</p><br>";
-	header("Location: ../epis.php");
+	$_SESSION['msg'] = "";
+	header("Location: ../okEpi.php");
 }else{
-	$_SESSION['msg'] = "<p style='color:red;'>Produto não foi editado com sucesso</p>";
-	header("Location: editEpi.php?id=$id_produto");
-	var_dump($result_produto);
+	$_SESSION['msg'] = "";
+	header("Location: ../erradoEpi.php");
+	// var_dump($result_produto);
 }
 
                                     
