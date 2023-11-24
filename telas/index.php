@@ -25,7 +25,7 @@
         <title>Almoxarifado</title>
     </head>
     <body>
-      <div class="tittle" style="padding-left:16px">
+      <div class="tittleIndex" style="padding-left:16px">
         <h2 class="titulos" style="color:#F06E2D; text-shadow: 1px 2px 5px black;"><i class="fa-brands fa-uncharted fa-lg"></i> &nbsp; Página Inicial</h2>
         <p id="subtitulo">Visão geral do Almoxarifado</p>
       </div>

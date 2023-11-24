@@ -1,7 +1,7 @@
 <?php 
-    require_once "../../config.php";
-    require_once('../function.php');
-    require '../../vendor/autoload.php';
+    require_once "../config.php";
+    require_once('./function.php');
+    require '../vendor/autoload.php';
     geraPdfEpi();
 
     $d = new DateTime("now");

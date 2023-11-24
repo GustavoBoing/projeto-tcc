@@ -417,7 +417,7 @@ img {vertical-align: middle;}
 
 .tittle > .titulos {
   font-family: 'Poppins', sans-serif;
-  margin: 25px 0 0 67px;
+  margin: 25px 0 0 5%;
   color: var(--color-black);
   font-size: 30px;
   font-weight: 1000;
@@ -522,23 +522,19 @@ input[type=number], select {
   box-sizing: border-box;
 }
 
-
-button[type=submit] {
-  width: 100%;
-  background-color: #F06E2D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
+/* .btnCancela {
+  padding: 10px 20px;
+  height: 40px;
   border-radius: 4px;
   cursor: pointer;
+  background-color: #F06E2D;
+  color: white;
 }
 
-button[type=submit]:hover {
-  background-color: #000000;
-  transition: 0.10s;
-  
-}
+.btnCancela:hover {
+  background-color: #636262;
+  transition: 0.8s;
+} */
 
 label{
   font-size: small;
@@ -564,34 +560,18 @@ label{
 }
 
 .btnfuncoes{
-
   display: flex;
   flex-direction: row;
-  margin: 10px; 
-  margin-left: 65px;
-}
-
-.btnfuncoes > button{
-
-  width: 100px;
-  height: 20px;
 }
 
 .btnSalvar{
 
  margin-right: 20px;
 
-  }
-
-  .btnCancelar{
-
-    margin-left: 20px;
-   
-  }
+}
 
 .Nome{
 
-  margin-left: 15px;
   color: var(--search-text);
 
 }
@@ -617,8 +597,66 @@ label{
 
 }
 
-form{
+.tela-editar{
 
   display: flex;
-  margin-left: 50px;
+  margin: 0 5% 0 5%;
+}
+
+.deixar-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputValues {
+  display: flex;
+  flex-direction: row;
+}
+
+.btnFuncoes {
+  display: flex;
+  flex-direction: row;
+}
+
+.btnFuncoes > .btnCancela {
+  display: inline;
+  width: 100px;
+  background-color: #F06E2D;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  padding: 8px 15px;
+}
+
+.btnFuncoes > .btnCancela a {
+  color: white;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnFuncoes > .btnCancela:hover {
+  background-color: #636262;
+  transition: 0.8s;
+  
+}
+
+button[type=submit] {
+  width: 100px;
+  background-color: #F06E2D;
+  color: white;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  font-size: 15px;
+}
+
+button[type=submit]:hover {
+  background-color: #636262;
+  transition: 0.8s;
+  
 }

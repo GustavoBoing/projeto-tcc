@@ -51,13 +51,13 @@
                                 } else {
                                      echo '<td>' . '<span class="verde">' . $produto['Quantidade'] . '</span>' . '</td>';
                                 }
-                                echo '<td>'. 'R$ ' . $produto['Valor'].'</td>';
+                                echo '<td>'. 'R$ ' . number_format($produto['Valor'], 2, ',', '.') . '</td>';
                                 echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'
                             ?>
                             <td class="changes">
-                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-plus-circle'></i> Adicionar</a>
-                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-minus-circle'></i> Renovar</a>
-                                <a href="edit.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class="fa fa-edit"></i> Editar</a>
+                                <a href="adicionar.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-plus-circle'></i> Adicionar</a>
+                                <a href="retirar.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-minus-circle'></i> Retirar</a>
+                                <a href="editEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class="fa fa-edit"></i> Editar</a>
                             </td>
                             <?php } ?>
                         </tr>

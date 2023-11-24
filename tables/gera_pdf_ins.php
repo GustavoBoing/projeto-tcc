@@ -42,11 +42,13 @@
     $dompdf = new Dompdf(['enable_remote' => true]);
 
     $dados .= "<img src=''>";
+    $dados .= "<footer>";
     $dados .= "<div class='date'>";
     $dados .= "<div class='data'>";
     $dados .= "<p class=''>$dataAtual</p>";
     $dados .= "</div>";
     $dados .= "</div>";
+    $dados .= "</footer>";
     $dados .= "</body>";
     
     //Instanciar o método
