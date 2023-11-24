@@ -12,8 +12,8 @@ $gerarRelatorioIns = null;
 
     function indexEPI() {
         global $produtos;
-        if (!empty($_POST['Descricao'])){
-            $produtos = filter("produto", "Descricao LIKE '%" . $_POST['Descricao'] . "%'");
+        if (!empty($_POST['filtro'])){
+            $produtos = filter("produto", "Descricao LIKE '%" . $_POST['filtro'] . "%' AND Tipo = 1");
         } else {
             $produtos = find_all('produto');
         }
@@ -21,10 +21,19 @@ $gerarRelatorioIns = null;
 
     function indexINS() {
         global $produtos;
-        if (!empty($_POST['Descricao'])){
-            $produtos = filter("produto", "Tipo LIKE '%" . $_POST['Tipo'] . "%'");
+        if (!empty($_POST['filtro'])){
+            $produtos = filter("produto", "Descricao LIKE '%" . $_POST['filtro'] . "%' AND Tipo = 2");
         } else {
             $produtos = find_all('produto');
+        }
+    }
+
+    function filtragem () {
+        global $filtro;
+        if(!empty($_POST['filtro'])) {
+            $filtro = filter("produto", "Descricao LIKE '%" . $_POST['filtro'] . "%' AND Tipo = 1");
+        } else {
+            $filtro = find_all('produto');
         }
     }
 

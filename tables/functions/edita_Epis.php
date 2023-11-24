@@ -14,7 +14,7 @@ $result_produto = "UPDATE produto SET descricao='$descricao', valor='$valor', mo
 $resultado_produto = mysqli_query($conn, $result_produto);
 
 if(mysqli_affected_rows($conn)){
-	$_SESSION['msg'] = "<p style='color:green;'>Usuário editado com sucesso</p><br>";
+	$_SESSION['msg'] = "<p style='color:green;'>Produto editado com sucesso</p><br>";
 	header("Location: ../epis.php");
 }else{
 	$_SESSION['msg'] = "<p style='color:red;'>Produto não foi editado com sucesso</p>";

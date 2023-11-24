@@ -224,3 +224,9 @@ label{
     background-color: #363636;
     transition: .8s;
 }
+
+.parte-superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

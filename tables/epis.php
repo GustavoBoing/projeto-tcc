@@ -1,6 +1,7 @@
     <?php
         require_once('function.php');
         indexEPI();
+        // filtragem();
         include(HEADER_TEMPLATE);
     ?>
 <!DOCTYPE html>    
@@ -19,15 +20,23 @@
 
             <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens de EPI</p>
         </div>
-
-        <div class="gera-pdf">
-            <a class="botao-gerar" href="gera_pdf_epi.php"><button><i class="fa-solid fa-print" style="color: #ffffff;"></i>&nbsp Gerar Relatório</button></a>
+        <div class="parte-superior">
+            <div class="gera-pdf">
+                <a class="botao-gerar" href="gera_pdf_epi.php"><button><i class="fa-solid fa-print" style="color: #ffffff;"></i>&nbsp Gerar Relatório</button></a>
+            </div>
+            <div class="filtro">
+                <form action="epis.php" method="POST">
+                    <label for="">Filtro</label>
+                    <input class="filtro" type="text" name="filtro">
+                    <input type="submit" value="buscar">
+                    <?php //var_dump($produtos);?>
+                </form>
+            </div>
         </div>
         <main>
             <table class="content-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>EPI</th>
                         <th>Quantidade</th>
                         <th>Valor Unitário</th>
@@ -42,7 +51,6 @@
                         <?php 
                             if ($produto['Tipo'] == '1') 
                             {
-                                echo '<td>'.$produto['id_produto'].'</td>';
                                 echo '<td>'.$produto['Descricao'].'</td>';
                                 if($produto['Quantidade'] < 10 ){
                                     echo '<td>' . '<span class="vermelho">' . $produto['Quantidade'] . '</span>' . '</td>';
