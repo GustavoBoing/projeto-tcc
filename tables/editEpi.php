@@ -29,8 +29,8 @@ $row_produto = mysqli_fetch_assoc($resultado_produto);
         }
     ?>
     <body>
-        <div class="TituloEdit">
-            <h2 class="titulos"><i class="fa fa-edit"></i>&nbsp Editar Dados </h2>
+        <div class="TituloARE">
+            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Editar Dados </h2>
         </div>
         <form class="tela-editar" method="POST" action="functions/edita_Epis.php" enctype="multipart/form-data">
             <div class="deixar-column">

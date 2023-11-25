@@ -31,6 +31,7 @@
         <div class="TituloEdit">
             <h2 class="titulos"><i class='bx bx-plus-circle'></i>&nbsp Adicionar </h2>
         </div>
+        
         <form class="tela-editar" method="POST" action="functions/add.php" enctype="multipart/form-data">
             <div class="deixar-column">
                 <div class="inputValues">

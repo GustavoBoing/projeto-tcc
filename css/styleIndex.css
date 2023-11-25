@@ -25,14 +25,26 @@ body {
     color: var(--color-white);
 }
 
-.tittleIndex{
-    margin: 35px 18px 18px 5%;
-    display: inline-block;
-    font-size: 25px;
-    font-weight: 500;
+.tittleIndex {
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+.tittleIndex > .tituloIdx{
+
+    font-family: 'Poppins', sans-serif;
+    margin: 25px 0 0 5%;
     color: var(--color-black);
+    font-size: 30px;
+    font-weight: 1000;
+    text-shadow: 3px 4px 4px var(--color-black);
+    letter-spacing: 1px;
+    color: black;
+    font-size: 30px;
+    font-weight: 1000;
     
 }
+
 
 .boxes {
     margin: 30px 60px 50px 60px;

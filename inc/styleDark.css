@@ -147,12 +147,22 @@ body.dark .tittle > .titulos {
     text-shadow: 3px 3px 3px var(--color-default);
 }
 
-body.dark .tittleIndex > .titulos > h2{
+body.dark .tittleIndex > .titulos {
     color: var(--color-black);
     text-shadow: 3px 3px 3px var(--color-default);
 }
 
-body.dark .tituloEdit > .titulos > h2{
+body.dark .tituloEdit > .titulos {
+    color: var(--color-black);
+    text-shadow: 3px 3px 3px var(--color-default);
+}
+
+body.dark .tittleIndex > .tituloIdx {
+    color: var(--color-black);
+    text-shadow: 3px 3px 3px var(--color-default);
+}
+
+body.dark .tituloARE > .tituloare {
     color: var(--color-black);
     text-shadow: 3px 3px 3px var(--color-default);
 }

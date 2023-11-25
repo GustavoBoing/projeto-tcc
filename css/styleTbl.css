@@ -147,7 +147,7 @@ label{
     border-radius: 10px;
     color: #ffffff;
 }
-/* 
+
 input[type=text], select {
     width: 80%;
     padding: 2px 8px;
@@ -182,7 +182,7 @@ button[type=submit] {
 button[type=submit]:hover {
     background-color: #f35c10;
     transition: 0.9s;
-} */
+} 
 
 label{
     font-size: small;
@@ -239,7 +239,7 @@ label{
 }
 
 .btnFiltro > button{
-    padding: 8px 10px 8px 10px;
+    padding: 6px 8px 6px 10px;
     background: var(--color-black);
     color: white;
     border: none;
@@ -255,10 +255,10 @@ label{
 
 .input-Filtro > input {
     width: 250px;
-    padding: 7px 10px 7px 10px;
+    padding: 9px 10px 10px 13px;
     color: black;
     border: none;
     border-radius: 5px;
     font-size: 15px;
-    margin-right: 5px;
+    margin-right: 20px;
 }

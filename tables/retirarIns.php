@@ -29,8 +29,8 @@ $row_produto = mysqli_fetch_assoc($resultado_produto);
         }
     ?>
     <body>
-        <div class="TituloEdit">
-            <h2 class="titulos"><i class='bx bx-minus-circle'></i>&nbsp Retirar </h2>
+        <div class="TituloARE">
+            <h2 class="titulosare"><i class='bx bx-minus-circle'></i>&nbsp Retirar </h2>
         </div>
         <form class="tela-editar" method="POST" action="functions/retira.php" enctype="multipart/form-data">
             <div class="deixar-column">

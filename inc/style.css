@@ -542,10 +542,23 @@ label{
   font-weight: 1000;
 }
 
-.TituloEdit > input{
-  margin: 2px, 3px, 5px, 8px;
-  size: 30px;
+
+
+.TituloARE > .titulosare{
+
+  font-family: 'Poppins', sans-serif;
+  margin: 25px 0 0 5%;
+  color: var(--color-black);
+  font-size: 30px;
+  font-weight: 1000;
+  text-shadow: 3px 4px 4px black;
+  letter-spacing: 1px;
+  color: var(--color-black);
+  font-size: 30px;
+  font-weight: 1000;
 }
+
+
 
 .btnfuncoes{
   display: flex;
