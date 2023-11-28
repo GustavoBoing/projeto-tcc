@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 22-Set-2023 às 19:02
--- Versão do servidor: 10.4.25-MariaDB
--- versão do PHP: 8.0.23
+-- Host: localhost
+-- Tempo de geração: 28/11/2023 às 20:34
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `aumoxarifado`
+-- Banco de dados: `almoxarifado`
 --
 CREATE DATABASE IF NOT EXISTS `almoxarifado` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `almoxarifado`;
@@ -26,17 +26,17 @@ USE `almoxarifado`;
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `fornecedor`
+-- Estrutura para tabela `fornecedor`
 --
 
 CREATE TABLE `fornecedor` (
   `id_fornecedor` int(11) NOT NULL,
   `CNPJ` varchar(14) DEFAULT NULL,
   `Nome` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `fornecedor`
+-- Despejando dados para a tabela `fornecedor`
 --
 
 INSERT INTO `fornecedor` (`id_fornecedor`, `CNPJ`, `Nome`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `fornecedor` (`id_fornecedor`, `CNPJ`, `Nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `funcionario`
+-- Estrutura para tabela `funcionario`
 --
 
 CREATE TABLE `funcionario` (
@@ -57,10 +57,10 @@ CREATE TABLE `funcionario` (
   `Nome` varchar(100) DEFAULT NULL,
   `TelContato` varchar(11) DEFAULT NULL,
   `CPF` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `funcionario`
+-- Despejando dados para a tabela `funcionario`
 --
 
 INSERT INTO `funcionario` (`id_funcionario`, `Nome`, `TelContato`, `CPF`) VALUES
@@ -73,102 +73,101 @@ INSERT INTO `funcionario` (`id_funcionario`, `Nome`, `TelContato`, `CPF`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `movimentacao`
+-- Estrutura para tabela `movimentacao`
 --
 
 CREATE TABLE `movimentacao` (
   `id_mov` int(11) NOT NULL,
-  `Datas` date DEFAULT NULL,
-  `Usuario` varchar(50) DEFAULT NULL,
+  `Data` datetime DEFAULT NULL,
+  `QntdAtual` int(11) NOT NULL,
   `QntdModificada` int(11) DEFAULT NULL,
-  `Funcionario` varchar(50) DEFAULT NULL,
-  `EntraSai` varchar(10) DEFAULT NULL,
   `Produto_id` int(11) DEFAULT NULL,
   `Usuario_id` int(11) DEFAULT NULL,
   `Funcionario_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `movimentacao`
+-- Despejando dados para a tabela `movimentacao`
 --
 
-INSERT INTO `movimentacao` (`id_mov`, `Datas`, `Usuario`, `QntdModificada`, `Funcionario`, `EntraSai`, `Produto_id`, `Usuario_id`, `Funcionario_id`) VALUES
-(1, '0000-00-00', 'Silvio0321', 2, 'Olete Smith', 'Entra', 1, 1, 4),
-(2, '0000-00-00', 'Silvio0321', 4, 'Olete Smith', 'Entra', 2, 1, 4),
-(3, '0000-00-00', 'Silvio0321', 9, 'Olete Smith', 'Entra', 3, 2, 2),
-(4, '0000-00-00', 'Silvio0321', 1, 'Olete Smith', 'Entra', 4, 2, 2),
-(5, '0000-00-00', 'Silvio0321', 10, 'Olete Smith', 'Entra', 5, 3, 4);
+INSERT INTO `movimentacao` (`id_mov`, `Data`, `QntdAtual`, `QntdModificada`, `Produto_id`, `Usuario_id`, `Funcionario_id`) VALUES
+(1, '2023-11-28 00:00:00', 0, 2, 1, 1, NULL),
+(2, '2023-11-28 00:00:00', 0, 4, 2, 1, NULL),
+(3, '2023-11-28 00:00:00', 0, 9, 3, 2, NULL),
+(4, '2023-11-28 00:00:00', 0, 1, 4, 2, NULL),
+(5, '2023-11-28 00:00:00', 0, 10, 5, 3, NULL),
+(6, '2023-11-28 15:38:04', 2, 3, 1, 1, NULL),
+(7, '2023-11-28 15:42:50', 5, -1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produto`
+-- Estrutura para tabela `produto`
 --
 
 CREATE TABLE `produto` (
   `id_produto` int(11) NOT NULL,
   `Quantidade` int(11) DEFAULT NULL,
-  `Valor` varchar(50) DEFAULT NULL,
+  `Valor` decimal(6,2) DEFAULT NULL,
   `Modelo` varchar(100) DEFAULT NULL,
   `Descricao` varchar(100) DEFAULT NULL,
   `Tipo` int(11) DEFAULT NULL,
   `Fornecedor_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `produto`
+-- Despejando dados para a tabela `produto`
 --
 
 INSERT INTO `produto` (`id_produto`, `Quantidade`, `Valor`, `Modelo`, `Descricao`, `Tipo`, `Fornecedor_id`) VALUES
-(1, 3, '8.00', 'Teste', 'Mascara', 1, 2),
-(2, 2, '8.00', 'Teste', 'Oculas', 1, 2),
-(3, 13, '8.00', 'Teste', 'Lixa', 2, 3),
-(4, 6, '8.00', 'Teste', 'Lâmina', 2, 3),
-(5, 9, '8.00', 'Teste', 'Mascara', 1, 2);
+(1, 2, 8.00, 'Teste', 'Mascara', 1, 2),
+(2, 2, 8.00, 'Teste', 'Oculas', 1, 2),
+(3, 18, 8.00, 'Teste', 'Lixa', 2, 3),
+(4, 6, 8.00, 'Teste', 'Lâmina', 2, 3),
+(5, 9, 8.00, 'Teste', 'Mascara', 1, 2);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Estrutura para tabela `usuario`
 --
 
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
   `Login` varchar(100) DEFAULT NULL,
-  `Senha` varchar(20) DEFAULT NULL,
-  `EsqueceuCod` VARCHAR (30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `Senha` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `usuario`
+-- Despejando dados para a tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `Login`, `Senha`, `EsqueceuCod`) VALUES
-(1, 'Silvio0321', '8442579', 'silvio'),
-(2, 'CarlaSanches', 'vdt65','carla'),
-(3, 'CarlosEdu87', '09smkx','carlos'),
-(4, 'Bea019', '1234','bea'),
-(5, 'Filipinho1V9', 'istrcvsu','filipin'),
-(6, 'admin', 'admin','admin');
+INSERT INTO `usuario` (`id_usuario`, `Login`, `Senha`) VALUES
+(1, 'Silvio0321', '8442579'),
+(2, 'CarlaSanches', 'vdt65'),
+(3, 'CarlosEdu87', '09smkx'),
+(4, 'Bea019', '1234'),
+(5, 'Filipinho1V9', 'istrcvsu'),
+(6, 'admin', 'admin');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `fornecedor`
+-- Índices de tabela `fornecedor`
 --
 ALTER TABLE `fornecedor`
   ADD PRIMARY KEY (`id_fornecedor`);
 
 --
--- Índices para tabela `funcionario`
+-- Índices de tabela `funcionario`
 --
 ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`id_funcionario`);
 
 --
--- Índices para tabela `movimentacao`
+-- Índices de tabela `movimentacao`
 --
 ALTER TABLE `movimentacao`
   ADD PRIMARY KEY (`id_mov`),
@@ -177,20 +176,20 @@ ALTER TABLE `movimentacao`
   ADD KEY `Fk_Funcionario_id` (`Funcionario_id`);
 
 --
--- Índices para tabela `produto`
+-- Índices de tabela `produto`
 --
 ALTER TABLE `produto`
   ADD PRIMARY KEY (`id_produto`),
   ADD KEY `Fk_Fornecedor_id` (`Fornecedor_id`);
 
 --
--- Índices para tabela `usuario`
+-- Índices de tabela `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
@@ -209,7 +208,7 @@ ALTER TABLE `funcionario`
 -- AUTO_INCREMENT de tabela `movimentacao`
 --
 ALTER TABLE `movimentacao`
-  MODIFY `id_mov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_mov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
@@ -221,14 +220,14 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Restrições para despejos de tabelas
+-- Restrições para tabelas despejadas
 --
 
 --
--- Limitadores para a tabela `movimentacao`
+-- Restrições para tabelas `movimentacao`
 --
 ALTER TABLE `movimentacao`
   ADD CONSTRAINT `Fk_Funcionario_id` FOREIGN KEY (`Funcionario_id`) REFERENCES `funcionario` (`id_funcionario`),
@@ -236,7 +235,7 @@ ALTER TABLE `movimentacao`
   ADD CONSTRAINT `Fk_Usuario_id` FOREIGN KEY (`Usuario_id`) REFERENCES `usuario` (`id_usuario`);
 
 --
--- Limitadores para a tabela `produto`
+-- Restrições para tabelas `produto`
 --
 ALTER TABLE `produto`
   ADD CONSTRAINT `Fk_Fornecedor_id` FOREIGN KEY (`Fornecedor_id`) REFERENCES `fornecedor` (`id_fornecedor`);

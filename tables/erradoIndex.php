@@ -17,7 +17,7 @@
     <body>
         <div class="TituloEdit">
             <h2 class="titulos"><i class="fa-solid fa-circle-info"></i>&nbsp Falha ao realizar a sua ação</h2>
-            <a href="<?php echo BASEURL; ?>tables/epis.php">Clique aqui e retorne para a tela de EPI</a>
+            <a href="<?php echo BASEURL; ?>telas/index.php">Clique aqui e retorne para a tela inicial</a>
         </div>
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>

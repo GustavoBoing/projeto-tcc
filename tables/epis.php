@@ -29,7 +29,7 @@
                 <?php 
                 if($_SESSION['login'] == "admin"){?>
                 <div class="btnAdd">
-                    <a class="btnNewProd" href=""><button><i class="fa-solid fa-plus"></i>&nbsp Novo Produto</button></a>
+                    <a class="btnNewProd" href="<?php echo BASEURL; ?>tables/AdicionarProd.php"><button><i class="fa-solid fa-plus"></i>&nbsp Novo Produto</button></a>
                 </div>
                 <?php } ?>
             </div>

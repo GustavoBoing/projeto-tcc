@@ -18,7 +18,7 @@
         <div class="TituloARE">
             <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Produto </h2>
         </div>
-        <form class="tela-editar" method="POST" action="functions/edita_Epis.php" enctype="multipart/form-data">
+        <form class="tela-editar" method="POST" action="erradoIndex.php" enctype="multipart/form-data">
             <div class="deixar-column">
                 <div class="inputValues">
                     <input type="hidden" name="produto[id_produto]" value="">
