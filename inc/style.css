@@ -577,14 +577,14 @@ label{
 
 }
 
-.Modelo{
+.Modelo, .Valor, .Qtd, .Tipo, .Fornecedor{
 
   margin-left: 15px;
   color: var(--search-text);
 
 }
 
-.Valor{
+/* .Valor{
 
   margin-left: 15px;
   color: var(--search-text);
@@ -598,6 +598,20 @@ label{
 
 }
 
+.Tipo{
+
+  margin-left: 15px;
+  color: var(--search-text);
+
+}
+
+.Fornecedor{
+
+  margin-left: 15px;
+  color: var(--search-text);
+
+} */
+
 .tela-editar{
 
   display: flex;
@@ -607,6 +621,7 @@ label{
 .deixar-column {
   display: flex;
   flex-direction: column;
+  margin: 30px 0 0 0;
 }
 
 .inputValues {

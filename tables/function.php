@@ -99,4 +99,12 @@ $gerarRelatorioIns = null;
         return $found;
     }
 
+    function adicionarProduto() {
+        
+    }
+
+    function add(){
+        
+    }
+
 ?>

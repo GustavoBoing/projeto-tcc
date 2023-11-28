@@ -59,7 +59,7 @@
             <span class="tooltip">O Software</span>
           </li>
           <li>
-            <a  href="#">
+            <a  href="<?php echo BASEURL; ?>telas/configuracoes.php">
               <i class="bx bx-cog" id="icons"></i>
               <span class="link_name">Configurações</span>
             </a>

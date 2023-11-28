@@ -135,20 +135,21 @@ INSERT INTO `produto` (`id_produto`, `Quantidade`, `Valor`, `Modelo`, `Descricao
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
   `Login` varchar(100) DEFAULT NULL,
-  `Senha` varchar(20) DEFAULT NULL
+  `Senha` varchar(20) DEFAULT NULL,
+  `EsqueceuCod` VARCHAR (30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `Login`, `Senha`) VALUES
-(1, 'Silvio0321', '8442579'),
-(2, 'CarlaSanches', 'vdt65'),
-(3, 'CarlosEdu87', '09smkx'),
-(4, 'Bea019', '1234'),
-(5, 'Filipinho1V9', 'istrcvsu'),
-(6, 'admin', 'admin');
+INSERT INTO `usuario` (`id_usuario`, `Login`, `Senha`, `EsqueceuCod`) VALUES
+(1, 'Silvio0321', '8442579', 'silvio'),
+(2, 'CarlaSanches', 'vdt65','carla'),
+(3, 'CarlosEdu87', '09smkx','carlos'),
+(4, 'Bea019', '1234','bea'),
+(5, 'Filipinho1V9', 'istrcvsu','filipin'),
+(6, 'admin', 'admin','admin');
 
 --
 -- Índices para tabelas despejadas

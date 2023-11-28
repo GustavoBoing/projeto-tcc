@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once('function.php');
     indexINS();
     include(HEADER_TEMPLATE);
@@ -14,14 +15,20 @@
     </head>
     <body>
         <div class="tittle">
-
             <h2 class="titulos"><i class='bx bx-grid-alt'></i>&nbsp Insumos </h2>
-
             <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens de Insumo</p>
         </div>
         <div class="parte-superior">
-            <div class="gera-pdf">
-                <a class="botao-gerar" href="gera_pdf_ins.php"><button><i class="fa-solid fa-print" style="color: #ffffff;"></i>&nbsp Gerar Relatório</button></a>
+            <div class="btnsAddGerar">
+                <div class="gera-pdf">
+                    <a class="botao-gerar" href="gera_pdf_ins.php"><button><i class="fa-solid fa-print" style="color: #ffffff;"></i>&nbsp Gerar Relatório</button></a>
+                </div>
+                <?php 
+                if($_SESSION['login'] == "admin"){?>
+                <div class="btnAdd">
+                    <a class="btnNewProd" href="<?php echo BASEURL; ?>tables/AdicionarProd.php"><button><i class="fa-solid fa-plus"></i>&nbsp Novo Produto</button></a>
+                </div>
+                <?php } ?>
             </div>
             <div class="filtro">
                 <form class="filtar" action="insumos.php" method="POST">
@@ -67,9 +74,12 @@
                                     echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'
                                 ?>
                                 <td class="changes">
-                                <a href="adicionarIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-plus-circle'></i> Adicionar</a>
-                                <a href="retirarIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-minus-circle'></i> Retirar</a>
-                                <a href="editIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Editar</a>
+                                    <a href="adicionarIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-plus-circle'></i> Adicionar</a>
+                                    <a href="retirarIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-minus-circle'></i> Retirar</a>
+                                    <?php
+                                    if($_SESSION['login'] == "admin"){?>
+                                        <a href="editIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Editar</a>
+                                    <?php } ?>
                                 </td>
                                 <?php } ?>
                             </tr>
