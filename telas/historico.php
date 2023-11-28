@@ -3,7 +3,6 @@
     historico();
     // movimentacao();
     include(HEADER_TEMPLATE);
-    session_start();
     if(!isset($_SESSION['login']))
       header("Location: ../index.php");
 ?>

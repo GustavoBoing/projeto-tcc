@@ -5,9 +5,9 @@
     poucaQtd();
     maisUtilizados();
     include(HEADER_TEMPLATE);
-    session_start();
-    if(!isset($_SESSION['login']))
+    if(!isset($_SESSION['login'])) {
       header("Location: ../index.php");
+    }
 ?>
 
 <!DOCTYPE html>

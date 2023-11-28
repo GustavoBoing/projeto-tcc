@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <?php
+  session_start();
   require_once "../config.php";
-  require_once "function.php";
 ?>
 
 <html lang="pt-br">
@@ -58,6 +58,7 @@
             </a>
             <span class="tooltip">O Software</span>
           </li>
+          <?php if ($_SESSION['login'] == "admin"){?>
           <li>
             <a  href="<?php echo BASEURL; ?>telas/configuracoes.php">
               <i class="bx bx-cog" id="icons"></i>
@@ -65,6 +66,7 @@
             </a>
             <span class="tooltip">Configurações</span>
           </li>
+          <?php } ?>
           <!-- <div class="darkLight-searchBox">
             <div class="dark-light">
                 <i class='bx bx-moon moon'></i>
