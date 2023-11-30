@@ -16,6 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
+        <link rel="stylesheet" href="<?php echo BASEURL; ?>./css/styleSobre.css" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>css/configuracoes.css">
         <title>Almoxarifado - Configurações</title>
     </head>
@@ -25,15 +26,34 @@
         <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens das configurações</p>
     </div>
     <main>
-        <div class="btnsConfig">
-            <div class="btnInsereProduto">
-                <a href=""><button>Adicionar Produto</button></a>
+        <div id="boxes" class="boxes">
+            <div id="caixa01" class="box">
+                <h3>Adicionar Funcionario &nbsp &nbsp <i class="fa-solid fa-user"></i></h3>
+                
+                <p>Adicionar um funcionário como usuário no site da empresa é um processo fundamental para conceder acesso a recursos específicos, 
+                como informações internas, ferramentas colaborativas ou outras áreas restritas do site.
+                Esse procedimento geralmente envolve a criação de contas de usuário personalizadas e a atribuição de permissões adequadas.<p>
+
+                <div class="btnInsereProduto">
+                    <a href="adicionarUser.php"><button>Adicionar Usuário</button></a>
+                </div>
             </div>
-            <div class="btnInsereUsuario">
-                <a href="adicionarUser.php"><button>Adicionar Usuário</button></a>
+
+            <div id="caixa02" class="box">
+                    <h3>Adicionar Produto &nbsp &nbsp <i class="fa-solid fa-boxes-stacked"></i></h3>
+                    <p>Adicionar um novo produto ao site da empresa é uma etapa crucial no gerenciamento do catálogo online. Essa prática não apenas mantém os clientes informados sobre os últimos lançamentos, mas também aprimora a experiência de compra, proporcionando um catálogo diversificado e atualizado. 
+                        Neste guia, exploraremos os passos detalhados para adicionar um produto com eficiência ao seu site, garantindo que os clientes tenham acesso fácil às informações mais recentes sobre os produtos oferecidos.</p>
+                    <div class="btnInsereUsuario">
+                        <a href="../tables/AdicionarProd.php"><button>Adicionar Produto</button></a>
+                    </div>
+                </div>
             </div>
         </div>
+
     </main>
     </body>
-    <script src="<?php echo BASEURL?>js/script.js"></script>
+
+    <script src="<?php echo BASEURL; ?>js/index.js"></script>
+    <script src="<?php echo BASEURL; ?>js/script.js"defer></script>
+    
 </html>
