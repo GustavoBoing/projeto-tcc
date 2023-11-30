@@ -74,7 +74,7 @@
 	  $columns = null;
 	  $values = null;
 
-	  //print_r($data);
+	  //print_r($data); 
 
 	  foreach ($data as $key => $value) {
 		$columns .= trim($key, "'") . ",";

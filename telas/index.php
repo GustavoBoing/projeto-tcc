@@ -6,8 +6,8 @@
     maisUtilizados();
     include(HEADER_TEMPLATE);
     if(!isset($_SESSION['login'])) {
-      header("Location: ../index.php");
-    }
+      die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +56,11 @@
                 if ($poucos) :
                   echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: var(--search-text);">';
                   foreach ($poucos as $produto) :
-                    echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . $produto['Quantidade'] . ' unidades ' . '</li>';
+                    if($produto['Quantidade'] === null){
+                      echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . "0" . ' unidades ' . '</li>';
+                    }else {
+                      echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . $produto['Quantidade'] . ' unidades ' . '</li>';
+                    }
                   endforeach;
                   echo '</ol>';
                 else :
@@ -73,7 +77,7 @@
                   // var_dump($movimentacoes);
                   echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: var(--search-text);">';
                     foreach ($movimentacoes as $produto) :
-                        echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . $produto['quantidade'] . ' unidades ' . '</li>';
+                        echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . abs($produto['quantidade']) . ' unidades ' . '</li>';
                         // var_dump($produto);
                     endforeach;
                   echo '</ol>';

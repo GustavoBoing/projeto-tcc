@@ -1,17 +1,17 @@
 <?php
     session_start();
     require_once('function.php');
-    add();
     include(HEADER_TEMPLATE);
+    add();
     if(!isset($_SESSION['login'])) {
         die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
     }
     if($_SESSION['login'] != "admin"){
         die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
     }
-   
 ?>
 <!DOCTYPE html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>css/styleSubmit.css"/>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
@@ -20,43 +20,27 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="<?php echo BASEURL; ?>css/configuracoes.css">
+        <title>Almoxarifado - Configurações</title>
     </head>
     <body>
         <div class="TituloARE">
-            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Produto </h2>
+            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Usuário </h2>
         </div>
-        <form class="tela-editar" method="POST" action="adicionarProd.php" enctype="multipart/form-data">
+        <form class="tela-editar" method="POST" action="adicionarUser.php" enctype="multipart/form-data">
             <div class="deixar-column">
                 <div class="inputValues">
-                    <input type="hidden" name="produto[id_produto]" value="">
-
                     <div class="Nome">
                         <label for="Nome">
                             Nome:
-                            <input type="text" name="produto[descricao]" placeholder="Digite o Nome"><br><br>
+                            <input type="text" name="usuario[Login]" placeholder="Digite o login"><br><br>
                         </label>
                     </div>
 
                     <div class="Valor">
                         <label for="Valor">
-                            Valor:
-                            <input type="number" step="0.01" name="produto[Valor]" min="0.01" placeholder="Digite o valor"><br><br>
-                        </label>
-                    </div>
-
-                    <div class="Modelo">
-                        <label for="Modelo">
-                            Modelo:
-                            <input type="text" name="produto[Modelo]" placeholder="Digite o modelo" value=""><br><br>
-                        </label>
-                    </div>
-                    <div class="Tipo">
-                        <label for="Tipo">
-                            Tipo:
-                            <select type="text" name="produto[Tipo]">
-                                <option value="1">EPI</option>
-                                <option value="2">Insumo</option>
-                            </select><br><br>
+                            Senha:
+                            <input type="password" name="usuario[Senha]" placeholder="Digite a senha"><br><br>
                         </label>
                     </div>
                 </div>

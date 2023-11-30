@@ -3,6 +3,12 @@
     include_once("./conexao.php");
     require_once('./function.php');
     include(HEADER_TEMPLATE);
+    if(!isset($_SESSION['login'])) {
+        die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
+    }
+    if(!isset($_SESSION['login'])) {
+        die("Você não pode acessar esta página porque não está logado como administrador.<p><a href=\"../index.php\"> Voltar</a></p>");
+    }
 ?>
 <!DOCTYPE html>
     <head>

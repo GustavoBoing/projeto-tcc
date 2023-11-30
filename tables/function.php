@@ -104,7 +104,12 @@ $gerarRelatorioIns = null;
     }
 
     function add(){
-        
+        if (!empty($_POST['produto'])) {
+            $produto = $_POST['produto'];
+            
+            save('produto', $produto);
+            header('location: ../telas/index.php');
+          }
     }
 
 ?>

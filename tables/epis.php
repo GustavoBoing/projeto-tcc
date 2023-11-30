@@ -4,6 +4,9 @@
         indexEPI();
         // filtragem();
         include(HEADER_TEMPLATE);
+        if(!isset($_SESSION['login'])) {
+            die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
+        }
     ?>
 <!DOCTYPE html>    
 <html>
@@ -66,7 +69,10 @@
                             if ($produto['Tipo'] == '1') 
                             {
                                 echo '<td>'.$produto['Descricao'].'</td>';
-                                if($produto['Quantidade'] < 10 ){
+                                if($produto['Quantidade'] === null ) {
+                                    echo '<td>' . '<span class="vermelho">' . "0" . '</span>' . '</td>';
+                                }
+                                else if ($produto['Quantidade'] < 10 ){
                                     echo '<td>' . '<span class="vermelho">' . $produto['Quantidade'] . '</span>' . '</td>';
                                 } else if ($produto['Quantidade'] <= 40){
                                      echo '<td>' . '<span class="amarelo">' . $produto['Quantidade'] . '</span>' . '</td>' ;

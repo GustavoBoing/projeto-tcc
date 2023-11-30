@@ -2,6 +2,12 @@
     session_start();
     require_once('function.php');
     include(HEADER_TEMPLATE);
+    if(!isset($_SESSION['login'])) {
+        die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
+    }
+    if($_SESSION['login'] != "admin"){
+        die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,14 +25,14 @@
         <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral dos itens das configurações</p>
     </div>
     <main>
-        <!-- <div class="btnsConfig">
+        <div class="btnsConfig">
             <div class="btnInsereProduto">
                 <a href=""><button>Adicionar Produto</button></a>
             </div>
             <div class="btnInsereUsuario">
-                <a href=""><button>Adicionar Usuário</button></a>
+                <a href="adicionarUser.php"><button>Adicionar Usuário</button></a>
             </div>
-        </div> -->
+        </div>
     </main>
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>

@@ -1,6 +1,10 @@
 <?php
+    session_start();
     require_once "../config.php";
     include(HEADER_TEMPLATE);
+    if(!isset($_SESSION['login'])) {
+        die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
+    }
 ?>
 
 <!DOCTYPE html>

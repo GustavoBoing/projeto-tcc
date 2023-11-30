@@ -17,7 +17,9 @@ $poucos = null;
 
 function maisUtilizados(){
     global $movimentacoes;
-    $movimentacoes = innerJoin2("id_mov, id_produto, COUNT(Produto_id) AS total_saidas,  SUM(CASE WHEN EntraSai = 'Entra' THEN QntdModificada ELSE 0 END) AS quantidade, Descricao, Funcionario, EntraSai, QntdModificada, Datas, Produto_id", "movimentacao", "produto", "movimentacao.Produto_id", "produto.id_produto", "'Entra'", "DESC");
+    $movimentacoes = innerJoin2("id_mov, id_produto, COUNT(Produto_id) AS total_saidas, SUM(CASE WHEN QntdModificada < 0 THEN QntdModificada ELSE 0 END) AS quantidade, 
+    Descricao, Funcionario_id, QntdModificada, Data, Produto_id", "movimentacao", "produto", 
+    "movimentacao.Produto_id", "produto.id_produto", "0", "DESC");
 }
 
     function movimentacao() {
@@ -28,7 +30,8 @@ function maisUtilizados(){
     function historico() {
         global $historicos;
 
-        $historicos = innerJoin("id_mov, id_produto, Descricao, Funcionario, EntraSai, QntdModificada, Datas, Produto_id", "movimentacao", "produto", "movimentacao.Produto_id", "produto.id_produto");
+        $historicos = innerJoin("id_mov, id_produto, Descricao, Funcionario_id, QntdModificada, Data, Produto_id, QntdAtual ", 
+        "movimentacao", "produto", "movimentacao.Produto_id", "produto.id_produto");
     }
     function grandeQtd() {
         global $produtos;
@@ -81,7 +84,7 @@ function maisUtilizados(){
     
         try{
             if($p) {
-              $sql = "SELECT " . $data . " FROM " . $table . " INNER JOIN " . $tableInner . " ON " . $table01Column . "=" . $dataInner . " WHERE EntraSai = " . $sai . " GROUP BY Descricao ORDER BY quantidade " . $p . " LIMIT 5";
+              $sql = "SELECT " . $data . " FROM " . $table . " INNER JOIN " . $tableInner . " ON " . $table01Column . "=" . $dataInner . " WHERE QntdModificada < " . $sai . " GROUP BY Descricao ORDER BY quantidade " . $p . " LIMIT 5";
               $result = $database->query($sql);
               if($result->num_rows > 0)  {
                   $found = array();
@@ -177,4 +180,13 @@ function maisUtilizados(){
         }
         close_database($database);
         return $found;
+    }
+
+    function add(){
+        if (!empty($_POST['usuario'])) {
+            $usuario = $_POST['usuario'];
+            
+            save('usuario', $usuario);
+            header('location: ../telas/index.php');
+          }
     }
