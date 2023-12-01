@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 28/11/2023 às 20:34
--- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Host: 127.0.0.1
+-- Tempo de geração: 01/12/2023 às 03:12
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `almoxarifado`
 --
-CREATE DATABASE IF NOT EXISTS `almoxarifado` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `almoxarifado`;
 
 -- --------------------------------------------------------
 
@@ -120,11 +118,14 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`id_produto`, `Quantidade`, `Valor`, `Modelo`, `Descricao`, `Tipo`, `Fornecedor_id`) VALUES
-(1, 2, 8.00, 'Teste', 'Mascara', 1, 2),
-(2, 2, 8.00, 'Teste', 'Oculas', 1, 2),
+(1, 26, 8.00, 'Teste', 'Mascara', 1, 2),
+(2, 12, 8.00, 'Teste', 'Oculas', 1, 2),
 (3, 18, 8.00, 'Teste', 'Lixa', 2, 3),
 (4, 6, 8.00, 'Teste', 'Lâmina', 2, 3),
-(5, 9, 8.00, 'Teste', 'Mascara', 1, 2);
+(5, 9, 8.00, 'Teste', 'Mascara', 1, 2),
+(6, NULL, 12.00, 'lente transparente para solda', 'Lente', 1, NULL),
+(7, NULL, 5.00, 'disco', 'disco de corte 4\" 1/2', 2, NULL),
+(8, NULL, 2.00, 'lente transparente para solda', 'Lente2', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -135,20 +136,23 @@ INSERT INTO `produto` (`id_produto`, `Quantidade`, `Valor`, `Modelo`, `Descricao
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
   `Login` varchar(100) DEFAULT NULL,
-  `Senha` varchar(20) DEFAULT NULL
+  `Senha` varchar(20) DEFAULT NULL,
+  `isAdmin` varchar(20) DEFAULT NULL,
+  `palavraPasse` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `Login`, `Senha`) VALUES
-(1, 'Silvio0321', '8442579'),
-(2, 'CarlaSanches', 'vdt65'),
-(3, 'CarlosEdu87', '09smkx'),
-(4, 'Bea019', '1234'),
-(5, 'Filipinho1V9', 'istrcvsu'),
-(6, 'admin', 'admin');
+INSERT INTO `usuario` (`id_usuario`, `Login`, `Senha`, `isAdmin`, `palavraPasse`) VALUES
+(1, 'Silvio0321', '8442579', 'Não', NULL),
+(2, 'CarlaSanches', 'vdt65', 'Não', NULL),
+(3, 'CarlosEdu87', '09smkx', 'Não', NULL),
+(4, 'Bea019', '1234', 'Não', NULL),
+(5, 'Filipinho1V9', 'istrcvsu', 'Não', NULL),
+(6, 'admin', '12345', 'Sim', 'admin'),
+(7, 'gustavo', '123456', 'Não', NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -214,13 +218,13 @@ ALTER TABLE `movimentacao`
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restrições para tabelas despejadas
