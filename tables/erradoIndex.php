@@ -6,9 +6,6 @@
     if(!isset($_SESSION['login'])) {
         die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
     }
-    if(!isset($_SESSION['login'])) {
-        die("Você não pode acessar esta página porque não está logado como administrador.<p><a href=\"../index.php\"> Voltar</a></p>");
-    }
 ?>
 <!DOCTYPE html>
     <head>
@@ -23,7 +20,7 @@
     <body>
         <div class="TituloEdit">
             <h2 class="titulos"><i class="fa-solid fa-circle-info"></i>&nbsp Falha ao realizar a sua ação</h2>
-            <a href="<?php echo BASEURL; ?>telas/index.php">Clique aqui e retorne para a tela inicial</a>
+            <a href="<?php echo BASEURL; ?>telas/index.php" style="margin: 0 0 0 5%">Clique aqui e retorne para a tela inicial</a>
         </div>
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>

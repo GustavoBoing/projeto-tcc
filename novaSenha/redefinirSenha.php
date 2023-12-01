@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php 
-    require_once "config.php";
+    require_once('./function.php');
+    novaSenha();
 ?>
 <html lang="pt-br">
 <head>
@@ -12,7 +13,7 @@
 <body>
     <div class="background-container">
         <div class="background-image"></div>
-        <form action="<?php echo BASEURL; ?>login/entrar.php" method="post">
+        <form action="redefinirSenha.php" method="post">
             <div class="content">
                 <div class="imagem-logo">
                     <p></p>
@@ -22,21 +23,11 @@
                     <input class="login" type="text" name="login" placeholder="Digite seu nome de usuário" required>
                 </p>
                 <p>
-                    <p><label for="password">Senha</label></p>
-                    <input class="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                    <p><label for="password">Nova Senha</label></p>
+                    <input class="senha" type="password" name="senha" placeholder="Nova senha" required>
                 </p>
                 <p>
-                    <p><label for="password">É administrador?</label></p>
-                    <select name="isAdmin" id="">
-                        <option value="Sim">Sim</option>
-                        <option value="Não">Não</option>
-                    </select>
-                </p>
-                <p>
-                    <a href="<?php echo BASEURL; ?>novaSenha/index.php"><label class="esqueceu" for="esqueceu">Esqueceu sua senha?</label></a>
-                </p>
-                <p>
-                    <button class="entrar">Entrar</button>
+                    <button class="entrar">Confirmar</button>
                 </p>
             </div>
         </form>

@@ -10,6 +10,7 @@ $password = "";
 // Dados do formulário
 $login = $_POST['login'];
 $senha = $_POST['senha'];
+$isAdmin = $_POST['isAdmin'];
 
 try {
     // Criar conexão PDO
@@ -17,16 +18,18 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Consulta para verificar o usuário e a senha
-    $query = "SELECT * FROM usuario WHERE login = :login AND senha = :senha";
+    $query = "SELECT * FROM usuario WHERE login = :login AND senha = :senha AND isAdmin = :isAdmin";
     $stmt = $conn->prepare($query);
     $stmt->bindParam(':login', $login);
     $stmt->bindParam(':senha', $senha);
+    $stmt->bindParam(':isAdmin', $isAdmin);
     $stmt->execute();
 
     // Verificar se o usuário foi encontrado
     if ($stmt->rowCount() > 0) {
             session_start();  // Inicia a sessão (se ainda não tiver sido iniciada)
-            $_SESSION['login'] = $login;  // Armazena o nome de usuário na sessão
+            $_SESSION['login'] = $login;
+            $_SESSION['isAdmin'] = $isAdmin;  // Armazena o nome de usuário na sessão
             header("Location: ../telas/index.php");  // Redireciona para a página de dashboard
         exit();  // Encerra o script após redirecionar
     } else {

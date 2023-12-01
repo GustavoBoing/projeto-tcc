@@ -27,7 +27,7 @@
                     <a class="botao-gerar" href="gera_pdf_ins.php"><button><i class="fa-solid fa-print" style="color: #ffffff;"></i>&nbsp Gerar Relatório</button></a>
                 </div>
                 <?php 
-                if($_SESSION['login'] == "admin"){?>
+                if($_SESSION['isAdmin'] === "Sim"){?>
                 <div class="btnAdd">
                     <a class="btnNewProd" href="<?php echo BASEURL; ?>tables/AdicionarProd.php"><button><i class="fa-solid fa-plus"></i>&nbsp Novo Produto</button></a>
                 </div>
@@ -83,7 +83,7 @@
                                     <a href="adicionarIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-plus-circle'></i> Adicionar</a>
                                     <a href="retirarIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-minus-circle'></i> Retirar</a>
                                     <?php
-                                    if($_SESSION['login'] == "admin"){?>
+                                    if($_SESSION['isAdmin'] === "Sim"){?>
                                         <a href="editIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Editar</a>
                                     <?php } ?>
                                 </td>

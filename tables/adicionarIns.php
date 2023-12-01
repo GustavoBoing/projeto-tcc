@@ -5,6 +5,9 @@
     require_once('./function.php');
     indexEPI();
     include(HEADER_TEMPLATE);
+    if(!isset($_SESSION['login'])) {
+        die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
+    }
 
     $id_produto = filter_input(INPUT_GET, 'id_produto', FILTER_SANITIZE_NUMBER_INT);
     $result_produto = "SELECT * FROM produto WHERE id_produto = '" . $_GET['id'] . "'";

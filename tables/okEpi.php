@@ -17,7 +17,7 @@
     <body>
         <div class="TituloEdit">
             <h2 class="titulos"><i class="fa-solid fa-check"></i>&nbsp Ação feita com sucesso</h2>
-            <a href="<?php echo BASEURL; ?>tables/epis.php">Clique aqui e retorne para a tela de EPI</a>
+            <a href="<?php echo BASEURL; ?>tables/epis.php" style="margin: 0 0 0 5%">Clique aqui e retorne para a tela de EPI</a>
         </div>
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>
