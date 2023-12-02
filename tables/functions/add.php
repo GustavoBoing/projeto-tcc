@@ -11,7 +11,7 @@ $resultado_produto = mysqli_query($conn, $result_produto);
 
 if(mysqli_affected_rows($conn)){
 	$_SESSION['msg'] = "";
-	header("Location: ../okEpi.php");
+	header("Location: ../okConfirma.php");
 } else {
     $_SESSION['msg'] = "<p style='color:red;'>Produto não foi editado com sucesso</p> <a href='editEpi.php?id=$id_produto'>Retornar para tentar novamente</a>";
     // var_dump($result_produto);

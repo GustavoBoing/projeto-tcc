@@ -15,7 +15,7 @@ $resultado_produto = mysqli_query($conn, $result_produto);
 
 if(mysqli_affected_rows($conn)){
 	$_SESSION['msg'] = "<p style='color:green;'>Usuário editado com sucesso</p><br>";
-	header("Location: ../insumos.php");
+	header("Location: ../okConfirma.php");
 }else{
 	$_SESSION['msg'] = "<p style='color:red;'>Produto não foi editado com sucesso</p>";
 	header("Location: editEpi.php?id=$id_produto");

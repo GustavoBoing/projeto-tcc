@@ -95,7 +95,12 @@
             <p class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></p>
           </ul>
           <ul class="navlist">
-            <li><a href="#" class="login"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a></li>
+            <li class="dropdown">
+              <a href="../index.php" class="login" title="Clique para sair"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
+              <!-- <div class="dropdown-content">
+                <a href="#">Sair</a>
+              </div> -->
+            </li>
           </ul>
         </nav>
       </div>

@@ -187,6 +187,6 @@ function maisUtilizados(){
             $usuario = $_POST['usuario'];
             
             save('usuario', $usuario);
-            header('location: ../telas/index.php');
+            header('location: ../tables/okConfirma.php');
           }
     }

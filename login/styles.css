@@ -34,10 +34,11 @@ body{
 
 .imagem-logo {
     background-image: url('image/logo2.png');
+    top: -20px;
     margin-left: 45px;
     width: 310px;
     height: 80px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     background-repeat: no-repeat;
 }
@@ -83,3 +84,14 @@ label {
 .entrar:hover {
     opacity: 0.8;
 }
+
+input[type=number], select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #B0A9A2;
+  }

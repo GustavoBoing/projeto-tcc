@@ -15,7 +15,7 @@ $resultado_produto = mysqli_query($conn, $result_produto);
 
 if(mysqli_affected_rows($conn)){
 	$_SESSION['msg'] = "";
-	header("Location: ../okEpi.php");
+	header("Location: ../okConfirma.php");
 }else{
 	$_SESSION['msg'] = "";
 	header("Location: ../erradoEpi.php");
