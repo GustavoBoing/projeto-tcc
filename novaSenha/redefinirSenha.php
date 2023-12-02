@@ -13,7 +13,7 @@
 <body>
     <div class="background-container">
         <div class="background-image"></div>
-        <form action="redefinirSenha.php" method="post">
+        <form action="novaSenha.php" method="post">
             <div class="content">
                 <div class="imagem-logo">
                     <p></p>

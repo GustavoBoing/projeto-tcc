@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01/12/2023 às 03:12
+-- Tempo de geração: 02/12/2023 às 23:24
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -151,8 +151,8 @@ INSERT INTO `usuario` (`id_usuario`, `Login`, `Senha`, `isAdmin`, `palavraPasse`
 (3, 'CarlosEdu87', '09smkx', 'Não', NULL),
 (4, 'Bea019', '1234', 'Não', NULL),
 (5, 'Filipinho1V9', 'istrcvsu', 'Não', NULL),
-(6, 'admin', '12345', 'Sim', 'admin'),
-(7, 'gustavo', '123456', 'Não', NULL);
+(6, 'admin', 'admin123', 'Sim', 'admin'),
+(10, 'gustavo boing', '2803', 'Não', '2803');
 
 --
 -- Índices para tabelas despejadas
@@ -224,7 +224,7 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restrições para tabelas despejadas
