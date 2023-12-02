@@ -90,4 +90,5 @@
     </body>
     <script src="<?php echo BASEURL; ?>js/index.js"></script>
     <script src="<?php echo BASEURL; ?>js/script.js"></script>
+    <!-- <script src="<?php echo BASEURL; ?>js/whiteMode.js"></script> -->
 </html>

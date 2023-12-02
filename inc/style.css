@@ -395,10 +395,15 @@ img {vertical-align: middle;}
 }
 
 
+/* .topnav > nav > .nomeUser {
+  display: flex;
+  justify-content: flex-end;
+} */
+
 .topnav > nav > ul > .user-logado{
   color: #F06E2D;
   font-size: small;
-  margin-left: 325px;
+  margin-left: 600px;
 }
 
 @keyframes fade {

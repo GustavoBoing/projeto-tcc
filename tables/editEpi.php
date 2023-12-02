@@ -7,7 +7,7 @@
     if(!isset($_SESSION['login'])) {
         die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
     }
-    if($_SESSION['isAdmin'] === "Sim"){
+    if(!$_SESSION['isAdmin'] === "Sim"){
         die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
     }
 

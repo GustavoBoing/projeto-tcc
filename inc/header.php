@@ -58,7 +58,7 @@
             </a>
             <span class="tooltip">O Software</span>
           </li>
-          <?php if ($_SESSION['login'] == "admin"){?>
+          <?php if ($_SESSION['isAdmin'] === "Sim"){?>
           <li>
             <a  href="<?php echo BASEURL; ?>telas/configuracoes.php">
               <i class="bx bx-cog" id="icons"></i>
@@ -67,19 +67,14 @@
             <span class="tooltip">Configurações</span>
           </li>
           <?php } ?>
-          <!-- <div class="darkLight-searchBox">
-            <div class="dark-light">
-                <i class='bx bx-moon moon'></i>
-                <i class='bx bx-sun sun'></i>
-            </div>
-          </div> -->
           <li>
             <a class="darkLight-searchBox">
               <div class="dark-light">
                 <i class='bx bx-moon moon'></i>
                 <i class='bx bx-sun sun'></i>
-                <span class="link_name">Modo escuro</span>
+                <!-- <span class="link_name">Modo escuro</span> -->
               </div>
+              <span class="link_name">Modo escuro</span>
             </a>
             <span class="tooltip">Modo escuro</span>
           </li>
@@ -96,8 +91,8 @@
           <ul class="container">
             <a class="logo" href="#">RV Soluções Industriais</a>
           </ul>
-          <ul>
-            <p class="user-logado">Você está logado como </p>
+          <ul class="nomeUser">
+            <p class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></p>
           </ul>
           <ul class="navlist">
             <li><a href="#" class="login"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a></li>

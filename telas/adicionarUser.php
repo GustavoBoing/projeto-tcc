@@ -43,6 +43,23 @@
                             <input type="password" name="usuario[Senha]" placeholder="Digite a senha"><br><br>
                         </label>
                     </div>
+                    
+                    <div class="Nome">
+                        <label for="Nome">
+                            É administrador?
+                            <select name="usuario[isAdmin]" id="">
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="Valor">
+                        <label for="Valor">
+                            Palavra Passe:
+                            <input type="password" name="usuario[palavraPasse]" placeholder="Digite a Palavra Passe"><br><br>
+                        </label>
+                    </div>
                 </div>
                 <div class="btnFuncoes">
                     <div class="btnSalvar">
