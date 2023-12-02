@@ -70,11 +70,12 @@
           <li>
             <a class="darkLight-searchBox">
               <div class="dark-light">
-                <i class='bx bx-moon moon'></i>
-                <i class='bx bx-sun sun'></i>
+                <i id="icons" class='bx bx-moon moon'></i>
+                <i id="icons" class='bx bx-sun sun'></i>
                 <!-- <span class="link_name">Modo escuro</span> -->
+                <span class="link_name">Modo escuro</span>
               </div>
-              <span class="link_name">Modo escuro</span>
+              <!-- <span class="link_name">Modo escuro</span> -->
             </a>
             <span class="tooltip">Modo escuro</span>
           </li>

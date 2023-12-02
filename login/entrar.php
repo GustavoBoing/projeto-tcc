@@ -34,7 +34,7 @@
                     session_start();  // Inicia a sessão (se ainda não tiver sido iniciada)
                     $_SESSION['login'] = $login;
                     $_SESSION['isAdmin'] = $isAdmin;  // Armazena o nome de usuário na sessão
-                    header("Location: ../telas/index.php");  // Redireciona para a página de dashboard
+                    header("Location: ./telas/index.php");  // Redireciona para a página de dashboard
                     exit();  // Encerra o script após redirecionar
                 } else {
                     // Apenas envie os scripts JavaScript se houver erro no login
