@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02/12/2023 às 23:24
+-- Tempo de geração: 05/12/2023 às 01:44
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -62,11 +62,7 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`id_funcionario`, `Nome`, `TelContato`, `CPF`) VALUES
-(1, '15997539823', '86465715298', 'Olete Smith'),
-(2, '15995386746', '84598534378', 'Carla Sanch'),
-(3, '11984562387', '97651704568', 'Carlos Edua'),
-(4, '11977560845', '92046738594', 'Bianca Pere'),
-(5, '15994562435', '02956820574', 'Filipe Lope');
+(1, 'Olete Smith\r\n', '15997539823', '86465715298');
 
 -- --------------------------------------------------------
 
@@ -77,7 +73,6 @@ INSERT INTO `funcionario` (`id_funcionario`, `Nome`, `TelContato`, `CPF`) VALUES
 CREATE TABLE `movimentacao` (
   `id_mov` int(11) NOT NULL,
   `Data` datetime DEFAULT NULL,
-  `QntdAtual` int(11) NOT NULL,
   `QntdModificada` int(11) DEFAULT NULL,
   `Produto_id` int(11) DEFAULT NULL,
   `Usuario_id` int(11) DEFAULT NULL,
@@ -88,14 +83,18 @@ CREATE TABLE `movimentacao` (
 -- Despejando dados para a tabela `movimentacao`
 --
 
-INSERT INTO `movimentacao` (`id_mov`, `Data`, `QntdAtual`, `QntdModificada`, `Produto_id`, `Usuario_id`, `Funcionario_id`) VALUES
-(1, '2023-11-28 00:00:00', 0, 2, 1, 1, NULL),
-(2, '2023-11-28 00:00:00', 0, 4, 2, 1, NULL),
-(3, '2023-11-28 00:00:00', 0, 9, 3, 2, NULL),
-(4, '2023-11-28 00:00:00', 0, 1, 4, 2, NULL),
-(5, '2023-11-28 00:00:00', 0, 10, 5, 3, NULL),
-(6, '2023-11-28 15:38:04', 2, 3, 1, 1, NULL),
-(7, '2023-11-28 15:42:50', 5, -1, 1, 1, 1);
+INSERT INTO `movimentacao` (`id_mov`, `Data`, `QntdModificada`, `Produto_id`, `Usuario_id`, `Funcionario_id`) VALUES
+(1, '2023-11-28 00:00:00', 2, 1, 1, NULL),
+(2, '2023-11-28 00:00:00', 4, 2, 1, NULL),
+(3, '2023-11-28 00:00:00', 9, 3, 2, NULL),
+(4, '2023-11-28 00:00:00', 1, 4, 2, NULL),
+(5, '2023-11-28 00:00:00', 10, 5, 3, NULL),
+(6, '2023-11-28 15:38:04', 3, 1, 1, NULL),
+(7, '2023-11-28 15:42:50', -1, 1, 1, 1),
+(8, '2023-12-04 21:02:31', 12, 1, NULL, NULL),
+(9, '2023-12-04 21:05:36', -10, 3, NULL, NULL),
+(10, '2023-12-04 21:05:54', -10, 3, NULL, NULL),
+(11, '2023-12-04 21:13:08', 10, 3, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -118,9 +117,9 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`id_produto`, `Quantidade`, `Valor`, `Modelo`, `Descricao`, `Tipo`, `Fornecedor_id`) VALUES
-(1, 26, 8.00, 'Teste', 'Mascara', 1, 2),
+(1, 21361, 8.00, 'Teste', 'Mascara', 1, 2),
 (2, 12, 8.00, 'Teste', 'Oculas', 1, 2),
-(3, 18, 8.00, 'Teste', 'Lixa', 2, 3),
+(3, 131, 8.00, 'Teste', 'Lixa', 2, 3),
 (4, 6, 8.00, 'Teste', 'Lâmina', 2, 3),
 (5, 9, 8.00, 'Teste', 'Mascara', 1, 2),
 (6, NULL, 12.00, 'lente transparente para solda', 'Lente', 1, NULL),
@@ -212,7 +211,7 @@ ALTER TABLE `funcionario`
 -- AUTO_INCREMENT de tabela `movimentacao`
 --
 ALTER TABLE `movimentacao`
-  MODIFY `id_mov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_mov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `produto`

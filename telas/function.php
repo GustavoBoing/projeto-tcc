@@ -30,8 +30,17 @@ function maisUtilizados(){
     function historico() {
         global $historicos;
 
-        $historicos = innerJoin("id_mov, id_produto, Descricao, Funcionario_id, QntdModificada, Data, Produto_id, QntdAtual ", 
-        "movimentacao", "produto", "movimentacao.Produto_id", "produto.id_produto");
+        $historicos = innerJoinLeftJoin("id_mov, id_produto, Descricao, Funcionario_id, QntdModificada, Data, Produto_id, Nome ", 
+        "movimentacao", "produto", "movimentacao.Produto_id", "produto.id_produto", "funcionario",
+        "movimentacao.Funcionario_id", "funcionario.id_funcionario ORDER BY Data DESC");
+
+        // SELECT id_mov, id_produto, Descricao, Funcionario_id, QntdModificada, Data, Produto_id, Nome
+        // FROM movimentacao
+        // INNER JOIN produto ON movimentacao.Produto_id = produto.id_produto
+        // LEFT JOIN funcionario ON movimentacao.Funcionario_id = funcionario.id_funcionario
+        // ORDER BY Data DESC;
+        // $historicos .= innerJoin("id_mov, id_produto, Nome, Funcionario_id, QntdModificada, Data, Produto_id ", 
+        // "movimentacao", "funcionario", "movimentacao.Funcionario_id", "produto.id_funcionario");
     }
     function grandeQtd() {
         global $produtos;
@@ -76,6 +85,35 @@ function maisUtilizados(){
         close_database($database);
         return $found;
     }
+
+
+    function innerJoinLeftJoin ($data = null, $table = null, $tableInner = null, $table01Column = null, $o = null, $tableLeft = null, $table02Column = null,$p = null) {
+
+        $database = open_database();
+        $found = null;
+
+        try{
+            if($p) {
+              $sql = "SELECT " . $data . " FROM " . $table . " INNER JOIN " . $tableInner . " ON " . $table01Column . "=" . $o . 
+              " LEFT JOIN " . $tableLeft . " ON " . $table02Column . "=" . $p;
+              $result = $database->query($sql);
+              if($result->num_rows > 0)  {
+                  $found = array();
+                  while ($row = $result->fetch_assoc()) {
+                    array_push($found, $row);
+                  }
+              } else{
+                  throw new Exception("Não foram encontrados registros de dados!");
+              }
+            }
+        } catch (Exception $e)  {
+            $_SESSION['message'] = "Ocorreu um erro: " . $e->getMessage();
+            $_SESSION['type'] = "danger";
+        }
+        close_database($database);
+        return $found;
+    }
+
 
     function innerJoin2 ($data = null, $table = null, $tableInner = null, $table01Column = null,$dataInner = null, $sai = null, $p = null) {
 

@@ -28,20 +28,22 @@
             <p id="subtitulo">Visão geral das últimas transações</p>
             <?php //var_dump($historicos);?>
         </div>
+        <?php //var_dump($historicos);?>
         <main>
             <table class="content-table">
                 <thead>
                     <tr>
                         <th>Item</th>
                         <th>Funcionário</th>
-                        <th>Qtd. Atual</th>
+                        <!-- <th>Qtd. Atual</th> -->
                         <th>Qtd. Modificada</th>
                         <th>Data</th>
                     </tr>
                 </thead>
                 <tbody>
+                    
                     <?php if ($historicos) :
-                        // var_dump($historicos);
+                        //var_dump($historicos);
                         // $dataFormatada = date("d/m/Y H:i:s", strtotime($produto['Data']));
                         foreach($historicos as $produto) : 
                         echo '<tr>';
@@ -50,11 +52,11 @@
                             if($produto['Funcionario_id'] === null){
                                 echo '<td>' . "null" . '</td>';
                             } else {
-                                echo '<td>' . $produto['Funcionario_id'] . '</td>';
+                                echo '<td>' . $produto['Nome'] . '</td>';
                             }
-                            echo '<td>' . $produto['QntdAtual'] . '</td>';
+                            // echo '<td>' . $produto['QntdAtual'] . '</td>';
                             echo '<td>' . $produto['QntdModificada'] . '</td>';
-                            echo '<td>' . $produto['Data'] . '</td>';
+                            echo '<td>' . date("d/m/Y H:i:s", strtotime($produto['Data'])) . '</td>';
                         echo '</tr>';
                         endforeach ; 
                         else :
