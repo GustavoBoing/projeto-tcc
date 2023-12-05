@@ -23,6 +23,7 @@ include_once("../conexao.php");
 $id_produto = filter_input(INPUT_POST, 'id_produto', FILTER_SANITIZE_NUMBER_INT);
 $quantidade_a_somar = filter_input(INPUT_POST, 'quantidade_a_somar', FILTER_SANITIZE_NUMBER_INT);
 
+
 // Inicia a transação
 mysqli_begin_transaction($conn);
 

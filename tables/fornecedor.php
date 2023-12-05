@@ -22,51 +22,28 @@
     </head>
     <body>
         <div class="TituloARE">
-            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Produto </h2>
+            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Fornecedor </h2>
         </div>
-        <form class="tela-editar" method="POST" action="adicionarProd.php" enctype="multipart/form-data">
+        <form class="tela-editar" method="POST" action="fornecedor.php" enctype="multipart/form-data">
             <div class="deixar-column">
                 <div class="inputValues">
-                    <input type="hidden" name="produto[id_produto]" value="">
-
                     <div class="Nome">
                         <label for="Nome">
                             Nome:
-                            <input type="text" name="produto[descricao]" placeholder="Digite o Nome"><br><br>
+                            <input type="text" name="produto[Forncedor]" placeholder="Digite o Nome do Fornecedor"><br><br>
                         </label>
                     </div>
 
-                    <div class="Qtd">
-                        <label for="Qtd">
-                        Quantidade:
-                            <input type="number" step="0.01" name="produto[Quantidade]" min="0.01" placeholder="Digite a quantidade"><br><br>
+                    <div class="cnpj">
+                        <label for="CNPJ">
+                        CNPJ:
+                            <input type="number" step="0.01" name="produto[CNPJ]" min="0.01" placeholder="Digite o CNPJ"><br><br>
                         </label>
                     </div>
-
-                    <div class="Valor">
-                        <label for="Valor">
-                            Valor:
-                            <input type="number" step="0.01" name="produto[Valor]" min="0.01" placeholder="Digite o valor"><br><br>
-                        </label>
-                    </div>
-
-                    <div class="Modelo">
-                        <label for="Modelo">
-                            Modelo:
-                            <input type="text" name="produto[Modelo]" placeholder="Digite o modelo" value=""><br><br>
-                        </label>
-                    </div>
-                    <div class="Tipo">
-                        <label for="Tipo">
-                            Tipo:
-                            <select type="text" name="produto[Tipo]">
-                                <option value="1">EPI</option>
-                                <option value="2">Insumo</option>
-                            </select><br><br>
-                        </label>
-                    </div>
-                </div>
-                <div class="btnFuncoes">
+                 </div>
+            </div>
+        </form>
+        <div class="btnFuncoes01">
                     <div class="btnSalvar">
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
@@ -74,8 +51,6 @@
                         <a href="<?php echo BASEURL;?>tables/epis.php">Cancelar</a>
                     </div>
                 </div>
-            </div>
-        </form>
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>
 </html>

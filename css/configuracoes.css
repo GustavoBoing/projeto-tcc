@@ -35,6 +35,24 @@
     margin: 55px 0 0 0;
 }
 
+.btnInsereUsuario01 button{
+    width: 200px;
+    background-color: #F06E2D;
+    color: white;
+    padding: 9px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+    font-size: 15px;
+    margin: 55px 0 0 0;
+}
+
+.btnInsereUsuario01 button:hover{
+    background-color: #363636;
+    transition: .8s;
+}
+
 .btnInsereUsuario button:hover{
     background-color: #363636;
     transition: .8s;

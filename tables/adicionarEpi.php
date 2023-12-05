@@ -67,6 +67,16 @@
                             <input type="text" name="modelo" placeholder="Digite o modelo" value="<?php echo $row_produto['Modelo']; ?>" disabled><br><br>
                         </label>
                     </div>
+                    <div class="Fornecedor">
+                        <label for="Fornecedor">
+                            Tipo:
+                            <select type="text" name="produto[Tipo]">
+                                <option value="1">Auto center marcondes</option>
+                                <option value="2">Auto center</option>
+                                <option value="2">Auto center vg</option>
+                            </select><br><br>
+                        </label>
+                    </div>
                 </div>
                 <div class="btnFuncoes">
                     <div class="btnSalvar">

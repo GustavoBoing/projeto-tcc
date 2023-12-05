@@ -33,7 +33,6 @@
                 <p>Adicionar um funcionário como usuário no site da empresa é um processo fundamental para conceder acesso a recursos específicos, 
                 como informações internas, ferramentas colaborativas ou outras áreas restritas do site.
                 Esse procedimento geralmente envolve a criação de contas de usuário personalizadas e a atribuição de permissões adequadas.<p>
-
                 <div class="btnInsereProduto">
                     <a href="adicionarUser.php"><button>Adicionar Usuário</button></a>
                 </div>
@@ -46,7 +45,15 @@
                     <div class="btnInsereUsuario">
                         <a href="../tables/AdicionarProd.php"><button>Adicionar Produto</button></a>
                     </div>
-                </div>
+            </div>
+
+            <div id="caixa03" class="box">
+                    <h3>Adicionar Fornecedor &nbsp &nbsp <i class="fa-solid fa-boxes-stacked"></i></h3>
+                    <p>Um fornecedor desempenha um papel fundamental no sucesso de uma empresa, desdobrando-se como um elo crucial na cadeia de suprimentos e desempenhando um papel estratégico em sua operação. 
+                    A importância de um fornecedor vai muito além da simples entrega de produtos ou serviços, influenciando diretamente a eficiência operacional, a qualidade do produto final e, consequentemente, a satisfação do cliente.</p>
+                    <div class="btnInsereUsuario01">
+                        <a href="../tables/fornecedor.php"><button>Adicionar Fornecedor</button></a>
+                    </div>
             </div>
         </div>
 
