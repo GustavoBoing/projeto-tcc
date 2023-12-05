@@ -403,7 +403,7 @@ img {vertical-align: middle;}
 .topnav > nav > ul > .user-logado{
   color: #F06E2D;
   font-size: small;
-  margin-left: 600px;
+  margin-left: 450px;
 }
 
 @keyframes fade {
@@ -530,6 +530,8 @@ input[type=number], select {
 label{
   font-size: small;
   margin-top: 50px;
+  margin-left: 10px;
+  color: var(--search-text);
 }
 
 
@@ -584,7 +586,7 @@ label{
 
 .Modelo, .Valor, .Qtd, .Tipo, .Fornecedor{
 
-  margin-left: 15px;
+  margin-left: 35px;
   color: var(--search-text);
 
 }
@@ -632,18 +634,19 @@ label{
 .inputValues {
   display: flex;
   flex-direction: row;
+
 }
 
 .btnFuncoes {
   display: flex;
   flex-direction: row;
-  /* margin-left: 60px; */
+  margin-left: 10px; 
 }
 
 .btnFuncoes01 {
   display: flex;
   flex-direction: row;
-  margin-left: 60px; 
+  margin-left: 70px; 
 }
 
 .btnFuncoes > .btnCancela {

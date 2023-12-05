@@ -29,7 +29,7 @@ input[type=text], select {
 
   input[type=password], select {
     width: 90%;
-    padding: 10px 20px;
+    padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -58,7 +58,7 @@ input[type=text], select {
   }
 
 input[type=number], select {
-    width: 100%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -84,9 +84,9 @@ button[type=submit]:hover {
 }
 
 input[type=text], select {
-  width: 100%;
+  width: 80%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 8px 0 0 10px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -94,9 +94,9 @@ input[type=text], select {
 }
 
 input[type=number], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0 0 10PX;
+  width: 90%;
+  padding: 10px 20px;
+  margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -113,6 +113,102 @@ label{
   margin: 0 0 0 20px;
 }
 
+
+.inputValues > .cnpj{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0 0 10PX;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.inputValues > .Nome{
+  width: 60%;
+  padding: 12px 0px;
+  margin: 8px 0 0 0PX;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.TelefoneFuncionario{
+  width: 60%;
+  padding: 12px 0px;
+  margin: 8px 0 0 10PX;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .CPFFuncionario{
-  margin: 0 0 0 20px;
+  width: 60%;
+  padding: 12px 0px;
+  margin: 8px 0 0 10PX;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+ .NomeFuncionario{
+  width: 60%;
+  padding: 12px 0px;
+  margin: 8px 0 0 10PX;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.NomeFornecedor{
+  width: 60%;
+  padding: 12px 0px;
+  margin: 8px 0 0 10PX;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.CNPJ{
+  width: 60%;
+  padding: 12px 0px;
+  margin: 8px 0 0 10PX;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Valor{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0 0 10px;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Qtd{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0 0 5px;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Modelo{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0 0 10px;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Funcionario{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0 0 10px;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
 }

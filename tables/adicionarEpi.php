@@ -77,8 +77,8 @@
                             <input type="text" name="modelo" placeholder="Digite o modelo" value="<?php echo $row_produto['Modelo']; ?>" disabled><br><br>
                         </label>
                     </div>
-                    <div class="Fornecedor">
-                        <label for="Fornecedor">
+                    <div class="Funcionario">
+                        <label for="Funcionario">
                             Funcionário:
                             <select type="text" name="funcionario">
                                 <option value=""><?php echo $_SESSION['login']?></option>

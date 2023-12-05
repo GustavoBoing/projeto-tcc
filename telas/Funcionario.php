@@ -21,6 +21,7 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>css/configuracoes.css">
+
         <title>Almoxarifado - Configurações</title>
     </head>
     <body>
@@ -41,15 +42,15 @@
 
                     <div class="TelefoneFuncionario">
                         <label for="Telefone">
-                            Telefone:
-                            <input type="number" name="funcionario[telefone]" placeholder="Telefone do Colaborador"><br><br>
+                            Telefone
+                            <input id="phone" type="text" name="funcionario[TelContato]" placeholder="Telefone do Colaborador"><br><br>
                         </label>
                     </div>
                     
                     <div class="CPFFuncionario">
                         <label for="CPF">
                             CPF:
-                            <input type="number" name="funcionario[cpf]" placeholder="CPF do Colaborador"><br><br>
+                            <input id="cpf" type="text" name="funcionario[CPF]" placeholder="CPF do Colaborador"><br><br>
                         </label>
                     </div>
                 </div>
@@ -65,6 +66,16 @@
         </form>
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
+    <script>
+
+    $('#phone').mask('(00) 0000-0000');  
+    $('#cpf').mask('000.000.000-00', {reverse: true});
+
+    </script>
+    
 </html>
 <?php
     ob_end_flush();  // Descarrega o buffer de saída

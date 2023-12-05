@@ -240,6 +240,14 @@ function maisUtilizados(){
             header('location: ../tables/okConfirma.php');
         }
     }
+    function addFornecedor(){
+        if (!empty($_POST['fornecedor'])) {
+            $fornecedor = $_POST['fornecedor'];
+            
+            save('fornecedor', $fornecedor);
+            header('location: ../tables/okConfirma.php');
+        }
+    }
 
     // function add(){
     //     if (!empty($_POST['produto'])) {

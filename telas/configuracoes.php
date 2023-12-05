@@ -28,22 +28,21 @@
     <main>
         <div id="boxes" class="boxes">
             <div id="caixa01" class="box">
-                <h3>Adicionar Funcionario &nbsp &nbsp <i class="fa-solid fa-user"></i></h3>
+                <h3>Adicionar Usuario &nbsp &nbsp <i class="fa-solid fa-user"></i></h3>
                 
-                <p>Adicionar um funcionário como usuário no site da empresa é um processo fundamental para conceder acesso a recursos específicos, 
-                como informações internas, ferramentas colaborativas ou outras áreas restritas do site.
-                Esse procedimento geralmente envolve a criação de contas de usuário personalizadas e a atribuição de permissões adequadas.<p>
+                <p>Adicionar um Usuario como usuário no site da empresa é um processo fundamental para termos o controle de login.
+                Esse procedimento geralmente envolve a criação de contas de usuário personalizadas e a atribuição de permissões adequadas.</p>
                 <div class="btnInsereProduto">
                     <a href="<?php echo BASEURL; ?>telas/adicionarUser.php"><button>Adicionar Usuário</button></a>
                 </div>
             </div>
 
             <div id="caixa02" class="box">
-                    <h3>Adicionar Produto &nbsp &nbsp <i class="fa-solid fa-boxes-stacked"></i></h3>
-                    <p>Adicionar um novo produto ao site da empresa é uma etapa crucial no gerenciamento do catálogo online. Essa prática não apenas mantém os clientes informados sobre os últimos lançamentos, mas também aprimora a experiência de compra, proporcionando um catálogo diversificado e atualizado. 
-                        Neste guia, exploraremos os passos detalhados para adicionar um produto com eficiência ao seu site, garantindo que os clientes tenham acesso fácil às informações mais recentes sobre os produtos oferecidos.</p>
+                    <h3>Adicionar Funcionario &nbsp &nbsp <i class="fa-solid fa-people-group"></i></h3>
+                    <p>Adicionar um funcionário no site da empresa é um processo fundamental para conceder acesso a recursos específicos, 
+                     como informações internas, ferramentas colaborativas ou outras áreas restritas do site.</p>
                     <div class="btnInsereUsuario">
-                        <a href="<?php echo BASEURL; ?>telas/funcionario.php"><button>Adicionar Produto</button></a>
+                        <a href="<?php echo BASEURL; ?>telas/funcionario.php"><button>Adicionar Funcionario</button></a>
                     </div>
             </div>
 
@@ -52,7 +51,7 @@
                     <p>Um fornecedor desempenha um papel fundamental no sucesso de uma empresa, desdobrando-se como um elo crucial na cadeia de suprimentos e desempenhando um papel estratégico em sua operação. 
                     A importância de um fornecedor vai muito além da simples entrega de produtos ou serviços, influenciando diretamente a eficiência operacional, a qualidade do produto final e, consequentemente, a satisfação do cliente.</p>
                     <div class="btnInsereUsuario01">
-                        <a href="<?php echo BASEURL; ?>tables/fornecedor.php"><button>Adicionar Fornecedor</button></a>
+                        <a href="<?php echo BASEURL; ?>telas/Fornecedor.php"><button>Adicionar Fornecedor</button></a>
                     </div>
             </div>
         </div>

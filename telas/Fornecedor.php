@@ -1,8 +1,8 @@
 <?php
-    session_start();
+    ob_start();
     require_once('function.php');
     include(HEADER_TEMPLATE);
-    add();
+    addFornecedor();
     if(!isset($_SESSION['login'])) {
         die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
     }
@@ -21,42 +21,54 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="<?php echo BASEURL; ?>css/configuracoes.css">
+
         <title>Almoxarifado - Configurações</title>
     </head>
     <body>
         <div class="TituloARE">
-            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Fornecedor </h2>
+            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Fonecedor </h2>
         </div>
-        <form class="tela-editar" method="POST" action="adicionarUser.php" enctype="multipart/form-data">
+        <form class="tela-editar" method="POST" action="Fornecedor.php" enctype="multipart/form-data">
             
         <div class="deixar-column">
                 <div class="inputValues">
 
-                    <div class="CNPJ">
-                        <label for="CNPJ">
-                            CNPJ:
-                            <input type="number" name="Fornecedor[CNPJ]" placeholder="Digite o CNPJ"><br><br>
-                        </label>
-                    </div>
-
-                    <div class="Nome">
+                    <div class="NomeFornecedor">
                         <label for="Nome">
-                            Nome do Fornecedor:
-                            <input type="text" name="Fornecedor[Nome]" placeholder="Digite o Nome"><br><br>
+                            Nome do Fonecedor:
+                            <input type="text" name="fornecedor[Nome]" placeholder="Nome do Fornecedor"><br><br>
                         </label>
                     </div>
                     
+                    <div class="CNPJ">
+                        <label for="CNPJ">
+                            CNPJ:
+                            <input id="cnpj" type="text" name="fornecedor[CNPJ]" placeholder="CNPJ"><br><br>
+                        </label>
+                    </div>
                 </div>
                 <div class="btnFuncoes">
                     <div class="btnSalvar">
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
                     <div class="btnCancela">
-                        <a href="<?php echo BASEURL;?>tables/index.php">Cancelar</a>
+                        <a href="<?php echo BASEURL;?>telas/index.php">Cancelar</a>
                     </div>
                 </div>
             </div>
         </form>
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
+    <script>
+  
+    $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
+
+    </script>
+    
 </html>
+<?php
+    ob_end_flush();  // Descarrega o buffer de saída
+?>

@@ -23,7 +23,7 @@
 }
 
 .btnInsereUsuario button{
-    width: 200px;
+    width: 215px;
     background-color: #F06E2D;
     color: white;
     padding: 9px 20px;
@@ -32,7 +32,7 @@
     cursor: pointer;
     height: 40px;
     font-size: 15px;
-    margin: 55px 0 0 0;
+    margin: 50px 0 0 0;
 }
 
 .btnInsereUsuario01 button{
@@ -56,4 +56,10 @@
 .btnInsereUsuario button:hover{
     background-color: #363636;
     transition: .8s;
+}
+
+
+.boxes > .caixa02 > p{
+
+    text-align: justify;
 }
