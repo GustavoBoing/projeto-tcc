@@ -1,8 +1,8 @@
 <?php
-    session_start();
+    ob_start();
     require_once('function.php');
     include(HEADER_TEMPLATE);
-    add();
+    addFuncionario();
     if(!isset($_SESSION['login'])) {
         die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
     }
@@ -25,34 +25,40 @@
     </head>
     <body>
         <div class="TituloARE">
-            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Fornecedor </h2>
+            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Funcionário </h2>
         </div>
-        <form class="tela-editar" method="POST" action="adicionarUser.php" enctype="multipart/form-data">
+        <form class="tela-editar" method="POST" action="funcionario.php" enctype="multipart/form-data">
             
         <div class="deixar-column">
                 <div class="inputValues">
 
-                    <div class="CNPJ">
-                        <label for="CNPJ">
-                            CNPJ:
-                            <input type="number" name="Fornecedor[CNPJ]" placeholder="Digite o CNPJ"><br><br>
+                    <div class="NomeFuncionario">
+                        <label for="Nome">
+                            Nome:
+                            <input type="text" name="funcionario[Nome]" placeholder="Nome do Colaborador"><br><br>
                         </label>
                     </div>
 
-                    <div class="Nome">
-                        <label for="Nome">
-                            Nome do Fornecedor:
-                            <input type="text" name="Fornecedor[Nome]" placeholder="Digite o Nome"><br><br>
+                    <div class="TelefoneFuncionario">
+                        <label for="Telefone">
+                            Telefone:
+                            <input type="number" name="funcionario[telefone]" placeholder="Telefone do Colaborador"><br><br>
                         </label>
                     </div>
                     
+                    <div class="CPFFuncionario">
+                        <label for="CPF">
+                            CPF:
+                            <input type="number" name="funcionario[cpf]" placeholder="CPF do Colaborador"><br><br>
+                        </label>
+                    </div>
                 </div>
                 <div class="btnFuncoes">
                     <div class="btnSalvar">
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
                     <div class="btnCancela">
-                        <a href="<?php echo BASEURL;?>tables/index.php">Cancelar</a>
+                        <a href="<?php echo BASEURL;?>telas/index.php">Cancelar</a>
                     </div>
                 </div>
             </div>
@@ -60,3 +66,6 @@
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>
 </html>
+<?php
+    ob_end_flush();  // Descarrega o buffer de saída
+?>

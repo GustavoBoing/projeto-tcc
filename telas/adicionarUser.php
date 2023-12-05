@@ -66,7 +66,7 @@
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
                     <div class="btnCancela">
-                        <a href="<?php echo BASEURL;?>tables/epis.php">Cancelar</a>
+                        <a href="<?php echo BASEURL;?>telas/index.php">Cancelar</a>
                     </div>
                 </div>
             </div>

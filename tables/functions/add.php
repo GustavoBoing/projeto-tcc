@@ -22,6 +22,7 @@ include_once("../conexao.php");
 
 $id_produto = filter_input(INPUT_POST, 'id_produto', FILTER_SANITIZE_NUMBER_INT);
 $quantidade_a_somar = filter_input(INPUT_POST, 'quantidade_a_somar', FILTER_SANITIZE_NUMBER_INT);
+$funcionario = filter_input(INPUT_POST, 'funcionario', FILTER_SANITIZE_NUMBER_INT);
 
 
 // Inicia a transação
@@ -36,7 +37,8 @@ try {
         throw new Exception("Erro ao atualizar a tabela de produtos.");
     }
 
-    $result_movimentacao = "INSERT INTO movimentacao (Data, QntdModificada, Produto_id, Usuario_id, Funcionario_id) VALUES (NOW(), $quantidade_a_somar, $id_produto, NULL, NULL)";
+    $result_movimentacao = "INSERT INTO movimentacao (Data, QntdModificada, Produto_id, Usuario_id, Funcionario_id) 
+    VALUES (NOW(), $quantidade_a_somar, $id_produto, NULL, $funcionario)";
     $resultado_movimentacao = mysqli_query($conn, $result_movimentacao);
 
     if (!mysqli_affected_rows($conn)) {

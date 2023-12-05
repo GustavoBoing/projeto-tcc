@@ -99,10 +99,6 @@ $gerarRelatorioIns = null;
         return $found;
     }
 
-    function adicionarProduto() {
-        
-    }
-
     function add(){
         if (!empty($_POST['produto'])) {
             $produto = $_POST['produto'];

@@ -108,3 +108,11 @@ label{
   margin-top: 50px;
   color: white;
 }
+
+.TelefoneFuncionario > label {
+  margin: 0 0 0 20px;
+}
+
+.CPFFuncionario{
+  margin: 0 0 0 20px;
+}

@@ -13,6 +13,16 @@
     $result_produto = "SELECT * FROM produto WHERE id_produto = '" . $_GET['id'] . "'";
     $resultado_produto = mysqli_query($conn, $result_produto);
     $row_produto = mysqli_fetch_assoc($resultado_produto);
+
+
+    // Verificar a conexão
+    if ($conn->connect_error) {
+        die("Conexão falhou: " . $conn->connect_error);
+    }
+
+    // Query para obter os funcionários
+    $query = "SELECT id_funcionario, Nome FROM funcionario";
+    $result = $conn->query($query);
 ?>
 <!DOCTYPE html>
     <head>
@@ -69,11 +79,14 @@
                     </div>
                     <div class="Fornecedor">
                         <label for="Fornecedor">
-                            Tipo:
-                            <select type="text" name="produto[Tipo]">
-                                <option value="1">Auto center marcondes</option>
-                                <option value="2">Auto center</option>
-                                <option value="2">Auto center vg</option>
+                            Funcionário:
+                            <select type="text" name="funcionario">
+                                <option value=""><?php echo $_SESSION['login']?></option>
+                                <?php
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<option value=\"{$row['id_funcionario']}\">{$row['Nome']}</option>";
+                                    }
+                                ?>
                             </select><br><br>
                         </label>
                     </div>

@@ -15,6 +15,9 @@ $produto = null;
 $pouco = null;
 $poucos = null;
 
+$funcionario = null;
+$usuario = null;
+
 function maisUtilizados(){
     global $movimentacoes;
     $movimentacoes = innerJoin2("id_mov, id_produto, COUNT(Produto_id) AS total_saidas, SUM(CASE WHEN QntdModificada < 0 THEN QntdModificada ELSE 0 END) AS quantidade, 
@@ -228,3 +231,21 @@ function maisUtilizados(){
             header('location: ../tables/okConfirma.php');
           }
     }
+
+    function addFuncionario(){
+        if (!empty($_POST['funcionario'])) {
+            $funcionario = $_POST['funcionario'];
+            
+            save('funcionario', $funcionario);
+            header('location: ../tables/okConfirma.php');
+        }
+    }
+
+    // function add(){
+    //     if (!empty($_POST['produto'])) {
+    //         $produto = $_POST['produto'];
+            
+    //         save('produto', $produto);
+    //         header('location: ../telas/index.php');
+    //       }
+    // }
