@@ -111,42 +111,6 @@ label{
     border-radius: 10px;
     color: #ffffff;
 }
-/* 
-input[type=text], select {
-    width: 80%;
-    padding: 2px 8px;
-    margin: 4px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-input[type=number], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-button[type=submit] {
-    width: 100%;
-    background-color: #F06E2D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button[type=submit]:hover {
-    background-color: #f35c10;
-    transition: 0.9s;
-}  */
 
 label{
     font-size: small;
@@ -242,6 +206,23 @@ label{
 }
 
 .gera-pdf > a > button:hover {
+    background-color: #363636;
+    transition: .8s;
+}
+
+.btnAdd > .btnNewFornecedor > button{
+    width: 180px;
+    padding: 8px 10px 8px 10px;
+    background: #1c1c1c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    align-items: flex-start;
+}
+
+.btnAdd > .btnNewFornecedor > button:hover {
     background-color: #363636;
     transition: .8s;
 }

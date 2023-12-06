@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?php echo BASEURL; ?>bootstrap/css/bootstrap.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
     <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">  
 
@@ -60,13 +60,27 @@
             <span class="tooltip">O Software</span>
           </li>
           <?php if ($_SESSION['isAdmin'] === "Sim"){?>
-          <li>
-            <a  href="<?php echo BASEURL; ?>telas/configuracoes.php">
-              <i class="bx bx-cog" id="icons"></i>
-              <span class="link_name">Configurações</span>
-            </a>
-            <span class="tooltip">Configurações</span>
-          </li>
+            <li>
+              <a  href="<?php echo BASEURL; ?>tablesAdmin/tableFornecedor.php">
+                <i class="fa-solid fa-truck-fast" ></i>
+                <span class="link_name">Fornecedores</span>
+              </a>
+              <span class="tooltip">Fornecedores</span>
+            </li>
+            <li>
+              <a  href="<?php echo BASEURL; ?>tablesAdmin/tableFuncionario.php">
+                <i class="fa-solid fa-people-group" ></i>
+                <span class="link_name">Colaboradores</span>
+              </a>
+              <span class="tooltip">Colaboradores</span>
+            </li>
+            <li>
+              <a  href="<?php echo BASEURL; ?>tablesAdmin/tableUser.php">
+                <i class="fa-regular fa-user" id="icons"></i>
+                <span class="link_name">Usuários</span>
+              </a>
+              <span class="tooltip">Usuários</span>
+            </li>
           <?php } ?>
           <li>
             <a class="darkLight-searchBox">

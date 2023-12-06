@@ -71,7 +71,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
     <script>
 
-    $('#phone').mask('(00) 0000-0000');  
+    $('#phone').mask('(00) 0 0000-0000');  
     $('#cpf').mask('000.000.000-00', {reverse: true});
 
     </script>

@@ -1,8 +1,8 @@
 <?php
-    session_start();
 
     include_once("conexao.php");
     require_once('function.php');
+    editFuncionario();
     include(HEADER_TEMPLATE);
     if(!isset($_SESSION['login'])) {
         die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
@@ -11,10 +11,10 @@
         die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
     }
 
-    $id_produto = filter_input(INPUT_GET, 'id_produto', FILTER_SANITIZE_NUMBER_INT);
-    $result_produto = "SELECT * FROM produto WHERE id_produto = '" . $_GET['id'] . "'";
-    $resultado_produto = mysqli_query($conn, $result_produto);
-    $row_produto = mysqli_fetch_assoc($resultado_produto);
+    // $id_funcionario = filter_input(INPUT_GET, 'id_funcionario', FILTER_SANITIZE_NUMBER_INT);
+    // $result_produto = "SELECT * FROM funcionario WHERE id_funcionario = '" . $_GET['id'] . "'";
+    // $resultado_produto = mysqli_query($conn, $result_produto);
+    // $row_produto = mysqli_fetch_assoc($resultado_produto);
 ?>
 <!DOCTYPE html>
 
@@ -28,45 +28,31 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <?php
-        if (isset($_SESSION['msg'])) {
-            echo $_SESSION['msg'];
-            unset($_SESSION['msg']);
-        }
+        // if (isset($_SESSION['msg'])) {
+        //     echo $_SESSION['msg'];
+        //     unset($_SESSION['msg']);
+        // }
     ?>
     <body>
         <div class="TituloARE">
             <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Editar Dados </h2>
         </div>
-        <form class="tela-editar" method="POST" action="functions/edita_Epis.php" enctype="multipart/form-data">
+        <form class="tela-editar" method="POST" action="editarFuncionario.php?id=<?php echo $produto['id_funcionario']; ?>" enctype="multipart/form-data">
             <div class="deixar-column">
                 <div class="inputValues">
-                    <input type="hidden" name="id_produto" value="<?php echo $row_produto['id_produto']; ?>">
+                    <input type="hidden" name="funcionario[id_funcionario]" value="<?php echo $produto['id_funcionario']; ?>">
 
                     <div class="Nome">
                         <label for="Nome">
                             Nome:
-                            <input type="text" name="descricao" value="<?php echo $row_produto['Descricao']; ?>"><br><br>
-                        </label>
-                    </div>
-
-                    <div class="Qtd">
-                        <label for="Qtd">
-                            Quantidade:
-                            <input type="number" name="quantidade" placeholder="Digite a quantidade" value="<?php echo $row_produto['Quantidade']; ?>" disabled><br><br>
-                        </label>
-                    </div>
-
-                    <div class="Valor">
-                        <label for="Valor">
-                            Valor:
-                            <input type="text" step="0.01" name="valor" min="0.01" placeholder="Digite o valor" value="<?php echo $row_produto['Valor']; ?>"><br><br>
+                            <input type="text" name="funcionario[Nome]" value="<?php echo $produto['Nome']; ?>"><br><br>
                         </label>
                     </div>
 
                     <div class="Modelo">
                         <label for="Modelo">
-                            Modelo:
-                            <input type="text" name="modelo" placeholder="Digite o modelo" value="<?php echo $row_produto['Modelo']; ?>"><br><br>
+                            Telefone:
+                            <input type="text" name="funcionario[TelContato]" placeholder="Digite o modelo" value="<?php echo $row_produto['TelContato']; ?>"><br><br>
                         </label>
                     </div>
                 </div>
@@ -75,7 +61,7 @@
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
                     <div class="btnCancela">
-                        <a href="<?php echo BASEURL;?>tables/epis.php">Cancelar</a>
+                        <a href="<?php echo BASEURL;?>tablesAdmin/tableFuncionario.php">Cancelar</a>
                     </div>
                 </div>
             </div>

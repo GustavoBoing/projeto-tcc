@@ -1,6 +1,4 @@
 <?php
-    session_start();
-
     include_once("./conexao.php");
     require_once('./function.php');
     indexEPI();
@@ -81,7 +79,7 @@
                     <div class="Valor">
                         <label for="Valor">
                             Valor:
-                            <input type="number" step="0.01" name="valor" min="0.01" placeholder="Digite o valor" value="<?php echo $row_produto['Valor']; ?>" disabled><br><br>
+                            <input type="text" step="0.01" name="valor" min="0.01" placeholder="Digite o valor" value="R$ <?php echo $row_produto['Valor']; ?>" disabled><br><br>
                         </label>
                     </div>
 
