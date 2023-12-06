@@ -39,6 +39,7 @@
                 } else {
                     // Apenas envie os scripts JavaScript se houver erro no login
                     echo '<script>alert("Usuário ou senha incorretos. Por favor, tente novamente.");</script>';
+                    // echo "<script>document.querySelector('.entrar').setCustomValidity('Usuário ou senha incorretos');</script>";
                     echo '<script>window.location.href = "./index.php";</script>';
                     exit();
                 }

@@ -140,6 +140,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .CPFFuncionario{
@@ -149,6 +150,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
  .NomeFuncionario{
@@ -158,6 +160,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .NomeFornecedor{
@@ -167,6 +170,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .CNPJ{
@@ -176,6 +180,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .Valor{
@@ -185,6 +190,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .Qtd{
@@ -194,6 +200,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .Nome{
@@ -203,6 +210,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .Modelo{
@@ -212,6 +220,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .Funcionario{
@@ -221,6 +230,7 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .Tipo{
@@ -230,4 +240,5 @@ label{
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
+  position: relative;
 }

@@ -63,6 +63,13 @@
                         </label>
                     </div>
 
+                    <div class="QtdAtual">
+                        <label for="Qtd">
+                            Quantidade Atual:
+                            <input type="number" value="<?php echo $row_produto['Quantidade']; ?>"disabled br><br>
+                        </label>
+                    </div>
+
                     <div class="Qtd">
                         <label for="Qtd">
                             Quantidade:

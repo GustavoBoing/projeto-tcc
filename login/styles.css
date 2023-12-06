@@ -51,7 +51,7 @@ label {
     margin-left: 2px;
 }
 
-.login, .senha {
+.login, .senha, .isAdmin {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 10px;

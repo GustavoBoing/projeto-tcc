@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root{
-  --color-default:#1c1c1c;
+  --color:#1c1c1c;
   --color-second:	#D3D3D3;
   --color-white:#89817D;
   --color-body:#4A3F35;
@@ -98,6 +98,8 @@
 .sidebar .nav-list{
   margin-top: -5px;
   height: 100%;
+  margin-left: -2rem;
+
 }
 
 .sidebar li{
@@ -238,10 +240,6 @@ a {
     transition: 0.5s;
   }
 
-nav li:hover {
-  opacity: 0.7;
-}
-
 .container .logo {
   cursor: default;
   color: var(--color-black);
@@ -265,14 +263,14 @@ nav {
   z-index: 999;
 }
 
-.navlist:hover{
+.navlist > .modal > .login:hover{
   opacity: 0.7;
 }
 
 .navlist li {
   position: absolute;
   right: 30px;
-  top: 2.5vh
+  top: 15px;
 }
 
 #ins, #epi {
@@ -400,14 +398,12 @@ img {vertical-align: middle;}
   justify-content: flex-end;
 } */
 
-.topnav > nav > ul > .user-logado{
+.topnav > nav > ul > li > .user-logado{
   color: #F06E2D;
   font-size: small;
-  margin-left: 800px;
-  position: absolute;
-  top: 2.5vh;
+  margin-right: 20px;
+  position: relative;
   cursor: default;
-  
 }
 
 @keyframes fade {
@@ -645,6 +641,7 @@ label{
   width: auto;
   position: relative;
   right: 25px;
+  
 
 }
 
@@ -713,42 +710,4 @@ label{
   transition: .8s;
 }
 
-/* li a, .dropBtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 7px 16px;
-  text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropBtn {
-  background-color: red;
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-} */
 

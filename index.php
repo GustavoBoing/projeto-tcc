@@ -29,7 +29,7 @@
                     </p>
                     <p>
                         <p><label for="password">É administrador?</label></p>
-                        <select name="isAdmin" id="">
+                        <select name="isAdmin" class="isAdmin" id="">
                             <option value="Sim">Sim</option>
                             <option value="Não">Não</option>
                         </select>
@@ -38,7 +38,7 @@
                         <a href="<?php echo BASEURL; ?>novaSenha/index.php"><label class="esqueceu" for="esqueceu">Esqueceu sua senha?</label></a>
                     </p>
                     <p>
-                        <button class="entrar">Entrar</button>
+                        <button class="entrar" onchange="try()">Entrar</button>
                     </p>
                 </div>
             </form>
@@ -49,6 +49,6 @@
         </div>
              Fundo do Modal -->
         <!-- <div id="modalBackground" onclick="fecharModal()"></div> -->
-        <!-- <script src="<?php echo BASEURL;?>login/script.js"></script>  -->
+        <!-- <script src="<?php echo BASEURL;?>login/script.js"></script>   -->
     </body>
 </html>

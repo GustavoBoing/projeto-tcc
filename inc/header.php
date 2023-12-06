@@ -8,11 +8,12 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="<?php echo BASEURL; ?>bootstrap/css/bootstrap.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
     <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">  
-    
+
   </head>
 
   <header>
@@ -92,16 +93,13 @@
           <ul class="container">
             <a class="logo" href="#">RV Soluções Industriais</a>
           </ul>
-          <ul class="navlist">
-            <p class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></p>
-          </ul>
+
           <ul class="navlist">
             <li class="modal">
-              <a href="../index.php" class="login" title="Clique para sair"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
-              <!-- <div class="dropdown-content">
-                <a href="#">Sair</a>
-              </div> -->
+              <a class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></a>
+              <a class="login" href="#" title="Clique para sair"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
             </li>
           </ul>
         </nav>
       </div>
+      
