@@ -22,6 +22,14 @@
     // Query para obter os funcionários
     $query = "SELECT id_funcionario, Nome FROM funcionario";
     $result = $conn->query($query);
+
+    $user = $_SESSION['login'];
+    $query2user = "SELECT id_usuario FROM usuario WHERE login = ?";
+    $stmt = $conn->prepare($query2user);
+    $stmt->bind_param("s", $user);
+    $stmt->execute();
+    $stmt->bind_result($id_usuario);
+    $stmt->fetch();
 ?>
 <!DOCTYPE html>
     <head>
@@ -88,6 +96,7 @@
                             </select><br><br>
                         </label>
                     </div>
+                    <input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">
                 </div>
                 <div class="btnFuncoes">
                     <div class="btnSalvar">

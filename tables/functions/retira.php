@@ -23,6 +23,8 @@ include_once("../conexao.php");
 
 $id_produto = filter_input(INPUT_POST, 'id_produto', FILTER_SANITIZE_NUMBER_INT);
 $quantidade_a_subtrair = filter_input(INPUT_POST, 'quantidade_a_subtrair', FILTER_SANITIZE_NUMBER_INT);
+$funcionario = filter_input(INPUT_POST, 'funcionario', FILTER_SANITIZE_NUMBER_INT);
+$id_usuario = filter_input(INPUT_POST, 'id_usuario', FILTER_SANITIZE_NUMBER_INT);
 
 // Inicia a transação
 mysqli_begin_transaction($conn);
@@ -37,7 +39,8 @@ try {
     }
 
     // Consulta SQL para inserir na tabela de movimentações com a data e hora atual
-    $result_movimentacao = "INSERT INTO movimentacao (Data, QntdModificada, Produto_id, Usuario_id, Funcionario_id) VALUES (NOW(), -$quantidade_a_subtrair, $id_produto, NULL, NULL)";
+    $result_movimentacao = "INSERT INTO movimentacao (Data, QntdModificada, Produto_id, Usuario_id, Funcionario_id) 
+    VALUES (NOW(), -$quantidade_a_subtrair, $id_produto, $id_usuario, $funcionario)";
     $resultado_movimentacao = mysqli_query($conn, $result_movimentacao);
 
     if (!mysqli_affected_rows($conn)) {
@@ -47,7 +50,7 @@ try {
     // Comita a transação
     mysqli_commit($conn);
 
-    $_SESSION['msg'] = "<p style='color:green;'>Produto retirado com sucesso</p>";
+    // $_SESSION['msg'] = "";
     header("Location: ../okConfirma.php");
 } catch (Exception $e) {
     // Em caso de erro, reverte a transação

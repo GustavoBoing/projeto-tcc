@@ -1,5 +1,5 @@
 button[type=submit] {
-    width: 100px;
+    width: auto;
     background-color: #F06E2D;
     color: white;
     padding: 9px 20px;
@@ -18,50 +18,50 @@ button[type=submit] {
 
   
 input[type=text], select {
-    width: 90%;
+    width: auto;
     padding: 10px 20px;
     margin: 8px 0;
-    display: inline-block;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
   }
 
   input[type=password], select {
-    width: 90%;
+    width: auto;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
   }
   
   input[type=number], select {
-    width: 90%;
+    width: auto;;
     padding: 10px 20px;
     margin: 8px 0;
-    display: inline-block;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
   }
 
   input[type=text], select {
-    width: 80%;
+    width: auto;
     padding: 2px 8px;
     margin: 4px 0;
-    display: inline-block;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
   }
 
 input[type=number], select {
-    width: 80%;
+    width: auto;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -84,20 +84,20 @@ button[type=submit]:hover {
 }
 
 input[type=text], select {
-  width: 80%;
+  width: auto;
   padding: 12px 20px;
   margin: 8px 0 0 10px;
-  display: inline-block;
+  display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 input[type=number], select {
-  width: 90%;
-  padding: 10px 20px;
+  width: 110%;
+  padding: 12px 20px;
   margin: 8px 0;
-  display: inline-block;
+  display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -114,11 +114,11 @@ label{
 }
 
 
-.inputValues > .cnpj{
+/* .inputValues > .cnpj{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0 0 10PX;
-  display: inline-block;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -127,16 +127,17 @@ label{
   width: 60%;
   padding: 12px 0px;
   margin: 8px 0 0 0PX;
-  display: inline-block;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
-}
+} */
+
 
 .TelefoneFuncionario{
   width: 60%;
   padding: 12px 0px;
   margin: 8px 0 0 10PX;
-  display: inline-block;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -145,7 +146,7 @@ label{
   width: 60%;
   padding: 12px 0px;
   margin: 8px 0 0 10PX;
-  display: inline-block;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -154,7 +155,7 @@ label{
   width: 60%;
   padding: 12px 0px;
   margin: 8px 0 0 10PX;
-  display: inline-block;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -163,7 +164,7 @@ label{
   width: 60%;
   padding: 12px 0px;
   margin: 8px 0 0 10PX;
-  display: inline-block;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -172,7 +173,7 @@ label{
   width: 60%;
   padding: 12px 0px;
   margin: 8px 0 0 10PX;
-  display: inline-block;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -180,8 +181,8 @@ label{
 .Valor{
   width: 80%;
   padding: 12px 20px;
-  margin: 8px 0 0 10px;
-  display: inline-block;
+  margin: 8px 0 0 15px;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -190,7 +191,16 @@ label{
   width: 80%;
   padding: 12px 20px;
   margin: 8px 0 0 5px;
-  display: inline-block;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Nome{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0 0 0px;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -199,7 +209,7 @@ label{
   width: 80%;
   padding: 12px 20px;
   margin: 8px 0 0 10px;
-  display: inline-block;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -208,7 +218,16 @@ label{
   width: 80%;
   padding: 12px 20px;
   margin: 8px 0 0 10px;
-  display: inline-block;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Tipo{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0 0 10px;
+  display: block;
   border-radius: 4px;
   box-sizing: border-box;
 }

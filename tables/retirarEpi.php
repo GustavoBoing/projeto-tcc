@@ -1,18 +1,35 @@
 <?php
-session_start();
+    session_start();
 
-include_once("./conexao.php");
-require_once('./function.php');
-indexEPI();
-include(HEADER_TEMPLATE);
-if(!isset($_SESSION['login'])) {
-    die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
-}
+    include_once("./conexao.php");
+    require_once('./function.php');
+    indexEPI();
+    include(HEADER_TEMPLATE);
+    if(!isset($_SESSION['login'])) {
+        die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
+    }
 
-$id_produto = filter_input(INPUT_GET, 'id_produto', FILTER_SANITIZE_NUMBER_INT);
-$result_produto = "SELECT * FROM produto WHERE id_produto = '" . $_GET['id'] . "'";
-$resultado_produto = mysqli_query($conn, $result_produto);
-$row_produto = mysqli_fetch_assoc($resultado_produto);
+    $id_produto = filter_input(INPUT_GET, 'id_produto', FILTER_SANITIZE_NUMBER_INT);
+    $result_produto = "SELECT * FROM produto WHERE id_produto = '" . $_GET['id'] . "'";
+    $resultado_produto = mysqli_query($conn, $result_produto);
+    $row_produto = mysqli_fetch_assoc($resultado_produto);
+
+    // Verificar a conexão
+    if ($conn->connect_error) {
+        die("Conexão falhou: " . $conn->connect_error);
+    }
+
+    // Query para obter os funcionários
+    $query = "SELECT id_funcionario, Nome FROM funcionario";
+    $result = $conn->query($query);
+
+    $user = $_SESSION['login'];
+    $query2user = "SELECT id_usuario FROM usuario WHERE login = ?";
+    $stmt = $conn->prepare($query2user);
+    $stmt->bind_param("s", $user);
+    $stmt->execute();
+    $stmt->bind_result($id_usuario);
+    $stmt->fetch();
 ?>
 <!DOCTYPE html>
 
@@ -67,6 +84,21 @@ $row_produto = mysqli_fetch_assoc($resultado_produto);
                             <input type="text" name="modelo" placeholder="Digite o modelo" value="<?php echo $row_produto['Modelo']; ?>" disabled><br><br>
                         </label>
                     </div>
+                    <div class="Funcionario">
+                        <label for="Funcionario">
+                            Funcionário:
+                            <? var_dump($query)?>
+                            <select type="text" name="funcionario">
+                                <option value=""><?php echo $_SESSION['login']?></option>
+                                <?php
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<option value=\"{$row['id_funcionario']}\">{$row['Nome']}</option>";
+                                    }
+                                ?>
+                            </select><br><br>
+                        </label>
+                    </div>
+                    <input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">
                 </div>
                 <div class="btnFuncoes">
                     <div class="btnSalvar">

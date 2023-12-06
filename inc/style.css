@@ -403,7 +403,11 @@ img {vertical-align: middle;}
 .topnav > nav > ul > .user-logado{
   color: #F06E2D;
   font-size: small;
-  margin-left: 450px;
+  margin-left: 800px;
+  position: absolute;
+  top: 2.5vh;
+  cursor: default;
+  
 }
 
 @keyframes fade {
@@ -583,32 +587,36 @@ label{
   color: var(--search-text);
 
 }
-
-.Modelo, .Valor, .Qtd, .Tipo, .Fornecedor{
-
-  margin-left: 35px;
-  color: var(--search-text);
-
-}
-
-/* .Valor{
+/* 
+.Modelo, .Valor, .Qtd, .Tipo, .Fornecedor, .Funcionario{
 
   margin-left: 15px;
   color: var(--search-text);
+  padding: 0px 0px;
+  margin-right: 10px;
+
+} */
+
+ .Valor{
+
+  margin-left: 15px;
+  color: var(--search-text);
+  width: 130%;
 
 }
 
 .Qtd{
 
-  margin-left: 15px;
+  margin-left: 5px;
   color: var(--search-text);
-
+  width: 130%;
 }
 
 .Tipo{
 
   margin-left: 15px;
   color: var(--search-text);
+  width: 100%;
 
 }
 
@@ -617,7 +625,7 @@ label{
   margin-left: 15px;
   color: var(--search-text);
 
-} */
+} 
 
 .tela-editar{
 
@@ -634,6 +642,9 @@ label{
 .inputValues {
   display: flex;
   flex-direction: row;
+  width: auto;
+  position: relative;
+  right: 25px;
 
 }
 

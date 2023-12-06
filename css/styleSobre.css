@@ -100,7 +100,7 @@
 .boxes {
     display: flex;
     justify-content: center;
-    margin: 3% 7% 7% 7%;
+    margin: 3% 7% 7% 3%;
 }
 
 .box {

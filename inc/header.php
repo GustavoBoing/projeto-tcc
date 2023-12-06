@@ -92,7 +92,7 @@
           <ul class="container">
             <a class="logo" href="#">RV Soluções Industriais</a>
           </ul>
-          <ul class="nomeUser">
+          <ul class="navlist">
             <p class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></p>
           </ul>
           <ul class="navlist">
