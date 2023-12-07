@@ -56,21 +56,21 @@
                         <th>ID</th>
                         <th>Nome</th>
                         <th>CNPJ</th>
-                        <th></th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if ($fornecedores) : ?>
-                    <?php foreach($fornecedores as $produto) : ?>
+                    <?php foreach($fornecedores as $fornecedor) : ?>
                         <tr>
                         <?php 
-                                echo '<td>'.$produto['id_fornecedor'].'</td>';
-                                echo '<td>'. $produto['Nome'] . '</td>';
-                                echo '<td>' .  $produto['CNPJ'] . '</td>'
+                                echo '<td>'.$fornecedor['id_fornecedor'].'</td>';
+                                echo '<td>'. $fornecedor['Nome'] . '</td>';
+                                echo '<td>' .  $fornecedor['CNPJ'] . '</td>'
                             ?>
                             <td class="changes">
-                                <a href="excluir.php?id=<?php echo $produto['id_fornecedor']; ?>" class="btn btn-transparent"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
-                                <a href="editar.php?id=<?php echo $produto['id_fornecedor']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
+                                <a href="editarFornecedor.php?id=<?php echo $fornecedor['id_fornecedor']; ?>" class="btn btn-transparent"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
+                                <a href="editarFornecedor.php?id=<?php echo $fornecedor['id_fornecedor']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
                             </td>
                         </tr>
                     <?php endforeach ; ?>

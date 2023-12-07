@@ -1,21 +1,21 @@
 <?php
-        require_once('function.php');
-        usuarios();
-        // filtragem();
-        include(HEADER_TEMPLATE);
-        if(!isset($_SESSION['login'])) {
-            die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
-        }
-        if(!$_SESSION['isAdmin'] === "Sim"){
-            die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
-        }
-    ?>
+    require_once('function.php');
+    usuarios();
+    // filtragem();
+    include(HEADER_TEMPLATE);
+    if(!isset($_SESSION['login'])) {
+        die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
+    }
+    if(!$_SESSION['isAdmin'] === "Sim"){
+        die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
+    }
+?>
 <!DOCTYPE html>    
 <html>
     <head>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>css/styleTbl.css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
     </head>
@@ -56,21 +56,21 @@
                         <th>ID</th>
                         <th>Login</th>
                         <th>Administrador?</th>
-                        <th></th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if ($usuarios) : ?>
-                    <?php foreach($usuarios as $produto) : ?>
+                    <?php foreach($usuarios as $usuario) : ?>
                         <tr>
                             <?php 
-                                echo '<td>'.$produto['id_usuario'].'</td>';
-                                echo '<td>'. $produto['Login'] . '</td>';
-                                echo '<td>' .  $produto['isAdmin'] . '</td>'
+                                echo '<td>'.$usuario['id_usuario'].'</td>';
+                                echo '<td>'. $usuario['Login'] . '</td>';
+                                echo '<td>' .  $usuario['isAdmin'] . '</td>'
                             ?>
                             <td class="changes">
-                                <a href="excluir.php?id=<?php echo $produto['id_usuario']; ?>" class="btn btn-transparent"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
-                                <a href="editar.php?id=<?php echo $produto['id_usuario']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
+                                <a href="editarUser.php?id=<?php echo $usuario['id_usuario']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal" class="btn btn-transparent" data-user="<?php echo $usuario['id_usuario']?>"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
                             </td>
                         </tr>
                     <?php endforeach ; ?>
@@ -82,7 +82,9 @@
                 </tbody>
             </table>
         </main>
-
+        <?php //include('modal.php'); ?>
     </body>
+
     <script src="<?php echo BASEURL?>js/script.js"></script>
+    <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>
 <html>

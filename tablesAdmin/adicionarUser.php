@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    ob_start();
     require_once('function.php');
     include(HEADER_TEMPLATE);
     add();

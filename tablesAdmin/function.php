@@ -6,6 +6,8 @@ require_once(DBAPI);
 $funcionarios = null;
 $usuarios = null;
 $fornecedores = null;
+global $conn; 
+$conn = open_database();
 
     function fornecedores() {
         global $fornecedores;
@@ -34,13 +36,45 @@ $fornecedores = null;
         }
     }
 
-    function add(){
-        if (!empty($_POST['usuario'])) {
-            $usuario = $_POST['usuario'];
-            
-            save('usuario', $usuario);
-            header('location: ../tables/okConfirma.php');
-          }
+    function criptografia($senha) {
+      /*
+        criptografia Blowfish
+      */ 
+      //criptografia na senha
+      $custo = "08";
+      $salt = "CflfllePArKlBJomMOF6aJ";
+
+      //gera um hash baseado em bcrypt
+      $hash = crypt($senha, "$2a$" . $custo . "$" . $salt . "$");
+
+      return $hash; //retorna a senha criptografada
+    }
+
+    function criarHashSenha($senha) {
+      return password_hash($senha, PASSWORD_BCRYPT);
+    }
+
+    function add()
+    {
+
+      if (!empty($_POST['usuario'])) {
+        try
+        {
+          $usuario = $_POST['usuario'];
+
+          $usuario['Senha'] = password_hash($usuario['Senha'], PASSWORD_DEFAULT);
+          $usuario['palavraPasse'] = password_hash($usuario['palavraPasse'], PASSWORD_DEFAULT);
+
+          save('usuario', $usuario);
+          header('location: ../tables/okConfirma.php');
+
+        } 
+        catch (Exception $e)
+        {
+            $_SESSION['message'] = "Aconteceu um erro: " . $e->getMessage();
+            $_SESSION['type'] = "danger";
+        }
+      } 
     }
 
     function addFuncionario(){
@@ -60,27 +94,217 @@ $fornecedores = null;
         }
     }
 
-    function editFuncionario() {
-    
+    // function editaFuncionario() {
+    //     $conn = open_database();
+    //     global $row_produto;
+
+    //     $id = $_GET['id'];
+
+    //     $id_funcionario = filter_input(INPUT_GET, 'id_funcionario', FILTER_SANITIZE_NUMBER_INT);
+    //     $result_produto = "SELECT * FROM funcionario WHERE id_funcionario = '" . $_GET['id'] . "'";
+    //     $resultado_produto = mysqli_query($conn, $result_produto);
+    //     $row_produto = mysqli_fetch_assoc($resultado_produto);
+
+    //     if(isset($_POST['funcionario'])){
+    //         $result_produto = "UPDATE funcionario SET Nome='Nome', TelContato='TelContato', CPF='CPF' WHERE id_funcionario ='$id_funcionario'";
+    //         $resultado_produto = mysqli_query($conn, $result_produto);
+
+    //         if(mysqli_affected_rows($conn)){
+    //             $_SESSION['msg'] = "";
+    //             header("Location: ../tables/okConfirma.php");
+    //         }else{
+    //             $_SESSION['msg'] = "";
+    //             header("Location: ../tables/erradoEpi.php");
+    //             // var_dump($result_produto);
+    //         }
+    //     }
+
+
+    // }
+
+    function editFornecedor() {
         if (isset($_GET['id'])) {
-    
             $id = $_GET['id'];
-        
-            if (isset($_POST['funcionario'])) {
     
-            $funcionario = $_POST['funcionario'];
+            // Adicione estes var_dump para verificar o valor de $id
+            var_dump($id);
     
-            update('funcionario', $id, $funcionario);
-            header('location: index.php');
-          } else {
-    
-            global $funcionario;
-            $funcionario = find('funcionario', $id);
-          } 
+            if (isset($_POST['fornecedor'])) {
+                $fornecedor = $_POST['fornecedor'];
+
+                updateFornecedor('fornecedor', $id, $fornecedor );
+                header('location: ../tables/okConfirma.php');
+            } else {
+                global $fornecedor; 
+                $fornecedor = findFuncionario('fornecedor', $id);
+            }
         } else {
-          header('location: index.php');
+            header('location: ../tables/erradoIndex.php');
         }
+    }
+
+	function findFuncionario( $table = null, $id = null ) {
+	  
+		$database = open_database();
+		$found = null;
+
+		try {
+		  if ($id) {
+			$sql = "SELECT * FROM " . $table . " WHERE id_fornecedor = " . $id;
+			$result = $database->query($sql);
+			
+			if ($result->num_rows > 0) {
+			  $found = $result->fetch_assoc();
+			}
+			
+		  } else {
+			
+			$sql = "SELECT * FROM " . $table;
+			$result = $database->query($sql);
+			
+			if ($result->num_rows > 0) {
+			  $found = $result->fetch_all(MYSQLI_ASSOC);
+			
+			/* Metodo alternativo
+			$found = array();
+			while ($row = $result->fetch_assoc()) {
+			  array_push($found, $row);
+			} */
+			}
+		  }
+		} catch (Exception $e) {
+		  $_SESSION['message'] = $e->GetMessage();
+		  $_SESSION['type'] = 'danger';
+	  }
+		
+		close_database($database);
+		return $found;
+	}
+
+    function updateFornecedor($table = null, $id = 0, $data = null) {
+
+      $database = open_database();
+
+      $items = null;
+
+      foreach ($data as $key => $value) {
+        $items .= trim($key, "'") . "='$value',";
       }
+
+      // remove a ultima virgula
+      $items = rtrim($items, ',');
+
+      $sql  = "UPDATE " . $table;
+      $sql .= " SET $items";
+      $sql .= " WHERE id_fornecedor=" . $id . ";";
+
+      try {
+        $database->query($sql);
+
+        $_SESSION['message'] = 'Registro atualizado com sucesso.';
+        $_SESSION['type'] = 'success';
+
+      } catch (Exception $e) { 
+
+        $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
+        $_SESSION['type'] = 'danger';
+      } 
+
+      close_database($database);
+    }
+
+
+    function editUser() {
+      if (isset($_GET['id'])) {
+          $id = $_GET['id'];
+  
+          // Adicione estes var_dump para verificar o valor de $id
+          var_dump($id);
+  
+          if (isset($_POST['usuario'])) {
+              $usuario = $_POST['usuario'];
+
+              updateUser('usuario', $id, $usuario );
+              header('location: ../tables/okConfirma.php');
+          } else {
+              global $usuario; 
+              $usuario = findUser('usuario', $id);
+          }
+      } else {
+          header('location: ../tables/erradoIndex.php');
+      }
+  }
+
+function findUser( $table = null, $id = null ) {
+  
+  $database = open_database();
+  $found = null;
+
+  try {
+    if ($id) {
+    $sql = "SELECT * FROM " . $table . " WHERE id_usuario = " . $id;
+    $result = $database->query($sql);
+    
+    if ($result->num_rows > 0) {
+      $found = $result->fetch_assoc();
+    }
+    
+    } else {
+    
+    $sql = "SELECT * FROM " . $table;
+    $result = $database->query($sql);
+    
+    if ($result->num_rows > 0) {
+      $found = $result->fetch_all(MYSQLI_ASSOC);
+    
+    /* Metodo alternativo
+    $found = array();
+    while ($row = $result->fetch_assoc()) {
+      array_push($found, $row);
+    } */
+    }
+    }
+  } catch (Exception $e) {
+    $_SESSION['message'] = $e->GetMessage();
+    $_SESSION['type'] = 'danger';
+  }
+  
+  close_database($database);
+  return $found;
+}
+
+  function updateUser($table = null, $id = 0, $data = null) {
+
+      $database = open_database();
+
+      $items = null;
+
+      foreach ($data as $key => $value) {
+        $items .= trim($key, "'") . "='$value',";
+      }
+
+      // remove a ultima virgula
+      $items = rtrim($items, ',');
+
+      $sql  = "UPDATE " . $table;
+      $sql .= " SET $items";
+      $sql .= " WHERE id_usuario=" . $id . ";";
+
+      try {
+        $database->query($sql);
+
+        $_SESSION['message'] = 'Registro atualizado com sucesso.';
+        $_SESSION['type'] = 'success';
+
+      } catch (Exception $e) { 
+
+        $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
+        $_SESSION['type'] = 'danger';
+      } 
+
+      close_database($database);
+    }
+
 
     function filter ($table = null, $p = null) {
 
