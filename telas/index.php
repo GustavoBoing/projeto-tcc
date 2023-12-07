@@ -14,9 +14,7 @@
 
 <html>
     <head>
-        <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="<?php echo BASEURL; ?>bootstrap/css/bootstrap.min.css"/>
                 <link rel="stylesheet" href="<?php echo BASEURL; ?>css/styleIndex.css"/>
                 <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
                 <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
@@ -29,9 +27,11 @@
       <div class="tittleIndex">
         <h2 class="tituloIdx"><i class="fa-brands fa-uncharted fa-lg"></i> &nbsp; Página Inicial</h2>
         <p id="subtitulo" style="font-size:small; margin:0 0 0 70px">Visão geral do Almoxarifado</p>
+
       </div>
       <main>
-        <div id="boxes" class="boxes">
+
+        <div id="boxes" class="float-sm-left">
           <div class="hidden">
             <div id="caixa01" class="box">
               <h3><i class="fa-regular fa-file-lines"></i>&nbsp; &nbsp;Grande quantidade</h3>
@@ -49,6 +49,7 @@
               ?>
             </div>
           </div>
+         
           <div class="hidden">
             <div id="caixa02" class="box">
               <h3><i class="fa-solid fa-file-lines"></i>&nbsp; &nbsp;Baixa quantidade</h3>
@@ -85,7 +86,7 @@
               ?>
             </div>
           </div>
-        </div>
+        </div> 
       </main>
     </body>
     <script src="<?php echo BASEURL; ?>js/index.js"></script>

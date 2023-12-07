@@ -4,6 +4,7 @@
   session_start();
   require_once "../config.php";
 ?>
+      <?php include('modal.php'); ?>
 
 <html lang="pt-br">
   <head>
@@ -97,6 +98,9 @@
         </ul>
       </div>
     </div>
+
+ 
+
   </header>
     <section class="home-section">
       <div class="topnav" id="myTopnav"> 
@@ -110,8 +114,10 @@
 
           <ul class="navlist">              
             <a class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></a>
-            <a class="loginIcon" href="./inc/modal.php" title="Clique para sair"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
+            <a href="#" class="loginIcon"  data-bs-toggle="modal" data-bs-target="#delete-modal" data-customer="<?php echo $_ido_usuario = $_SESSION['id_usuario']; ?>" title="Clique para sair"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
           </ul>
         </nav>
       </div>
+
+
       

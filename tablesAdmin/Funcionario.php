@@ -26,12 +26,12 @@
     </head>
     <body>
         <div class="TituloARE">
-            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Funcionário </h2>
+            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Colaborador </h2>
         </div>
         <form class="tela-editar" method="POST" action="funcionario.php" enctype="multipart/form-data">
             
         <div class="deixar-column">
-                <div class="inputValues">
+                <div class="inputValues01">
 
                     <div class="NomeFuncionario">
                         <label for="Nome">

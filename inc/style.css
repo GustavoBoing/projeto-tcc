@@ -615,7 +615,7 @@ label{
 
  .Valor{
 
-  margin-left: 15px;
+  margin-left: 10px;
   color: var(--search-text);
   width: 130%;
   margin-left: 30px;
@@ -626,6 +626,7 @@ label{
 .Nome {
 
   margin-right: 10px;
+  width: 100%;
 
 
 }
@@ -636,6 +637,14 @@ label{
   margin-right: 10px;
   color: var(--search-text);
   width: 100%;
+}
+
+.Modelo{
+    margin-left:25px;
+    margin-right: 10px;
+    color: var(--search-text);
+    width: 100%;
+
 }
 
 .Tipo{
@@ -678,6 +687,18 @@ label{
   width: auto;
   position: relative;
   right: 25px;
+  top: -27px;
+  
+
+}
+
+.inputValues01 {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  position: relative;
+  right: 14px;
+  top: -27px;
   
 
 }
@@ -686,6 +707,7 @@ label{
   display: flex;
   flex-direction: row; 
   margin-left: 4px;
+  bottom: 30px;
 }
 
 .btnFuncoes01 {
