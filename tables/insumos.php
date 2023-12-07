@@ -79,11 +79,11 @@
                                     echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'
                                 ?>
                                 <td class="changes">
-                                    <a href="adicionarIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-plus-circle'></i> Adicionar</a>
-                                    <a href="retirarIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class='bx bx-minus-circle'></i> Retirar</a>
+                                    <a href="adicionarIns.php?id=<?php echo $produto['id_produto']; ?> " class="btn btn-transparent"><i class='bx bx-plus-circle'></i> Adicionar</a>
+                                    <a href="retirarIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-transparent"><i class='bx bx-minus-circle'></i> Retirar</a>
                                     <?php
                                     if($_SESSION['isAdmin'] === "Sim"){?>
-                                        <a href="editIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Editar</a>
+                                        <a href="editIns.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-transparent"><i class="fa fa-edit"></i> Editar</a>
                                     <?php } ?>
                                 </td>
                                 <?php } ?>

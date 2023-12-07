@@ -62,14 +62,14 @@
           <?php if ($_SESSION['isAdmin'] === "Sim"){?>
             <li>
               <a  href="<?php echo BASEURL; ?>tablesAdmin/tableFornecedor.php">
-                <i class="fa-solid fa-truck-fast" ></i>
+                <i class="fa-solid fa-truck-fast" id="icons" ></i>
                 <span class="link_name">Fornecedores</span>
               </a>
               <span class="tooltip">Fornecedores</span>
             </li>
             <li>
               <a  href="<?php echo BASEURL; ?>tablesAdmin/tableFuncionario.php">
-                <i class="fa-solid fa-people-group" ></i>
+                <i class="fa-solid fa-people-group" id="icons" ></i>
                 <span class="link_name">Colaboradores</span>
               </a>
               <span class="tooltip">Colaboradores</span>
@@ -108,11 +108,9 @@
             <a class="logo" href="#">RV Soluções Industriais</a>
           </ul>
 
-          <ul class="navlist">
-            <li class="modal">
-              <a class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></a>
-              <a class="login" href="#" title="Clique para sair"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
-            </li>
+          <ul class="navlist">              
+            <a class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></a>
+            <a class="loginIcon" href="./inc/modal.php" title="Clique para sair"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
           </ul>
         </nav>
       </div>

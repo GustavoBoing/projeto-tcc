@@ -84,9 +84,9 @@ button[type=submit]:hover {
 }
 
 input[type=text], select {
-  width: auto;
+  width: 120%;
   padding: 12px 20px;
-  margin: 8px 0 0 10px;
+  margin: 8px 0 0 -2px;
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -94,9 +94,9 @@ input[type=text], select {
 }
 
 input[type=number], select {
-  width: 110%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 120%;
+  padding: 12px 8px;
+  margin: 8px 0 ;
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -184,7 +184,7 @@ label{
 }
 
 .Valor{
-  width: 80%;
+  width: 70%;
   padding: 12px 20px;
   margin: 8px 0 0 15px;
   display: block;

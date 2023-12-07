@@ -69,8 +69,8 @@
                                 echo '<td>' .  $produto['isAdmin'] . '</td>'
                             ?>
                             <td class="changes">
-                                <a href="excluir.php?id=<?php echo $produto['id_usuario']; ?>" class="btn btn-sm btn-light"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
-                                <a href="editar.php?id=<?php echo $produto['id_usuario']; ?>" class="btn btn-sm btn-light">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
+                                <a href="excluir.php?id=<?php echo $produto['id_usuario']; ?>" class="btn btn-transparent"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
+                                <a href="editar.php?id=<?php echo $produto['id_usuario']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
                             </td>
                         </tr>
                     <?php endforeach ; ?>

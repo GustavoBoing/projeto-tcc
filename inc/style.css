@@ -235,9 +235,11 @@
   }
 
 a {
-    color: rgb(168, 167, 167);
+    color: var(--color-black);
     text-decoration: none;
+    font-size: small;
     transition: 0.5s;
+    position: relative;
   }
 
 .container .logo {
@@ -398,13 +400,30 @@ img {vertical-align: middle;}
   justify-content: flex-end;
 } */
 
-.topnav > nav > ul > li > .user-logado{
+.nav-list {
   color: #F06E2D;
   font-size: small;
-  margin-right: 20px;
   position: relative;
-  cursor: default;
 }
+
+.navlist{
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 35px;
+  padding: 15px 10px 0 70px;
+  right: -5px;
+  width: 50%;
+}
+
+.navlist > .loginIcon{
+
+margin-left: 10px;
+
+
+}
+
 
 @keyframes fade {
   from {opacity: .4} 
@@ -498,6 +517,7 @@ img {vertical-align: middle;}
 
 .changes a{
   margin-left: 2px;
+  color: var(--search-bar);
 }
 
 .changes button{
@@ -598,14 +618,24 @@ label{
   margin-left: 15px;
   color: var(--search-text);
   width: 130%;
+  margin-left: 30px;
+
+}
+
+
+.Nome {
+
+  margin-right: 10px;
+
 
 }
 
 .Qtd{
 
-  margin-left: 5px;
+  margin-left:25px;
+  margin-right: 10px;
   color: var(--search-text);
-  width: 130%;
+  width: 100%;
 }
 
 .Tipo{
@@ -616,12 +646,19 @@ label{
 
 }
 
-.Fornecedor{
+.NomeFornecedor{
 
-  margin-left: 15px;
+  margin-right: 50px;
   color: var(--search-text);
 
-} 
+}
+
+.NomeFornecedor > label{
+
+  margin-left: 30px;
+
+}
+
 
 .tela-editar{
 
@@ -647,8 +684,8 @@ label{
 
 .btnFuncoes {
   display: flex;
-  flex-direction: row;
-  margin-left: 10px; 
+  flex-direction: row; 
+  margin-left: 4px;
 }
 
 .btnFuncoes01 {

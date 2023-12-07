@@ -83,11 +83,11 @@
                                 echo '<td>' . 'R$ ' . number_format($produto['Valor'] * $produto['Quantidade'], 2, ',', '.') . '</td>'
                             ?>
                             <td class="changes">
-                                <a href="adicionarEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-plus-circle'></i> Adicionar</a>
-                                <a href="retirarEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class='bx bx-minus-circle'></i> Retirar</a>
+                                <a href="adicionarEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-transparent"><i class='bx bx-plus-circle'></i> Adicionar</a>
+                                <a href="retirarEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-transparent"><i class='bx bx-minus-circle'></i> Retirar</a>
                                 <?php 
                                 if($_SESSION['isAdmin'] === "Sim"){?>
-                                    <a href="editEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-sm btn-light"><i class="fa fa-edit"></i> Editar</a>
+                                    <a href="editEpi.php?id=<?php echo $produto['id_produto']; ?>" class="btn btn-transparent"><i class="fa fa-edit"></i> Editar</a>
                                 <?php } ?>
                             </td>
                             <?php } ?>
