@@ -64,7 +64,7 @@
                     <div class="divisor" >
                         <h3>A REALTECH</h3>
                         <div class="image">
-                            <img src="./images/realtech.png">
+                            <i class="fa-solid fa-crown" style="color: var(--color-search); position: relative; top: -12px;"></i>
                         </div>
                     </div>
                 </div>

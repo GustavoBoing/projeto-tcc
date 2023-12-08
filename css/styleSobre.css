@@ -190,3 +190,10 @@
   transform: translateX(0);
   transition: all 1.5s;
 }
+
+.image > .fa-solid .fa-crown{
+
+   position: relative;
+   top: -20px;
+
+}

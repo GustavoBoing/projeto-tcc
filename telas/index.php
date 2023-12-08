@@ -18,6 +18,7 @@
                 <link rel="stylesheet" href="<?php echo BASEURL; ?>css/styleIndex.css"/>
                 <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
                 <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
+                <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
                 integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
                 crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -88,9 +89,13 @@
           </div>
         </div> 
       </main>
+
+        <?php include('../inc/modalLogout.php');?>
+
     </body>
     <script src="<?php echo BASEURL; ?>js/index.js"></script>
     <script src="<?php echo BASEURL; ?>js/script.js"></script>
+    <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>
     <!-- <script src="<?php echo BASEURL; ?>js/whiteMode.js"></script> -->
     <!-- <script src="<?php //echo BASEURL; ?>js/modal.js"></script> -->
 </html>

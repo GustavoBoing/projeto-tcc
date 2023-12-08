@@ -4,13 +4,12 @@
   session_start();
   require_once "../config.php";
 ?>
-      <?php include('modal.php'); ?>
+<?php include('../inc/modalLogout.php'); ?>
 
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?php echo BASEURL; ?>bootstrap/css/bootstrap.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="<?php echo BASEURL; ?>bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
     <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">  
@@ -114,10 +113,11 @@
 
           <ul class="navlist">              
             <a class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></a>
-            <a href="#" class="loginIcon"  data-bs-toggle="modal" data-bs-target="#delete-modal" data-customer="<?php echo $_ido_usuario = $_SESSION['id_usuario']; ?>" title="Clique para sair"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
+            <a href="#" class="btn btn-transparent" data-bs-toggle="modal" data-bs-target="#delete-modal"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
           </ul>
         </nav>
+        
       </div>
 
-
+      <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>
       
