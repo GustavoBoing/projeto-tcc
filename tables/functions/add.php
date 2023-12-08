@@ -8,7 +8,6 @@
     $funcionario = filter_input(INPUT_POST, 'funcionario', FILTER_SANITIZE_NUMBER_INT);
     $id_usuario = filter_input(INPUT_POST, 'id_usuario', FILTER_SANITIZE_NUMBER_INT);
 
-
     // Inicia a transação
     mysqli_begin_transaction($conn);
 

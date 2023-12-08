@@ -39,7 +39,7 @@
               <?php
                 if ($produtos) :
                   // var_dump($produtos);
-                  echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: var(--search-text);">';
+                  echo '<ol style="margin: 10px 0 0 15px; font-size:17px; color: var(--search-text); padding: 0 0px 20px 20px">';
                   foreach ($produtos as $produto) :
                     echo '<li style="margin: 2px 0 0 0;">' . $produto['Descricao'] . ' - ' . $produto['Quantidade'] . ' unidades ' . '</li>';
                   endforeach;

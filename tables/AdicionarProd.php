@@ -1,4 +1,5 @@
 <?php
+    include_once("./conexao.php");
     require_once('function.php');
     add();
     include(HEADER_TEMPLATE);
@@ -8,6 +9,18 @@
     if(!$_SESSION['isAdmin'] === "Sim"){
         die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
     }
+
+    // Query para obter os funcionários
+    $query = "SELECT id_fornecedor, Nome FROM fornecedor";
+    $result = $conn->query($query);
+
+    $user = $_SESSION['login'];
+    $query2user = "SELECT id_usuario FROM usuario WHERE login = ?";
+    $stmt = $conn->prepare($query2user);
+    $stmt->bind_param("s", $user);
+    $stmt->execute();
+    $stmt->bind_result($id_usuario);
+    $stmt->fetch();
 ?>
 <!DOCTYPE html>
     <head>
@@ -44,7 +57,7 @@
 
                     <div class="Valor">
                         <label for="Valor">
-                            Valor:
+                            Valor Unitário:
                             <input type="text" id="valor-input" step="0.01" name="produto[Valor]" min="0.01" placeholder="R$ 0,00"><br><br>
                         </label>
                     </div>
@@ -61,6 +74,18 @@
                             <select type="text" name="produto[Tipo]">
                                 <option value="1">EPI</option>
                                 <option value="2">Insumo</option>
+                            </select><br><br>
+                        </label>
+                    </div>
+                    <div class="Tipo">
+                        <label for="Tipo">
+                            Fornecedor:
+                            <select class="" type="text" name="produto[Fornecedor_id]">
+                                <?php
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<option value=\"{$row['id_fornecedor']}\">{$row['Nome']}</option>";
+                                    }
+                                ?>
                             </select><br><br>
                         </label>
                     </div>
@@ -83,7 +108,6 @@
             $('#valor-input').mask('R$ ##0,00', );
         });
     </script>
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="<?php echo BASEURL; ?>js/index.js"></script>
     <script src="<?php echo BASEURL; ?>js/script.js"></script>
     <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>

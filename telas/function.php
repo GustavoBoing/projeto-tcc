@@ -55,7 +55,7 @@ function maisUtilizados(){
         global $poucos;
         
         $condition = "produto Quantidade < 5 AND Data >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)";
-        $poucos = quantities("produto WHERE Quantidade < 7", "ASC");
+        $poucos = quantities("produto WHERE Quantidade < 10", "ASC");
     }
 
     function innerJoin ($data = null, $table = null, $tableInner = null, $table01Column = null, $p = null) {

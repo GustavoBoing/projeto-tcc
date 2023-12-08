@@ -141,6 +141,10 @@ button[type=submit] {
   position: relative;
 }
 
+.Tipo > label > .fornecedor{
+  margin: 0 0 0 -30px;
+}
+
 .QtdAtual {
   width: 80%;
   padding: 12px 20px;
