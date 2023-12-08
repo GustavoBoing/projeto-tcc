@@ -89,5 +89,8 @@ session_start();
             $('#valor-input').mask('R$ ##0,00', );
         });
     </script>
-    <script src="<?php echo BASEURL?>js/script.js"></script>
+    <script src="<?php echo BASEURL; ?>js/index.js"></script>
+    <script src="<?php echo BASEURL; ?>js/script.js"></script>
+    <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo BASEURL?>js/main.js"></script>
 </html>

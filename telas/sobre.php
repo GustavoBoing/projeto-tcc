@@ -87,6 +87,9 @@
             </div>
         </main>
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="<?php echo BASEURL; ?>js/index.js"></script>
-    <script src="<?php echo BASEURL; ?>js/script.js"defer></script>
+    <script src="<?php echo BASEURL; ?>js/script.js"></script>
+    <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo BASEURL?>js/main.js"></script>
 </html>

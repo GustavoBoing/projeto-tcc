@@ -63,10 +63,13 @@
             </div>
         </form>
     </body>
-    <script src="<?php echo BASEURL?>js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
+    <script src="<?php echo BASEURL; ?>js/index.js"></script>
+    <script src="<?php echo BASEURL; ?>js/script.js"></script>
+    <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo BASEURL?>js/main.js"></script>
     <script>
   
     $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
