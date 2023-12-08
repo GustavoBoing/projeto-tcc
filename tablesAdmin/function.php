@@ -323,4 +323,99 @@ $conn = open_database();
         close_database($database);
         return $found;
     }
-?>
+
+    function delete($id = null) {
+
+      global $usuario;
+      $usuario = removeUser('usuario', $id);
+  
+      header('location: ../tables/okConfirma.php');
+    }
+
+    function removeUser( $table = null, $id = null ) {
+
+      $database = open_database();
+        
+      try {
+        if ($id) {
+  
+        $sql = "DELETE FROM " . $table . " WHERE id_usuario = " . $id;
+        $result = $database->query($sql);
+  
+        if ($result = $database->query($sql)) {   	
+          $_SESSION['message'] = "Registro Removido com Sucesso.";
+          $_SESSION['type'] = 'success';
+        }
+        }
+      } catch (Exception $e) { 
+  
+        $_SESSION['message'] = $e->GetMessage();
+        $_SESSION['type'] = 'danger';
+      }
+  
+    close_database($database);
+    }
+
+    function deleteFuncionario($id = null) {
+
+      global $funcionario;
+      $funcionario = removeFuncionario('funcionario', $id);
+  
+      header('location: ../tables/okConfirma.php');
+    }
+
+    function removeFuncionario( $table = null, $id = null ) {
+
+      $database = open_database();
+        
+      try {
+        if ($id) {
+  
+        $sql = "DELETE FROM " . $table . " WHERE id_funcionario = " . $id;
+        $result = $database->query($sql);
+  
+        if ($result = $database->query($sql)) {   	
+          $_SESSION['message'] = "Registro Removido com Sucesso.";
+          $_SESSION['type'] = 'success';
+        }
+        }
+      } catch (Exception $e) { 
+  
+        $_SESSION['message'] = $e->GetMessage();
+        $_SESSION['type'] = 'danger';
+      }
+  
+    close_database($database);
+  }
+
+  function deleteFornecedor($id = null) {
+
+    global $fornecedor;
+    $fornecedor = removeFornecedor('fornecedor', $id);
+
+    header('location: ../tables/okConfirma.php');
+  }
+
+  function removeFornecedor( $table = null, $id = null ) {
+
+    $database = open_database();
+      
+    try {
+      if ($id) {
+
+      $sql = "DELETE FROM " . $table . " WHERE id_fornecedor = " . $id;
+      $result = $database->query($sql);
+
+      if ($result = $database->query($sql)) {   	
+        $_SESSION['message'] = "Registro Removido com Sucesso.";
+        $_SESSION['type'] = 'success';
+      }
+      }
+    } catch (Exception $e) { 
+
+      $_SESSION['message'] = $e->GetMessage();
+      $_SESSION['type'] = 'danger';
+    }
+
+  close_database($database);
+}

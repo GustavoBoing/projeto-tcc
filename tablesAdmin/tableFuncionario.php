@@ -15,7 +15,7 @@
     <head>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>css/styleTbl.css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
     </head>
@@ -69,8 +69,8 @@
                                 echo "<td class='phone'>" .  $funcionario['TelContato'] . '</td>'
                             ?>
                             <td class="changes">
-                                <a href="editarFuncionario.php?id=<?php echo $funcionario['id_funcionario']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal" class="btn btn-transparent" data-user="<?php echo $funcionario['id_funcionario']?>"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
+                                <a href="editarFuncionario.php?id=<?php echo $funcionario['id_funcionario']; ?>"class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal" class="btn btn-transparent" data-funcionario="<?php echo $funcionario['id_funcionario']; ?>"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
                             </td>
                         </tr>
                     <?php endforeach ; ?>
@@ -82,19 +82,15 @@
                 </tbody>
             </table>
         </main>
-
+        <?php include('modal.php'); ?>
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="<?php echo BASEURL?>js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
-    <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>                     
+    <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo BASEURL?>js/main.js"></script>
     <script>
-
-    $('.phone').mask('(00) 0 0000-0000');  
-    $('#cpf').mask('000.000.000-00', {reverse: true});
-   
-    </script> 
-
-
+        $('.phone').mask('(00) 0 0000-0000');  
+        $('#cpf').mask('000.000.000-00', {reverse: true});
+    </script>
 <html>

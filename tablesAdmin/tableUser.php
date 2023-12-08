@@ -15,7 +15,6 @@
     <head>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>css/styleTbl.css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/style.css"/>
         <link rel="stylesheet" href="<?php echo BASEURL; ?>inc/styleDark.css">
     </head>
@@ -70,21 +69,22 @@
                             ?>
                             <td class="changes">
                                 <a href="editarUser.php?id=<?php echo $usuario['id_usuario']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal" class="btn btn-transparent" data-user="<?php echo $usuario['id_usuario']?>"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal" class="btn btn-transparent" data-user="<?php echo $usuario['id_usuario']; ?>"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
                             </td>
                         </tr>
                     <?php endforeach ; ?>
                     <?php else : ?>
                         <tr>
-                            <td colspan="7">Nenhum registro encontrado.</td>
+                            <td colspan="4">Nenhum registro encontrado.</td>
                         </tr>
                     <?php endif ; ?>
                 </tbody>
             </table>
         </main>
-        <?php //include('modal.php'); ?>
+        <?php include('modal.php'); ?>
     </body>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="<?php echo BASEURL?>js/script.js"></script>
     <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo BASEURL?>js/main.js"></script>
 <html>

@@ -113,11 +113,11 @@
 
           <ul class="navlist">              
             <a class="user-logado">Você está logado como <b><?php echo $_SESSION['login']?></b></a>
-            <a href="#" class="btn btn-transparent" data-bs-toggle="modal" data-bs-target="#delete-modal"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
+            <a href="#" class="btn btn-transparent" data-bs-toggle="modal" data-bs-target="#logout-modal" data-logout="<?php echo $_SESSION['login']; ?>"><i class="fa-solid fa-circle-user fa-xl" style="color: #e16223;"></i></a>
           </ul>
         </nav>
         
       </div>
 
-      <script src="<?php echo BASEURL; ?>bootstrap/js/bootstrap.min.js"></script>
+      <?php include('../inc/modalLogout.php');?>
       
