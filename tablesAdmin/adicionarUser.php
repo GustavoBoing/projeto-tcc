@@ -44,8 +44,8 @@
                         </label>
                     </div>
                     
-                    <div class="Nome">
-                        <label for="Nome">
+                    <div class="isAdmin">
+                        <label for="isAdmin">
                             É administrador?
                             <select name="usuario[isAdmin]" id="">
                                 <option value="Sim">Sim</option>
@@ -54,8 +54,8 @@
                         </label>
                     </div>
 
-                    <div class="Valor">
-                        <label for="Valor">
+                    <div class="pPasse">
+                        <label for="pPasse">
                             Palavra Passe:
                             <input type="password" name="usuario[palavraPasse]" placeholder="Digite a Palavra Passe"><br><br>
                         </label>
@@ -66,7 +66,7 @@
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
                     <div class="btnCancela">
-                        <a href="<?php echo BASEURL;?>telas/index.php">Cancelar</a>
+                        <a href="<?php echo BASEURL;?>tablesAdmin/tableUser.php">Cancelar</a>
                     </div>
                 </div>
             </div>

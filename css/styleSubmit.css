@@ -16,102 +16,57 @@ button[type=submit] {
     
   }
 
-  
-input[type=text], select {
-    width: auto;
-    padding: 10px 20px;
-    margin: 8px 0;
+  input[type=password], select {
+    width: 120%;
+    padding: 12px 20px;
+    margin: 8px 0 0 -2px;
     display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
   }
 
-  input[type=password], select {
-    width: auto;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+
+  button[type=submit] {
+      width: 100%;
+      background-color: #F06E2D;
+      color: white;
+      padding: 0px 20px;
+      margin: 0px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
   }
-  
-  input[type=number], select {
-    width: auto;;
-    padding: 10px 20px;
-    margin: 8px 0;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+
+  button[type=submit]:hover {
+      background-color: #f35c10;
+      transition: 0.9s;
   }
 
   input[type=text], select {
-    width: auto;
-    padding: 2px 8px;
-    margin: 4px 0;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-input[type=number], select {
-    width: auto;
+    width: 120%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px 0 0 -2px;
     display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
   }
 
-button[type=submit] {
-    width: 100%;
-    background-color: #F06E2D;
-    color: white;
-    padding: 0px 20px;
-    margin: 0px 0;
-    border: none;
+  input[type=number], select {
+    width: 120%;
+    padding: 12px 20px;
+    margin: 8px 0 ;
+    display: block;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    cursor: pointer;
-}
+    box-sizing: border-box;
+  }
 
-button[type=submit]:hover {
-    background-color: #f35c10;
-    transition: 0.9s;
-}
 
-input[type=text], select {
-  width: 120%;
-  padding: 12px 20px;
-  margin: 8px 0 0 -2px;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=number], select {
-  width: 120%;
-  padding: 12px 8px;
-  margin: 8px 0 ;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-label{
-  font-size: small;
-  margin-top: 50px;
-  color: white;
-}
-
-.TelefoneFuncionario > label {
-  margin: 0 0 0 20px;
-}
+  /* .TelefoneFuncionario > label {
+    margin: 0 0 0 20px;
+  } */
 
 
 /* .inputValues > .cnpj{
@@ -132,21 +87,15 @@ label{
   box-sizing: border-box;
 } */
 
-
-.TelefoneFuncionario{
-  width: 60%;
-  padding: 12px 0px;
-  margin: 58px 0 0 50PX;
-  display: block;
-  border-radius: 4px;
-  box-sizing: border-box;
-  position: relative;
+.inputValues-funcionario {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0 40px -4px;
 }
 
-.CPFFuncionario{
-  width: 60%;
-  padding: 12px 0px;
-  margin: 8px 0 0 60pX;
+.TelefoneFuncionario, .CPFFuncionario{
+  width: 100%;
+  margin: 0px 0 0 60px;
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
@@ -154,9 +103,8 @@ label{
 }
 
  .NomeFuncionario{
-  width: 60%;
-  padding: 12px 0px;
-  margin: 8px 0 0 10PX;
+  width: 100%;
+  margin: 0px 0 0 0px;
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
@@ -166,7 +114,7 @@ label{
 .NomeFornecedor{
   width: 60%;
   padding: 12px 0px;
-  margin: 8px 0 0 10PX;
+  margin: 8px 0 0 0px;
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
@@ -183,8 +131,8 @@ label{
   position: relative;
 }
 
-.Valor{
-  width: 70%;
+.Valor, .Qtd, .Modelo, .Funcionario, .Tipo{
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0 0 15px;
   display: block;
@@ -193,10 +141,10 @@ label{
   position: relative;
 }
 
-.Qtd{
+.QtdAtual {
   width: 80%;
   padding: 12px 20px;
-  margin: 8px 0 0 5px;
+  margin: 8px 0 0 15px;
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
@@ -213,30 +161,20 @@ label{
   position: relative;
 }
 
-.Modelo{
+.isAdmin {
   width: 80%;
   padding: 12px 20px;
-  margin: 8px 0 0 10px;
+  margin: 8px 0 0 40px;
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
   position: relative;
 }
 
-.Funcionario{
+.pPasse {
   width: 80%;
-  padding: 12px 20px;
-  margin: 8px 0 0 10px;
-  display: block;
-  border-radius: 4px;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.Tipo{
-  width: 80%;
-  padding: 12px 20px;
-  margin: 8px 0 0 10px;
+  padding: 12px 0px;
+  margin: 8px 0 0 0px;
   display: block;
   border-radius: 4px;
   box-sizing: border-box;

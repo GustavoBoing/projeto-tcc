@@ -33,9 +33,9 @@ function maisUtilizados(){
     function historico() {
         global $historicos;
 
-        $historicos = innerJoinLeftJoin("id_mov, id_produto, Descricao, Funcionario_id, QntdModificada, Data, Produto_id, Nome ", 
+        $historicos = innerJoinLeftJoin("id_mov, id_produto, Descricao, Funcionario_id, QntdModificada, Data, Produto_id, Nome, id_usuario, Usuario_id, Login ", 
         "movimentacao", "produto", "movimentacao.Produto_id", "produto.id_produto", "funcionario",
-        "movimentacao.Funcionario_id", "funcionario.id_funcionario ORDER BY Data DESC");
+        "movimentacao.Funcionario_id", "funcionario.id_funcionario", "usuario", "movimentacao.Usuario_id", "usuario.id_usuario ORDER BY Data DESC");
 
         // SELECT id_mov, id_produto, Descricao, Funcionario_id, QntdModificada, Data, Produto_id, Nome
         // FROM movimentacao
@@ -90,7 +90,8 @@ function maisUtilizados(){
     }
 
 
-    function innerJoinLeftJoin ($data = null, $table = null, $tableInner = null, $table01Column = null, $o = null, $tableLeft = null, $table02Column = null,$p = null) {
+    function innerJoinLeftJoin ($data = null, $table = null, $tableInner = null, $table01Column = null, $o = null, 
+    $tableLeft = null, $table02Column = null, $q = null, $tableRight = null, $table03Column = null, $p = null) {
 
         $database = open_database();
         $found = null;
@@ -98,7 +99,9 @@ function maisUtilizados(){
         try{
             if($p) {
               $sql = "SELECT " . $data . " FROM " . $table . " INNER JOIN " . $tableInner . " ON " . $table01Column . "=" . $o . 
-              " LEFT JOIN " . $tableLeft . " ON " . $table02Column . "=" . $p;
+              " LEFT JOIN " . $tableLeft . " ON " . $table02Column . "=" . $q .
+              " INNER JOIN " . $tableRight . " ON " . $table03Column . "=" . $p;
+;
               $result = $database->query($sql);
               if($result->num_rows > 0)  {
                   $found = array();

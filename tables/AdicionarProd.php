@@ -39,14 +39,14 @@
                     <div class="Qtd">
                         <label for="Qtd">
                         Quantidade:
-                            <input type="number" step="0.01" name="produto[Quantidade]" min="0.01" placeholder="Digite a quantidade"><br><br>
+                            <input type="number" step="1" name="produto[Quantidade]" min="1" placeholder="Digite a quantidade"><br><br>
                         </label>
                     </div>
 
                     <div class="Valor">
                         <label for="Valor">
                             Valor:
-                            <input type="number" step="0.01" name="produto[Valor]" min="0.01" placeholder="Digite o valor"><br><br>
+                            <input type="text" id="valor-input" step="0.01" name="produto[Valor]" min="0.01" placeholder="R$ 0,00"><br><br>
                         </label>
                     </div>
 
@@ -77,5 +77,12 @@
             </div>
         </form>
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#valor-input').mask('R$ ##0,00', );
+        });
+    </script>
     <script src="<?php echo BASEURL?>js/script.js"></script>
 </html>

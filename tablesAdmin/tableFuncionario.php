@@ -66,11 +66,11 @@
                             <?php 
                                 echo '<td>'.$funcionario['id_funcionario'].'</td>';
                                 echo '<td>'. $funcionario['Nome'] . '</td>';
-                                echo '<td>' .  $funcionario['TelContato'] . '</td>'
+                                echo "<td class='phone'>" .  $funcionario['TelContato'] . '</td>'
                             ?>
                             <td class="changes">
-                                <a href="excluir.php?id=<?php echo $funcionario['id_funcionario']; ?>" class="btn btn-transparent"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
                                 <a href="editarFuncionario.php?id=<?php echo $funcionario['id_funcionario']; ?>"class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
+                                <a href="excluir.php?id=<?php echo $funcionario['id_funcionario']; ?>" class="btn btn-transparent"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
                             </td>
                         </tr>
                     <?php endforeach ; ?>
@@ -85,4 +85,13 @@
 
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
+    <script>
+
+    $('.phone').mask('(00) 0 0000-0000');  
+    $('#cpf').mask('000.000.000-00', {reverse: true});
+
+    </script>
 <html>

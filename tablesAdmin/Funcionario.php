@@ -26,29 +26,29 @@
     </head>
     <body>
         <div class="TituloARE">
-            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Funcionário </h2>
+            <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Novo Colaborador </h2>
         </div>
         <form class="tela-editar" method="POST" action="funcionario.php" enctype="multipart/form-data">
             
         <div class="deixar-column">
-                <div class="inputValues">
+                <div class="inputValues-funcionario">
 
                     <div class="NomeFuncionario">
-                        <label for="Nome">
+                        <label for="NomeFuncionario">
                             Nome:
                             <input type="text" name="funcionario[Nome]" placeholder="Nome do Colaborador"><br><br>
                         </label>
                     </div>
 
                     <div class="TelefoneFuncionario">
-                        <label for="Telefone">
-                            Telefone
+                        <label for="NomeFuncionario">
+                            Telefone:
                             <input id="phone" type="text" name="funcionario[TelContato]" placeholder="Telefone do Colaborador"><br><br>
                         </label>
                     </div>
                     
                     <div class="CPFFuncionario">
-                        <label for="CPF">
+                        <label for="CPFFuncionario">
                             CPF:
                             <input id="cpf" type="text" name="funcionario[CPF]" placeholder="CPF do Colaborador"><br><br>
                         </label>
@@ -59,7 +59,7 @@
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
                     <div class="btnCancela">
-                        <a href="<?php echo BASEURL;?>telas/index.php">Cancelar</a>
+                        <a href="<?php echo BASEURL;?>tablesAdmin/tableFuncionario.php">Cancelar</a>
                     </div>
                 </div>
             </div>

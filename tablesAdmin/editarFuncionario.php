@@ -35,7 +35,7 @@
         <div class="TituloARE">
             <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Editar Dados </h2>
         </div>
-        <?php var_dump($row_produto); ?>
+        <?php //var_dump($row_produto); ?>
         <form class="tela-editar" method="POST" action="functions/editFuncionario.php" enctype="multipart/form-data">
             <div class="deixar-column">
                 <div class="inputValues">
@@ -50,15 +50,15 @@
 
                     <div class="Qtd">
                         <label for="Qtd">
-                            Quantidade:
-                            <input type="number" name="Telefone" placeholder="Digite a quantidade" value="<?php echo $row_produto['TelContato']; ?>"><br><br>
+                            Telefone:
+                            <input type="text" id="phone" name="Telefone" placeholder="Digite a quantidade" value="<?php echo $row_produto['TelContato']; ?>"><br><br>
                         </label>
                     </div>
 
                     <div class="Modelo">
                         <label for="Modelo">
-                            Modelo:
-                            <input type="text" name="CPF" placeholder="Digite o modelo" value="<?php echo $row_produto['CPF']; ?>"><br><br>
+                            CPF:
+                            <input type="text" id="cpf" name="CPF" placeholder="Digite o modelo" value="<?php echo $row_produto['CPF']; ?>"><br><br>
                         </label>
                     </div>
                 </div>
@@ -67,11 +67,18 @@
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
                     <div class="btnCancela">
-                        <a href="<?php echo BASEURL;?>tables/epis.php">Cancelar</a>
+                        <a href="<?php echo BASEURL;?>tablesAdmin/tableFuncionario.php">Cancelar</a>
                     </div>
                 </div>
             </div>
         </form>
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
+    <script>
+        $('#phone').mask('(00) 0 0000-0000');  
+        $('#cpf').mask('000.000.000-00', {reverse: true});
+    </script>
 </html>

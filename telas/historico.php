@@ -32,7 +32,7 @@
                     <tr>
                         <th>Item</th>
                         <th>Funcionário</th>
-                        <!-- <th>Qtd. Atual</th> -->
+                        <th>Usuário</th>
                         <th>Qtd. Modificada</th>
                         <th>Data</th>
                     </tr>
@@ -46,12 +46,12 @@
                         echo '<tr>';
                             // echo '<td>' . $produto['id_mov'] . '</td>';
                             echo '<td>' . $produto['Descricao'] . '</td>';
-                            if($produto['Funcionario_id'] === null){
-                                echo '<td>' . "null" . '</td>';
+                            if($produto['Funcionario_id'] === NULL){
+                                echo '<td>' . $produto['Login'] . '</td>';
                             } else {
                                 echo '<td>' . $produto['Nome'] . '</td>';
                             }
-                            // echo '<td>' . $produto['QntdAtual'] . '</td>';
+                            echo '<td>' . $produto['Login'] . '</td>';
                             echo '<td>' . $produto['QntdModificada'] . '</td>';
                             echo '<td>' . date("d/m/Y H:i:s", strtotime($produto['Data'])) . '</td>';
                         echo '</tr>';

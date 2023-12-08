@@ -81,6 +81,18 @@ $conn = open_database();
         if (!empty($_POST['funcionario'])) {
             $funcionario = $_POST['funcionario'];
             
+            if(isset($funcionario['CPF'])) {
+
+              // $cpfSemFormato = str_replace(['.', '-'], '', $cpfFormatado);
+              $funcionario['CPF'] = str_replace(['.', '-'], "", $funcionario['CPF']);
+            }
+
+            if(isset($funcionario['TelContato'])) {
+
+              // $cpfSemFormato = str_replace(['.', '-'], '', $cpfFormatado);
+              $funcionario['TelContato'] = str_replace(['(', ')', '-', ' '], "", $funcionario['TelContato']);
+            }
+
             save('funcionario', $funcionario);
             header('location: ../tables/okConfirma.php');
         }
@@ -89,38 +101,14 @@ $conn = open_database();
         if (!empty($_POST['fornecedor'])) {
             $fornecedor = $_POST['fornecedor'];
             
+            if(isset($fornecedor['CNPJ'])){
+              $fornecedor['CNPJ'] = str_replace(['.', '-', '/'], '', $fornecedor['CNPJ']);
+            }
+            
             save('fornecedor', $fornecedor);
             header('location: ../tables/okConfirma.php');
         }
     }
-
-    // function editaFuncionario() {
-    //     $conn = open_database();
-    //     global $row_produto;
-
-    //     $id = $_GET['id'];
-
-    //     $id_funcionario = filter_input(INPUT_GET, 'id_funcionario', FILTER_SANITIZE_NUMBER_INT);
-    //     $result_produto = "SELECT * FROM funcionario WHERE id_funcionario = '" . $_GET['id'] . "'";
-    //     $resultado_produto = mysqli_query($conn, $result_produto);
-    //     $row_produto = mysqli_fetch_assoc($resultado_produto);
-
-    //     if(isset($_POST['funcionario'])){
-    //         $result_produto = "UPDATE funcionario SET Nome='Nome', TelContato='TelContato', CPF='CPF' WHERE id_funcionario ='$id_funcionario'";
-    //         $resultado_produto = mysqli_query($conn, $result_produto);
-
-    //         if(mysqli_affected_rows($conn)){
-    //             $_SESSION['msg'] = "";
-    //             header("Location: ../tables/okConfirma.php");
-    //         }else{
-    //             $_SESSION['msg'] = "";
-    //             header("Location: ../tables/erradoEpi.php");
-    //             // var_dump($result_produto);
-    //         }
-    //     }
-
-
-    // }
 
     function editFornecedor() {
         if (isset($_GET['id'])) {
@@ -131,6 +119,10 @@ $conn = open_database();
     
             if (isset($_POST['fornecedor'])) {
                 $fornecedor = $_POST['fornecedor'];
+
+                if(isset($fornecedor['CNPJ'])){
+                  $fornecedor['CNPJ'] = str_replace(['.', '-', '/'], '', $fornecedor['CNPJ']);
+                }
 
                 updateFornecedor('fornecedor', $id, $fornecedor );
                 header('location: ../tables/okConfirma.php');
@@ -235,75 +227,75 @@ $conn = open_database();
       }
   }
 
-function findUser( $table = null, $id = null ) {
-  
-  $database = open_database();
-  $found = null;
-
-  try {
-    if ($id) {
-    $sql = "SELECT * FROM " . $table . " WHERE id_usuario = " . $id;
-    $result = $database->query($sql);
-    
-    if ($result->num_rows > 0) {
-      $found = $result->fetch_assoc();
-    }
-    
-    } else {
-    
-    $sql = "SELECT * FROM " . $table;
-    $result = $database->query($sql);
-    
-    if ($result->num_rows > 0) {
-      $found = $result->fetch_all(MYSQLI_ASSOC);
-    
-    /* Metodo alternativo
-    $found = array();
-    while ($row = $result->fetch_assoc()) {
-      array_push($found, $row);
-    } */
-    }
-    }
-  } catch (Exception $e) {
-    $_SESSION['message'] = $e->GetMessage();
-    $_SESSION['type'] = 'danger';
-  }
-  
-  close_database($database);
-  return $found;
-}
-
   function updateUser($table = null, $id = 0, $data = null) {
 
-      $database = open_database();
+    $database = open_database();
 
-      $items = null;
+    $items = null;
 
-      foreach ($data as $key => $value) {
-        $items .= trim($key, "'") . "='$value',";
-      }
-
-      // remove a ultima virgula
-      $items = rtrim($items, ',');
-
-      $sql  = "UPDATE " . $table;
-      $sql .= " SET $items";
-      $sql .= " WHERE id_usuario=" . $id . ";";
-
-      try {
-        $database->query($sql);
-
-        $_SESSION['message'] = 'Registro atualizado com sucesso.';
-        $_SESSION['type'] = 'success';
-
-      } catch (Exception $e) { 
-
-        $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
-        $_SESSION['type'] = 'danger';
-      } 
-
-      close_database($database);
+    foreach ($data as $key => $value) {
+      $items .= trim($key, "'") . "='$value',";
     }
+
+    // remove a ultima virgula
+    $items = rtrim($items, ',');
+
+    $sql  = "UPDATE " . $table;
+    $sql .= " SET $items";
+    $sql .= " WHERE id_usuario=" . $id . ";";
+
+    try {
+      $database->query($sql);
+
+      $_SESSION['message'] = 'Registro atualizado com sucesso.';
+      $_SESSION['type'] = 'success';
+
+    } catch (Exception $e) { 
+
+      $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
+      $_SESSION['type'] = 'danger';
+    } 
+
+    close_database($database);
+  }
+
+  function findUser( $table = null, $id = null ) {
+    
+    $database = open_database();
+    $found = null;
+
+    try {
+      if ($id) {
+      $sql = "SELECT * FROM " . $table . " WHERE id_usuario = " . $id;
+      $result = $database->query($sql);
+      
+      if ($result->num_rows > 0) {
+        $found = $result->fetch_assoc();
+      }
+      
+      } else {
+      
+      $sql = "SELECT * FROM " . $table;
+      $result = $database->query($sql);
+      
+      if ($result->num_rows > 0) {
+        $found = $result->fetch_all(MYSQLI_ASSOC);
+      
+      /* Metodo alternativo
+      $found = array();
+      while ($row = $result->fetch_assoc()) {
+        array_push($found, $row);
+      } */
+      }
+      }
+    } catch (Exception $e) {
+      $_SESSION['message'] = $e->GetMessage();
+      $_SESSION['type'] = 'danger';
+    }
+    
+    close_database($database);
+    return $found;
+  }
 
 
     function filter ($table = null, $p = null) {

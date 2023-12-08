@@ -13,18 +13,20 @@
 <body>
     <div class="background-container">
         <div class="background-image"></div>
-        <form action="novaSenha.php" method="post">
+        <form action="" method="post">
             <div class="content">
                 <div class="imagem-logo">
                     <p></p>
                 </div>
+                <!-- <p>CRIAR NOVA SENHA</p> -->
                 <p>
+                    <?php //var_dump($usuario); ?>
                     <p><label class="label-email" for="usuario">Usuário</label></p>
-                    <input class="login" type="text" name="login" placeholder="Digite seu nome de usuário" required>
+                    <input class="login" type="text" name="login" value="<?php echo $usuario['Login']; ?>" placeholder="Digite seu nome de usuário" disabled>
                 </p>
                 <p>
                     <p><label for="password">Nova Senha</label></p>
-                    <input class="senha" type="password" name="senha" placeholder="Nova senha" required>
+                    <input class="senha" type="password" name="usuario[Senha]" placeholder="Nova senha" required>
                 </p>
                 <p>
                     <button class="entrar">Confirmar</button>

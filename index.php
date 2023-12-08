@@ -28,27 +28,13 @@
                         <input class="senha" type="password" name="senha" placeholder="Digite sua senha" required>
                     </p>
                     <p>
-                        <p><label for="password">É administrador?</label></p>
-                        <select name="isAdmin" class="isAdmin" id="">
-                            <option value="Sim">Sim</option>
-                            <option value="Não">Não</option>
-                        </select>
-                    </p>
-                    <p>
                         <a href="<?php echo BASEURL; ?>novaSenha/index.php"><label class="esqueceu" for="esqueceu">Esqueceu sua senha?</label></a>
                     </p>
                     <p>
-                        <button class="entrar" onchange="try()">Entrar</button>
+                        <button class="entrar">Entrar</button>
                     </p>
                 </div>
             </form>
         </div>
-        <!-- <div id="myModal">
-            <p>A senha que você digitou está incorreta. Por favor, tente novamente.</p>
-            <button onclick="fecharModal()">Fechar</button>
-        </div>
-             Fundo do Modal -->
-        <!-- <div id="modalBackground" onclick="fecharModal()"></div> -->
-        <!-- <script src="<?php echo BASEURL;?>login/script.js"></script>   -->
     </body>
 </html>

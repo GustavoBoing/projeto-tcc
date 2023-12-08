@@ -66,11 +66,11 @@
                         <?php 
                                 echo '<td>'.$fornecedor['id_fornecedor'].'</td>';
                                 echo '<td>'. $fornecedor['Nome'] . '</td>';
-                                echo '<td>' .  $fornecedor['CNPJ'] . '</td>'
+                                echo '<td class="cnpj">' .  $fornecedor['CNPJ'] . '</td>'
                             ?>
                             <td class="changes">
+                            <a href="editarFornecedor.php?id=<?php echo $fornecedor['id_fornecedor']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
                                 <a href="editarFornecedor.php?id=<?php echo $fornecedor['id_fornecedor']; ?>" class="btn btn-transparent"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
-                                <a href="editarFornecedor.php?id=<?php echo $fornecedor['id_fornecedor']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
                             </td>
                         </tr>
                     <?php endforeach ; ?>
@@ -85,4 +85,12 @@
 
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
+    <script>
+  
+    $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+
+    </script>
 <html>

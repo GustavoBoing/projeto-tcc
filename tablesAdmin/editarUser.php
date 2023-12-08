@@ -10,10 +10,6 @@
         die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
     }
 
-    // $id_funcionario = filter_input(INPUT_GET, 'id_funcionario', FILTER_SANITIZE_NUMBER_INT);
-    // $result_funcionario = "SELECT * FROM funcionario WHERE id_funcionario = '" . $_GET['id'] . "'";
-    // $resultado_funcionario = mysqli_query($conn, $result_funcionario);
-    // $row_produto = mysqli_fetch_assoc($resultado_funcionario);
 ?>
 <!DOCTYPE html>
 
@@ -27,17 +23,17 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <?php
-        // if (isset($_SESSION['msg'])) {
-        //     echo $_SESSION['msg'];
-        //     unset($_SESSION['msg']);
-        // }
+        if (isset($_SESSION['msg'])) {
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+        }
     ?>
     <body>
         <div class="TituloARE">
             <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Editar Dados </h2>
         </div>
-        <?php var_dump($usuario); ?>
-        <form class="tela-editar" method="POST" action="functions/editUser.php" enctype="multipart/form-data">
+        <?php //var_dump($usuario); ?>
+        <form class="tela-editar" method="POST" action="editarUser.php?id=<?php echo $usuario['id_usuario']; ?>" enctype="multipart/form-data">
             <div class="deixar-column">
                 <div class="inputValues">
                     <input type="hidden" name="usuario[id_usuario]" value="<?php echo $usuario['id_usuario']; ?>">
@@ -49,17 +45,13 @@
                         </label>
                     </div>
 
-                    <div class="Qtd">
-                        <label for="Qtd">
-                            :
-                            <input type="number" name="Telefone" placeholder="Digite a quantidade" value="<?php echo $row_produto['TelContato']; ?>"><br><br>
-                        </label>
-                    </div>
-
-                    <div class="Modelo">
-                        <label for="Modelo">
-                            É admin?
-                            <input type="text" name="CPF" placeholder="Digite o modelo" value="<?php echo $row_produto['CPF']; ?>"><br><br>
+                    <div class="isAdmin">
+                        <label for="isAdmin">
+                            É administrador?
+                            <select name="usuario[isAdmin]" id="">
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
                         </label>
                     </div>
                 </div>
@@ -68,7 +60,7 @@
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
                     <div class="btnCancela">
-                        <a href="<?php echo BASEURL;?>tables/epis.php">Cancelar</a>
+                        <a href="<?php echo BASEURL;?>tablesAdmin/tableUser.php">Cancelar</a>
                     </div>
                 </div>
             </div>

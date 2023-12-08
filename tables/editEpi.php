@@ -59,7 +59,7 @@
                     <div class="Valor">
                         <label for="Valor">
                             Valor:
-                            <input type="text" step="0.01" name="valor" min="0.01" placeholder="Digite o valor" value="<?php echo $row_produto['Valor']; ?>"><br><br>
+                            <input type="text" id="valor-input" step="0.01" name="valor" min="0.01" placeholder="Digite o valor" value="<?php echo $row_produto['Valor']; ?>"><br><br>
                         </label>
                     </div>
 
@@ -81,5 +81,12 @@
             </div>
         </form>
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#valor-input').mask('R$ ##0,00', );
+        });
+    </script>
     <script src="<?php echo BASEURL?>js/script.js"></script>
 </html>

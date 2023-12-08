@@ -400,28 +400,23 @@ img {vertical-align: middle;}
   justify-content: flex-end;
 } */
 
-.nav-list {
+.navlist{
   color: #F06E2D;
   font-size: small;
   position: relative;
-}
-
-.navlist{
-
   display: flex;
   align-items: center;
-  position: relative;
-  right: 35px;
-  padding: 15px 10px 0 70px;
-  right: -5px;
-  width: 50%;
+  right: 3%;
+  padding: 15px 0px 0 70px;
+}
+
+.user-logado {
+  width: 400px;
+  text-align: right;
 }
 
 .navlist > .loginIcon{
-
-margin-left: 10px;
-
-
+  margin-left: 20px;
 }
 
 
@@ -549,7 +544,7 @@ input[type=number], select {
 
 label{
   font-size: small;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 10px;
   color: var(--search-text);
 }
@@ -569,8 +564,6 @@ label{
   font-weight: 1000;
 }
 
-
-
 .TituloARE > .titulosare{
 
   font-family: 'Poppins', sans-serif;
@@ -585,75 +578,31 @@ label{
   font-weight: 1000;
 }
 
-
-
-.btnfuncoes{
-  display: flex;
-  flex-direction: row;
-}
-
 .btnSalvar{
 
- margin-right: 20px;
+  margin-right: 20px;
 
 }
 
-.Nome{
-
-  color: var(--search-text);
-
+.tela-editar{
+  display: flex;
+  margin: 0 5% 0 5%;
 }
-/* 
-.Modelo, .Valor, .Qtd, .Tipo, .Fornecedor, .Funcionario{
 
-  margin-left: 15px;
+ .Valor, .Qtd, .Modelo, .Tipo{
   color: var(--search-text);
-  padding: 0px 0px;
-  margin-right: 10px;
-
-} */
-
- .Valor{
-
-  margin-left: 10px;
-  color: var(--search-text);
-  width: 130%;
+  width: 100%;
   margin-left: 30px;
-
 }
-
 
 .Nome {
 
   margin-right: 10px;
   width: 100%;
-
-
-}
-
-.Qtd{
-
-  margin-left:25px;
-  margin-right: 10px;
   color: var(--search-text);
-  width: 100%;
-}
-
-.Modelo{
-    margin-left:25px;
-    margin-right: 10px;
-    color: var(--search-text);
-    width: 100%;
 
 }
 
-.Tipo{
-
-  margin-left: 15px;
-  color: var(--search-text);
-  width: 100%;
-
-}
 
 .NomeFornecedor{
 
@@ -666,13 +615,6 @@ label{
 
   margin-left: 30px;
 
-}
-
-
-.tela-editar{
-
-  display: flex;
-  margin: 0 5% 0 5%;
 }
 
 .deixar-column {
@@ -704,17 +646,19 @@ label{
 }
 
 .btnFuncoes {
+  position: relative;
   display: flex;
   flex-direction: row; 
   margin-left: 4px;
-  bottom: 30px;
+  top: -30px
 }
 
+/* 
 .btnFuncoes01 {
   display: flex;
   flex-direction: row;
   margin-left: 70px; 
-}
+} */
 
 .btnFuncoes > .btnCancela {
   display: inline;

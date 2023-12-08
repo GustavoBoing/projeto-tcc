@@ -103,8 +103,15 @@ $gerarRelatorioIns = null;
         if (!empty($_POST['produto'])) {
             $produto = $_POST['produto'];
             
+            if (isset($produto['Valor'])) {
+                // Remover o símbolo "R$"
+                $produto['Valor'] = str_replace("R$", "", $produto['Valor']);
+                // Substituir vírgulas por pontos
+                $produto['Valor'] = str_replace(",", ".", $produto['Valor']);
+            }
+            
             save('produto', $produto);
-            header('location: ../telas/index.php');
+            header('location: ./okConfirma.php');
           }
     }
 

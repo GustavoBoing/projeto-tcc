@@ -10,10 +10,6 @@
         die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
     }
 
-    // $id_funcionario = filter_input(INPUT_GET, 'id_funcionario', FILTER_SANITIZE_NUMBER_INT);
-    // $result_funcionario = "SELECT * FROM funcionario WHERE id_funcionario = '" . $_GET['id'] . "'";
-    // $resultado_funcionario = mysqli_query($conn, $result_funcionario);
-    // $row_produto = mysqli_fetch_assoc($resultado_funcionario);
 ?>
 <!DOCTYPE html>
 
@@ -36,7 +32,7 @@
         <div class="TituloARE">
             <h2 class="titulosare"><i class="fa fa-edit"></i>&nbsp Editar Dados </h2>
         </div>
-        <?php var_dump($fornecedor); ?>
+        <?php //var_dump($fornecedor); ?>
         <form class="tela-editar" method="POST" action="editarFornecedor.php?id=<?php echo $fornecedor['id_fornecedor']; ?>">
             <div class="deixar-column">
                 <div class="inputValues">
@@ -52,7 +48,7 @@
                     <div class="Qtd">
                         <label for="Qtd">
                             CNPJ:
-                            <input type="number" name="fornecedor[CNPJ]" placeholder="CNPJ do fornecedor" value="<?php echo $fornecedor['CNPJ']; ?>"><br><br>
+                            <input type="text" id="cnpj" name="fornecedor[CNPJ]" placeholder="CNPJ do fornecedor" value="<?php echo $fornecedor['CNPJ']; ?>"><br><br>
                         </label>
                     </div>
                 </div>
@@ -61,11 +57,19 @@
                         <button type="submit" name="" class="btn btn-primary">Salvar</button>
                     </div> 
                     <div class="btnCancela">
-                        <a href="<?php echo BASEURL;?>tables/epis.php">Cancelar</a>
+                        <a href="<?php echo BASEURL;?>tablesAdmin/tableFornecedor.php">Cancelar</a>
                     </div>
                 </div>
             </div>
         </form>
     </body>
     <script src="<?php echo BASEURL?>js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
+    <script>
+  
+    $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
+
+    </script>
 </html>

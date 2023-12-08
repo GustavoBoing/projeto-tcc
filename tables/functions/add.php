@@ -39,7 +39,7 @@ try {
     }
 
     $result_movimentacao = "INSERT INTO movimentacao (Data, QntdModificada, Produto_id, Usuario_id, Funcionario_id) 
-    VALUES (NOW(), $quantidade_a_somar, $id_produto, $id_usuario, $funcionario)";
+    VALUES (NOW(), $quantidade_a_somar, $id_produto, $id_usuario, ". ($funcionario ? $funcionario : "NULL") .")";
     $resultado_movimentacao = mysqli_query($conn, $result_movimentacao);
 
     if (!mysqli_affected_rows($conn)) {
