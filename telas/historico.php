@@ -1,5 +1,6 @@
 <?php
     require_once "function.php";
+    // filterData();
     historico();
     // movimentacao();
     include(HEADER_TEMPLATE);
@@ -25,7 +26,23 @@
             <p id="subtitulo">Visão geral das últimas transações</p>
             <?php //var_dump($historicos);?>
         </div>
+
+        <!-- <div class="filtro">
+            <form action="historico.php" method="POST">
+                <div class="actionsTbls">
+                    <div class="input-Filtro">
+                        <input class="btnFiltro" type="text" name="filtro" placeholder="Pesquise um produto">
+                    </div>
+                    <div class="btnFiltro">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: white"></i></button>
+                    </div>
+                    <?php //var_dump($produtos);?>
+                </div>
+            </form>
+        </div> -->
+
         <?php //var_dump($historicos);?>
+
         <main>
             <table class="content-table">
                 <thead>

@@ -1,7 +1,7 @@
 <?php
     require_once('function.php');
     usuarios();
-    // filtragem();
+    include('modal.php');
     include(HEADER_TEMPLATE);
     if(!isset($_SESSION['login'])) {
         die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
@@ -40,7 +40,7 @@
                         <div class="input-Filtro">
                             <input class="btnFiltro" type="text" name="filtro" placeholder="Pesquise um usuário">
                         </div>
-                        <div class="btnFiltro">
+                        <div class="btnFiltroFornecedor">
                             <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: white"></i></button>
                         </div>
                         <?php //var_dump($produtos);?>
@@ -69,7 +69,7 @@
                             ?>
                             <td class="changes">
                                 <a href="editarUser.php?id=<?php echo $usuario['id_usuario']; ?>" class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal" class="btn btn-transparent" data-user="<?php echo $usuario['id_usuario']; ?>"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-user" class="btn btn-transparent" data-user="<?php echo $usuario['id_usuario']; ?>"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
                             </td>
                         </tr>
                     <?php endforeach ; ?>
@@ -81,7 +81,7 @@
                 </tbody>
             </table>
         </main>
-        <?php include('modal.php'); ?>
+        <?php //var_dump($usuario['id_usuario']); ?>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="<?php echo BASEURL?>js/script.js"></script>

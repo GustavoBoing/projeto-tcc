@@ -18,6 +18,7 @@ $poucos = null;
 $funcionario = null;
 $usuario = null;
 
+
 function maisUtilizados(){
     global $movimentacoes;
     $movimentacoes = innerJoin2("id_mov, id_produto, COUNT(Produto_id) AS total_saidas, SUM(CASE WHEN QntdModificada < 0 THEN QntdModificada ELSE 0 END) AS quantidade, 
@@ -47,20 +48,14 @@ function maisUtilizados(){
     }
     function grandeQtd() {
         global $produtos;
-        $produtos = quantities("produto", "DESC");
-        // ob_start();
-        // var_dump($produtos);
-
-        // // Captura a saída do var_dump
-        // $output = ob_get_clean();
-
-        // // Envia a saída para o console do navegador
-        // echo '<script>console.log(' . json_encode($output) . ')</script>';
+        $produtos = quantities("produto WHERE Quantidade > 40", "DESC");
     } 
 
     function poucaQtd() {
         global $poucos;
-        $poucos = quantities("produto", "ASC");
+        
+        $condition = "produto Quantidade < 5 AND Data >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)";
+        $poucos = quantities("produto WHERE Quantidade < 7", "ASC");
     }
 
     function innerJoin ($data = null, $table = null, $tableInner = null, $table01Column = null, $p = null) {
@@ -128,7 +123,7 @@ function maisUtilizados(){
     
         try{
             if($p) {
-              $sql = "SELECT " . $data . " FROM " . $table . " INNER JOIN " . $tableInner . " ON " . $table01Column . "=" . $dataInner . " WHERE QntdModificada < " . $sai . " GROUP BY Descricao ORDER BY quantidade " . $p . " LIMIT 5";
+              $sql = "SELECT " . $data . " FROM " . $table . " INNER JOIN " . $tableInner . " ON " . $table01Column . "=" . $dataInner . " WHERE QntdModificada < " . $sai . " AND Data >= DATE_SUB(CURDATE(), INTERVAL 7 DAY) GROUP BY Descricao ORDER BY quantidade " . $p . " LIMIT 5";
               $result = $database->query($sql);
               if($result->num_rows > 0)  {
                   $found = array();

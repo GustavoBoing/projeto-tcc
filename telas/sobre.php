@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require_once "../config.php";
     include(HEADER_TEMPLATE);
     if(!isset($_SESSION['login'])) {

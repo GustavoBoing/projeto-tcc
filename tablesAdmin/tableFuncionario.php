@@ -1,7 +1,7 @@
 <?php
         require_once('function.php');
         funcionarios();
-        // filtragem();
+        include('modal.php');
         include(HEADER_TEMPLATE);
         if(!isset($_SESSION['login'])) {
             die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
@@ -41,7 +41,7 @@
                         <div class="input-Filtro">
                             <input class="btnFiltro" type="text" name="filtro" placeholder="Pesquise um colaborador">
                         </div>
-                        <div class="btnFiltro">
+                        <div class="btnFiltroFornecedor">
                             <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: white"></i></button>
                         </div>
                         <?php //var_dump($produtos);?>
@@ -70,19 +70,19 @@
                             ?>
                             <td class="changes">
                                 <a href="editarFuncionario.php?id=<?php echo $funcionario['id_funcionario']; ?>"class="btn btn-transparent">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp; Editar</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal" class="btn btn-transparent" data-funcionario="<?php echo $funcionario['id_funcionario']; ?>"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-funcionario" class="btn btn-transparent" data-funcionario="<?php echo $funcionario['id_funcionario']; ?>"><i class="fa-solid fa-trash"></i>&nbsp; Excluir</a>
                             </td>
                         </tr>
                     <?php endforeach ; ?>
                     <?php else : ?>
                         <tr>
-                            <td colspan="4">Nenhum registro encontrado.</td>
+                            <td colspan="4">Nenhum registro encontrado.</td> 
                         </tr>
                     <?php endif ; ?>
                 </tbody>
             </table>
         </main>
-        <?php include('modal.php'); ?>
+        <?php  ?>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>

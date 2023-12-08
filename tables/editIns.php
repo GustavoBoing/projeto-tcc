@@ -1,6 +1,4 @@
 <?php
-session_start();
-
     include_once("conexao.php");
     require_once('function.php');
     include(HEADER_TEMPLATE);
@@ -53,14 +51,14 @@ session_start();
                     <div class="Qtd">
                         <label for="Qtd">
                             Quantidade:
-                            <input type="number" name="quantidade" placeholder="Digite a quantidade" value="<?php echo $row_produto['Quantidade']; ?>" disabled><br><br>
+                            <input type="number" name="quantidade" placeholder="Digite a quantidade" value="<?php echo  $row_produto['Quantidade']; ?>" disabled><br><br>
                         </label>
                     </div>
 
                     <div class="Valor">
                         <label for="Valor">
                             Valor:
-                            <input type="text" id="valor-input" step="0.01" name="valor" min="0.01" placeholder="Digite o valor" value="<?php echo $row_produto['Valor']; ?>"><br><br>
+                            <input type="text" id="valor-input" step="0.01" name="valor" min="0.01" placeholder="Digite o valor" value="<?php echo "R$ " . $row_produto['Valor']; ?>"><br><br>
                         </label>
                     </div>
 
@@ -86,7 +84,7 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('#valor-input').mask('R$ ##0,00', );
+            // $('#valor-input').mask('R$ ##0,00', );
         });
     </script>
     <script src="<?php echo BASEURL; ?>js/index.js"></script>

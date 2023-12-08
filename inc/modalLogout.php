@@ -1,5 +1,5 @@
-<div class="modal fade" id="logout-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-  <div class="modal-dialog" role="document">
+<div class="modal" id="logout-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  <div class="modal-dialog modal-dialog-slide-down" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="modalLabel">Sair</h4>
@@ -14,4 +14,4 @@
       </div>
     </div>
   </div>
-</div> <!-- /.modal -->
+</div> 

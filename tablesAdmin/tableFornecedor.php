@@ -1,7 +1,7 @@
 <?php
         require_once('function.php');
         fornecedores();
-        // filtragem();
+        include('modal.php');
         include(HEADER_TEMPLATE);
         if(!isset($_SESSION['login'])) {
             die("Você não pode acessar esta página porque não está logado.<p><a href=\"../index.php\"> Voltar</a></p>");
@@ -9,6 +9,7 @@
         if(!$_SESSION['isAdmin'] === "Sim"){
             die ("Você não pode acessar esta página porque não é o administrador.<p><a href=\"../telas/index.php\"> Voltar</a></p>");
         }
+        
     ?>
 <!DOCTYPE html>    
 <html>
@@ -41,7 +42,7 @@
                         <div class="input-Filtro">
                             <input class="btnFiltro" type="text" name="filtro" placeholder="Pesquise um fornecedor">
                         </div>
-                        <div class="btnFiltro">
+                        <div class="btnFiltroFornecedor">
                             <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: white"></i></button>
                         </div>
                         <?php //var_dump($produtos);?>
@@ -82,7 +83,6 @@
                 </tbody>
             </table>
         </main>
-        <?php include('modal.php'); ?>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>

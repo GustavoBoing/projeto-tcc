@@ -226,3 +226,18 @@ label{
     background-color: #363636;
     transition: .8s;
 }
+
+.btnFiltroFornecedor > button{
+    padding: 11px 12px 11px 12px;
+    background: var(--color-black);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btnFiltroFornecedor > button:hover {
+    background-color: #363636;
+    transition: .8s;
+}
